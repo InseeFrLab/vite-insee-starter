@@ -1,0 +1,73 @@
+{
+    "openapi": "3.0.0",
+    "info": { "version": "1.0.6", "title": "My API" },
+    "components": {
+        "schemas": {
+            "Todo": {
+                "type": "object",
+                "properties": {
+                    "id": { "type": "string", "example": "123" },
+                    "text": { "type": "string", "example": "Clean my room" },
+                    "isDone": { "type": "boolean", "example": false }
+                },
+                "required": ["id", "text", "isDone"]
+            }
+        },
+        "parameters": {}
+    },
+    "paths": {
+        "/todo/{id}": {
+            "put": {
+                "parameters": [
+                    {
+                        "schema": { "type": "string", "minLength": 1, "example": "1212121" },
+                        "required": true,
+                        "name": "id",
+                        "in": "path"
+                    },
+                    {
+                        "schema": { "type": "string", "minLength": 1, "example": "Clean my room" },
+                        "required": true,
+                        "name": "text",
+                        "in": "query"
+                    },
+                    {
+                        "schema": { "type": "boolean", "example": false },
+                        "required": true,
+                        "name": "isDone",
+                        "in": "query"
+                    }
+                ],
+                "responses": { "200": { "description": "Create or update a todo item" } }
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "schema": { "type": "string", "minLength": 1, "example": "1212121" },
+                        "required": true,
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": { "200": { "description": "Deleted a todo item" } }
+            }
+        },
+        "/todos": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Get all user's todo",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": { "$ref": "#/components/schemas/Todo" }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

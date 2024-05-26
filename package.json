@@ -13,7 +13,8 @@
         "format:check": "npm run _format -- --list-different",
         "postinstall": "copy-dsfr-to-public",
         "predev": "only-include-used-icons",
-        "prebuild": "only-include-used-icons"
+        "prebuild": "only-include-used-icons",
+        "openapi": "orval --config ./orval.config.ts"
     },
     "dependencies": {
         "@codegouvfr/react-dsfr": "^1.9.11",
@@ -48,6 +49,7 @@
         "eslint-plugin-react-refresh": "^0.4.6",
         "husky": "^4.3.8",
         "lint-staged": "^15.2.2",
+        "orval": "^6.29.1",
         "prettier": "^3.2.5",
         "typescript": "^5.4.5",
         "vite": "^5.2.0"
