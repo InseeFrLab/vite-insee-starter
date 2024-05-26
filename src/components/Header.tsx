@@ -62,7 +62,8 @@ export function Header() {
                 (
                     [
                         ["/", "Home"],
-                        ["/mui", "Mui Playground"]
+                        ["/mui", "Mui Playground"],
+                        ["/todo", "Todo App"]
                     ] as const
                 ).map(([to, label]) => ({
                     text: label,

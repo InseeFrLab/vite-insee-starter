@@ -14,6 +14,9 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Route as rootRoute } from "./routes/__root";
 import { Route as AccountImport } from "./routes/account";
+import { Route as TodoRouteImport } from "./routes/todo/route";
+import { Route as TodoIndexImport } from "./routes/todo/index";
+import { Route as TodoEditImport } from "./routes/todo/edit";
 
 // Create Virtual Routes
 
@@ -32,10 +35,25 @@ const AccountRoute = AccountImport.update({
     getParentRoute: () => rootRoute
 } as any);
 
+const TodoRouteRoute = TodoRouteImport.update({
+    path: "/todo",
+    getParentRoute: () => rootRoute
+} as any);
+
 const IndexLazyRoute = IndexLazyImport.update({
     path: "/",
     getParentRoute: () => rootRoute
 } as any).lazy(() => import("./routes/index.lazy").then(d => d.Route));
+
+const TodoIndexRoute = TodoIndexImport.update({
+    path: "/",
+    getParentRoute: () => TodoRouteRoute
+} as any);
+
+const TodoEditRoute = TodoEditImport.update({
+    path: "/edit",
+    getParentRoute: () => TodoRouteRoute
+} as any);
 
 // Populate the FileRoutesByPath interface
 
@@ -46,6 +64,13 @@ declare module "@tanstack/react-router" {
             path: "/";
             fullPath: "/";
             preLoaderRoute: typeof IndexLazyImport;
+            parentRoute: typeof rootRoute;
+        };
+        "/todo": {
+            id: "/todo";
+            path: "/todo";
+            fullPath: "/todo";
+            preLoaderRoute: typeof TodoRouteImport;
             parentRoute: typeof rootRoute;
         };
         "/account": {
@@ -62,6 +87,20 @@ declare module "@tanstack/react-router" {
             preLoaderRoute: typeof MuiLazyImport;
             parentRoute: typeof rootRoute;
         };
+        "/todo/edit": {
+            id: "/todo/edit";
+            path: "/edit";
+            fullPath: "/todo/edit";
+            preLoaderRoute: typeof TodoEditImport;
+            parentRoute: typeof TodoRouteImport;
+        };
+        "/todo/": {
+            id: "/todo/";
+            path: "/";
+            fullPath: "/todo/";
+            preLoaderRoute: typeof TodoIndexImport;
+            parentRoute: typeof TodoRouteImport;
+        };
     }
 }
 
@@ -69,6 +108,7 @@ declare module "@tanstack/react-router" {
 
 export const routeTree = rootRoute.addChildren({
     IndexLazyRoute,
+    TodoRouteRoute: TodoRouteRoute.addChildren({ TodoEditRoute, TodoIndexRoute }),
     AccountRoute,
     MuiLazyRoute
 });
