@@ -4,6 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
+        "postinstall": "copy-dsfr-to-public && vite-envs update-types",
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -11,7 +12,6 @@
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
         "format:check": "npm run _format -- --list-different",
-        "postinstall": "copy-dsfr-to-public",
         "predev": "only-include-used-icons",
         "prebuild": "only-include-used-icons",
         "openapi": "orval --config ./orval.config.ts"
