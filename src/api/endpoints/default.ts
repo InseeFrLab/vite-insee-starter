@@ -14,17 +14,17 @@ import type {
     UseQueryOptions,
     UseQueryResult
 } from "@tanstack/react-query";
-import type { PutTodoIdParams, Todo } from "../model/api";
-import { axiosInstance } from "./axiosInstance";
+import type { PutTodoIdParams, Todo } from "../model";
+import { customInstance } from "../mutator/customInstance";
 
 type SecondParameter<T extends (...args: any) => any> = Parameters<T>[1];
 
 export const putTodoId = (
     id: string,
     params: PutTodoIdParams,
-    options?: SecondParameter<typeof axiosInstance>
+    options?: SecondParameter<typeof customInstance>
 ) => {
-    return axiosInstance<void>({ url: `/todo/${id}`, method: "PUT", params }, options);
+    return customInstance<void>({ url: `/todo/${id}`, method: "PUT", params }, options);
 };
 
 export const getPutTodoIdMutationOptions = <TError = unknown, TContext = unknown>(options?: {
@@ -34,7 +34,7 @@ export const getPutTodoIdMutationOptions = <TError = unknown, TContext = unknown
         { id: string; params: PutTodoIdParams },
         TContext
     >;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }): UseMutationOptions<
     Awaited<ReturnType<typeof putTodoId>>,
     TError,
@@ -66,7 +66,7 @@ export const usePutTodoId = <TError = unknown, TContext = unknown>(options?: {
         { id: string; params: PutTodoIdParams },
         TContext
     >;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }): UseMutationResult<
     Awaited<ReturnType<typeof putTodoId>>,
     TError,
@@ -77,8 +77,8 @@ export const usePutTodoId = <TError = unknown, TContext = unknown>(options?: {
 
     return useMutation(mutationOptions);
 };
-export const deleteTodoId = (id: string, options?: SecondParameter<typeof axiosInstance>) => {
-    return axiosInstance<void>({ url: `/todo/${id}`, method: "DELETE" }, options);
+export const deleteTodoId = (id: string, options?: SecondParameter<typeof customInstance>) => {
+    return customInstance<void>({ url: `/todo/${id}`, method: "DELETE" }, options);
 };
 
 export const getDeleteTodoIdMutationOptions = <TError = unknown, TContext = unknown>(options?: {
@@ -88,7 +88,7 @@ export const getDeleteTodoIdMutationOptions = <TError = unknown, TContext = unkn
         { id: string },
         TContext
     >;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }): UseMutationOptions<Awaited<ReturnType<typeof deleteTodoId>>, TError, { id: string }, TContext> => {
     const { mutation: mutationOptions, request: requestOptions } = options ?? {};
 
@@ -115,14 +115,14 @@ export const useDeleteTodoId = <TError = unknown, TContext = unknown>(options?: 
         { id: string },
         TContext
     >;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }): UseMutationResult<Awaited<ReturnType<typeof deleteTodoId>>, TError, { id: string }, TContext> => {
     const mutationOptions = getDeleteTodoIdMutationOptions(options);
 
     return useMutation(mutationOptions);
 };
-export const getTodos = (options?: SecondParameter<typeof axiosInstance>, signal?: AbortSignal) => {
-    return axiosInstance<Todo[]>({ url: `/todos`, method: "GET", signal }, options);
+export const getTodos = (options?: SecondParameter<typeof customInstance>, signal?: AbortSignal) => {
+    return customInstance<Todo[]>({ url: `/todos`, method: "GET", signal }, options);
 };
 
 export const getGetTodosQueryKey = () => {
@@ -134,7 +134,7 @@ export const getGetTodosQueryOptions = <
     TError = unknown
 >(options?: {
     query?: Partial<UseQueryOptions<Awaited<ReturnType<typeof getTodos>>, TError, TData>>;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }) => {
     const { query: queryOptions, request: requestOptions } = options ?? {};
 
@@ -155,7 +155,7 @@ export type GetTodosQueryError = unknown;
 
 export const useGetTodos = <TData = Awaited<ReturnType<typeof getTodos>>, TError = unknown>(options?: {
     query?: Partial<UseQueryOptions<Awaited<ReturnType<typeof getTodos>>, TError, TData>>;
-    request?: SecondParameter<typeof axiosInstance>;
+    request?: SecondParameter<typeof customInstance>;
 }): UseQueryResult<TData, TError> & { queryKey: QueryKey } => {
     const queryOptions = getGetTodosQueryOptions(options);
 

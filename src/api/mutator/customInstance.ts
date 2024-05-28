@@ -36,7 +36,7 @@ const onRequest = async (config: any) => ({
 baseInstance.interceptors.request.use(onRequest);
 
 // add a second `options` argument here if you want to pass extra options to each generated query
-export const axiosInstance = <T>(config: AxiosRequestConfig, options?: AxiosRequestConfig) => {
+export const customInstance = <T>(config: AxiosRequestConfig, options?: AxiosRequestConfig) => {
     return baseInstance<T>({
         ...config,
         ...options

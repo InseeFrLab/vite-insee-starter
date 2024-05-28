@@ -1,9 +1,10 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
+import { QueryClient } from "@tanstack/react-query";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
     component: () => (
         <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
             <Header />

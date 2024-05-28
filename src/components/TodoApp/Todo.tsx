@@ -51,7 +51,7 @@ export const Todo = memo((props: TodoProps) => {
                 />
                 <Button
                     iconId="ri-delete-bin-line"
-                    onClick={() => onDeleteTodo()}
+                    onClick={onDeleteTodo}
                     priority="primary"
                     title="Delete"
                 />

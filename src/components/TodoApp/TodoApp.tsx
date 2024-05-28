@@ -15,7 +15,7 @@ type Props = {
 export function TodoApp(props: Props) {
     const { className, todos, onAddTodo, onUpdateTodoText, onToggleTodo, onDeleteTodo } = props;
 
-    const { classes, cx } = useState();
+    const { classes, cx } = useStyles();
 
     const getOnUpdateTodoText = useListCallbacks(([todoId]: [string], [text]: [string]) =>
         onUpdateTodoText(todoId, text)
@@ -41,7 +41,7 @@ export function TodoApp(props: Props) {
     );
 }
 
-const useState = tss.withName({ TodoApp }).create({
+const useStyles = tss.withName({ TodoApp }).create({
     root: {},
     addTodo: {},
     todoListWrapper: {}

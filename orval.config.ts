@@ -5,13 +5,13 @@ export default defineConfig({
         input: "./openApi.json",
         output: {
             mode: "tags",
-            target: "src/api/",
-            schemas: "src/model/api",
+            target: "src/api/endpoints",
+            schemas: "src/api/model",
             client: "react-query",
             override: {
                 mutator: {
-                    path: "./src/api/axiosInstance.ts",
-                    name: "axiosInstance"
+                    path: "./src/api/mutator/customInstance.ts",
+                    name: "customInstance"
                 }
             }
         },

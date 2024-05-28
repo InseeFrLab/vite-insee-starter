@@ -13,3 +13,15 @@ export const { OidcProvider, useOidc, prOidc } = import.meta.env.VITE_OIDC_ISSUE
           })
       })
     : createMockReactOidc({ isUserInitiallyLoggedIn: false });
+
+export const protectedLoader = async () => {
+    const oidc = await prOidc;
+
+    if (oidc.isUserLoggedIn) {
+        return null;
+    }
+
+    await oidc.login({
+        doesCurrentHrefRequiresAuth: true
+    });
+};

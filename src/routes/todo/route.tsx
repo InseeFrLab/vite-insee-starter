@@ -1,24 +1,15 @@
-import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { protectedLoader } from "oidc";
 
 export const Route = createFileRoute("/todo")({
-    component: Layout
+    component: Layout,
+    beforeLoad: protectedLoader
 });
 
 function Layout() {
     return (
         <>
-            <h3>Todo App</h3>
-
-            {(
-                [
-                    ["/todo", "Summary"],
-                    ["/todo/edit", "Edit"]
-                ] as const
-            ).map(([to, label]) => (
-                <Link key={to} to={to}>
-                    {label}
-                </Link>
-            ))}
+            <h2>Todo App</h2>
             <Outlet />
         </>
     );

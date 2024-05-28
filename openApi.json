@@ -1,6 +1,6 @@
 {
     "openapi": "3.0.0",
-    "info": { "version": "1.0.6", "title": "My API" },
+    "info": { "version": "1.0.8", "title": "My API" },
     "components": {
         "schemas": {
             "Todo": {
