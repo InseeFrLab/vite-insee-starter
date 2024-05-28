@@ -20,6 +20,20 @@ export function TodoApp(props: Props) {
     const getOnUpdateTodoText = useListCallbacks(([todoId]: [string], [text]: [string]) =>
         onUpdateTodoText(todoId, text)
     );
+
+    /*
+    If we use this custom hook instead of just doing:  
+      onToggleTodo={()=> onToggleTodo(todo.id)}
+    It is because we want to avoid all <Todo /> to be re-rendered every time this component is re-rendered.  
+    For that we use memo() on the Todo component but we also need to make sure that the references of the callbacks
+    are stable.  
+    Learn more: https://stackblitz.com/edit/react-ts-fyrwng?file=index.tsx
+
+    Hot take: The builtin useCallback() hook should never be used. In any scenario.  
+    It almost never enables to avoid rerender and is very error prone. It shouldn't exist in the first place.  
+
+    Note: This is the state of the art for React 18. React 19 shuffles the deck with it's pre-compiler.  
+    */
     const getOnToggleTodo = useListCallbacks(([todoId]: [string]) => onToggleTodo(todoId));
     const getOnDeleteTodo = useListCallbacks(([todoId]: [string]) => onDeleteTodo(todoId));
 
