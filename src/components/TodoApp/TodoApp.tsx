@@ -17,10 +17,6 @@ export function TodoApp(props: Props) {
 
     const { classes, cx } = useStyles();
 
-    const getOnUpdateTodoText = useListCallbacks(([todoId]: [string], [text]: [string]) =>
-        onUpdateTodoText(todoId, text)
-    );
-
     /*
     If we use this custom hook instead of just doing:  
       onToggleTodo={()=> onToggleTodo(todo.id)}
@@ -34,6 +30,9 @@ export function TodoApp(props: Props) {
 
     Note: This is the state of the art for React 18. React 19 shuffles the deck with it's pre-compiler.  
     */
+    const getOnUpdateTodoText = useListCallbacks(([todoId]: [string], [text]: [string]) =>
+        onUpdateTodoText(todoId, text)
+    );
     const getOnToggleTodo = useListCallbacks(([todoId]: [string]) => onToggleTodo(todoId));
     const getOnDeleteTodo = useListCallbacks(([todoId]: [string]) => onDeleteTodo(todoId));
 

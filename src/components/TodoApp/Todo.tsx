@@ -1,8 +1,9 @@
-import { memo, useState } from "react";
+import { memo, useState, useEffect, useReducer } from "react";
 import { tss } from "tss-react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
+import { useConstCallback } from "tools/useConstCallback";
 
 export type Todo = {
     id: string;
@@ -19,11 +20,32 @@ type TodoProps = {
 };
 
 export const Todo = memo((props: TodoProps) => {
-    const { className, todo, onUpdateTodoText, onToggleTodo, onDeleteTodo } = props;
+    const { className, todo, onToggleTodo, onDeleteTodo } = props;
 
-    const [isEditing, setIsEditing] = useState(false);
+    // NOTE: Make sure it's not stale for when used in the reducer.
+    // We know it's constant because we also used useListCallbacks() in the parent component
+    // but this component is not supposed to be aware of that.
+    const onUpdateTodoText = useConstCallback(props.onUpdateTodoText);
+
+    const [isEditing, setIsEditing] = useReducer((isEditing: boolean, isEditing_new: boolean) => {
+        if (isEditing_new === isEditing) {
+            return isEditing;
+        }
+
+        if (!isEditing_new) {
+            onUpdateTodoText(text);
+        }
+
+        return isEditing_new;
+    }, false);
 
     const { classes, cx } = useStyles({ isEditing });
+
+    const [text, setText] = useState(todo.text);
+
+    useEffect(() => {
+        setText(todo.text);
+    }, [todo.text]);
 
     return (
         <div className={cx(classes.root, className)}>
@@ -33,8 +55,8 @@ export const Todo = memo((props: TodoProps) => {
                 {isEditing ? (
                     <input
                         className={cx(fr.cx("fr-input"), classes.input)}
-                        value={todo.text}
-                        onChange={e => onUpdateTodoText(e.target.value)}
+                        value={text}
+                        onChange={e => setText(e.target.value)}
                         onBlur={() => setIsEditing(false)}
                     />
                 ) : (
@@ -44,7 +66,7 @@ export const Todo = memo((props: TodoProps) => {
 
             <div className={classes.buttonsWrapper}>
                 <Button
-                    iconId="ri-pencil-line"
+                    iconId={isEditing ? "ri-check-line" : "ri-pencil-line"}
                     onClick={() => setIsEditing(!isEditing)}
                     priority="secondary"
                     title="Edit"
