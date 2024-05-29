@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { protectedLoader, useOidc, getKeycloakAccountUrl } from "oidc";
 import { useLang } from "i18n";
 import { fr } from "@codegouvfr/react-dsfr";
-import { useStyles } from "tss-react";
+import { useStyles } from "tss";
 
 export const Route = createFileRoute("/account")({
     component: Account,

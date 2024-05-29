@@ -15,26 +15,32 @@ export const AddTodo = memo((props: Props) => {
 
     const [text, setText] = useState("");
 
+    const onAddTodo = () => {
+        if (text === "") {
+            return;
+        }
+        props.onAddTodo(text);
+
+        setText("");
+    };
+
     return (
         <Input
             className={className}
             label={t("add a todo")}
             addon={
-                <Button
-                    iconId="ri-add-line"
-                    onClick={() => {
-                        if (text === "") {
-                            return;
-                        }
-                        props.onAddTodo(text);
-                    }}
-                >
+                <Button iconId="ri-add-line" onClick={onAddTodo}>
                     {t("validate")}
                 </Button>
             }
             nativeInputProps={{
                 value: text,
-                onChange: e => setText(e.target.value)
+                onChange: e => setText(e.target.value),
+                onKeyPress: e => {
+                    if (e.key === "Enter") {
+                        onAddTodo();
+                    }
+                }
             }}
         />
     );

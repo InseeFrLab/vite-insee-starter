@@ -1,3 +1,4 @@
+import { protectedLoader } from "oidc";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -9,13 +10,12 @@ import {
 } from "api/endpoints/default";
 import { TodoApp } from "components/TodoApp";
 import { queryClient } from "main";
+import { tss } from "tss";
+import { fr } from "@codegouvfr/react-dsfr";
 
-export const Route = createFileRoute("/todo/")({
+export const Route = createFileRoute("/todo")({
     component: TodoIndex,
-    loader: ({ context: { queryClient }, abortController }) =>
-        queryClient.ensureQueryData(
-            getGetTodosQueryOptions({ request: { signal: abortController.signal } })
-        )
+    beforeLoad: protectedLoader
 });
 
 function TodoIndex() {
@@ -66,13 +66,28 @@ function TodoIndex() {
             data: { text }
         });
 
+    const { classes } = useStyles();
+
     return (
-        <TodoApp
-            onAddTodo={addTodo}
-            onDeleteTodo={deleteTodo}
-            onToggleTodo={toggleTodo}
-            onUpdateTodoText={updateTodo}
-            todos={todos}
-        />
+        <div className={classes.root}>
+            <TodoApp
+                className={classes.todoApp}
+                onAddTodo={addTodo}
+                onDeleteTodo={deleteTodo}
+                onToggleTodo={toggleTodo}
+                onUpdateTodoText={updateTodo}
+                todos={todos}
+            />
+        </div>
     );
 }
+
+const useStyles = tss.withName({ TodoIndex }).create({
+    root: {
+        display: "flex",
+        justifyContent: "center"
+    },
+    todoApp: {
+        width: `min(100%, ${fr.breakpoints.emValues.lg}em)`
+    }
+});

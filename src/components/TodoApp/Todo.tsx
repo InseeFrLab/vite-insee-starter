@@ -1,5 +1,5 @@
 import { memo, useState, useEffect } from "react";
-import { tss } from "tss-react";
+import { tss } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";

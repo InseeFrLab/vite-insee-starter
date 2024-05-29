@@ -59,6 +59,8 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
+import { useStyles } from "tss";
+
 export const Route = createLazyFileRoute("/mui")({
     component: Mui
 });
@@ -66,32 +68,42 @@ export const Route = createLazyFileRoute("/mui")({
 function Mui() {
     const { isDark, setIsDark } = useIsDark();
 
+    const { css } = useStyles();
+
     return (
-        <>
-            <FormControlLabel
-                control={
-                    <Switch
-                        checked={isDark}
-                        onChange={event => setIsDark(event.target.checked)}
-                        inputProps={{ "aria-label": "controlled" }}
-                    />
-                }
-                label="Dark mode"
-            />
-            <Typography sx={{ mt: 2 }} variant="h4">
-                This is a place for testing MUI components
-            </Typography>
-            <DataGridDemo />
-            <BasicButtons />
-            <ComboBox />
-            <BasicChips />
-            <IconMenu />
-            <MaterialUIPickers />
-            <BadgeVisibility />
-            <HorizontalLinearStepper />
-            <Links />
-            <RecipeReviewCard />
-        </>
+        <div
+            className={css({
+                margin: "auto",
+                display: "flex",
+                justifyContent: "center"
+            })}
+        >
+            <div>
+                <FormControlLabel
+                    control={
+                        <Switch
+                            checked={isDark}
+                            onChange={event => setIsDark(event.target.checked)}
+                            inputProps={{ "aria-label": "controlled" }}
+                        />
+                    }
+                    label="Dark mode"
+                />
+                <Typography sx={{ mt: 2 }} variant="h4">
+                    This is a place for testing MUI components
+                </Typography>
+                <DataGridDemo />
+                <BasicButtons />
+                <ComboBox />
+                <BasicChips />
+                <IconMenu />
+                <MaterialUIPickers />
+                <BadgeVisibility />
+                <HorizontalLinearStepper />
+                <Links />
+                <RecipeReviewCard />
+            </div>
+        </div>
     );
 }
 

@@ -1,8 +1,9 @@
 import { Todo } from "./Todo";
 import { AddTodo } from "./AddTodo";
-import { tss } from "tss-react";
+import { tss } from "tss";
 import { usePartiallyAppliedEvent } from "tools/usePartiallyAppliedEvent";
 import type { TodoItem } from "./type";
+import { fr } from "@codegouvfr/react-dsfr";
 
 type Props = {
     className?: string;
@@ -61,7 +62,7 @@ export function TodoApp(props: Props) {
 
     return (
         <div className={cx(classes.root, className)}>
-            <AddTodo className={classes.addTodo} onAddTodo={onAddTodo} />
+            <AddTodo onAddTodo={onAddTodo} />
             <div className={classes.todoListWrapper}>
                 {todos.map(todo => (
                     <Todo
@@ -78,7 +79,13 @@ export function TodoApp(props: Props) {
 }
 
 const useStyles = tss.withName({ TodoApp }).create({
-    root: {},
-    addTodo: {},
-    todoListWrapper: {}
+    root: {
+        border: `1px solid ${fr.colors.decisions.border.actionLow.blueFrance.default}`,
+        padding: fr.spacing("5w")
+    },
+    todoListWrapper: {
+        display: "flex",
+        flexDirection: "column",
+        gap: fr.spacing("2w")
+    }
 });

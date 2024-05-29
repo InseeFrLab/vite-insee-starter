@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useOidc } from "oidc";
+import { useStyles } from "tss";
 
 export function AutoLogoutCountdown() {
     const { isUserLoggedIn, subscribeToAutoLogoutCountdown } = useOidc();
@@ -30,6 +31,8 @@ export function AutoLogoutCountdown() {
         [isUserLoggedIn, subscribeToAutoLogoutCountdown]
     );
 
+    const { css } = useStyles();
+
     if (secondsLeft === undefined) {
         return null;
     }
@@ -37,7 +40,7 @@ export function AutoLogoutCountdown() {
     return (
         <div
             // Full screen overlay, blurred background
-            style={{
+            className={css({
                 position: "fixed",
                 top: 0,
                 left: 0,
@@ -49,9 +52,9 @@ export function AutoLogoutCountdown() {
                 justifyContent: "center",
                 alignItems: "center",
                 zIndex: 1000
-            }}
+            })}
         >
-            <div>
+            <div className={css({ textAlign: "center" })}>
                 <p>Are you still there?</p>
                 <p>You will be logged out in {secondsLeft}</p>
             </div>
