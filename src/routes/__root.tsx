@@ -3,6 +3,7 @@ import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
 import { QueryClient } from "@tanstack/react-query";
+import { AutoLogoutCountdown } from "components/AutoLogoutCountdown";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
     component: () => (
@@ -16,10 +17,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                     ...fr.spacing("padding", { topBottom: "10v" })
                 }}
             >
-                {" "}
                 <Outlet />
             </div>
+            <AutoLogoutCountdown />
             <Footer />
         </div>
-    )
+    ),
+    notFoundComponent: () => <>The route is not defined</>
 });
