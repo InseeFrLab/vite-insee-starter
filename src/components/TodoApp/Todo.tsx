@@ -30,6 +30,11 @@ export const Todo = memo((props: TodoProps) => {
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
     const [text, setText] = useState(todo.text);
+
+    useEffect(() => {
+        setText(todo.text);
+    }, [todo.text]);
+
     const [isEditing, setIsEditing] = useState(false);
 
     const onEditButtonClick = useEvent(() => {
@@ -42,10 +47,6 @@ export const Todo = memo((props: TodoProps) => {
     });
 
     const { classes, cx } = useStyles({ isEditing });
-
-    useEffect(() => {
-        setText(todo.text);
-    }, [todo.text]);
 
     return (
         <div className={cx(classes.root, className)}>
