@@ -2,10 +2,11 @@ import { Todo } from "./Todo";
 import { AddTodo } from "./AddTodo";
 import { tss } from "tss-react";
 import { usePartiallyAppliedEvent } from "tools/usePartiallyAppliedEvent";
+import type { TodoItem } from "./type";
 
 type Props = {
     className?: string;
-    todos: Todo[];
+    todos: TodoItem[];
     onAddTodo: (text: string) => void;
     onUpdateTodoText: (id: string, text: string) => void;
     onToggleTodo: (id: string) => void;
@@ -13,9 +14,29 @@ type Props = {
 };
 
 export function TodoApp(props: Props) {
-    const { className, todos, onAddTodo, onUpdateTodoText, onToggleTodo, onDeleteTodo } = props;
+    const { className, todos } = props;
 
     const { classes, cx } = useStyles();
+
+    const onAddTodo = (text: string) => {
+        console.log(`Adding todo with text: ${text}`);
+        props.onAddTodo(text);
+    };
+
+    const onUpdateTodoText = (id: string, text: string) => {
+        console.log(`Updating todo with id: ${id} and text: ${text}`);
+        props.onUpdateTodoText(id, text);
+    };
+
+    const onToggleTodo = (id: string) => {
+        console.log(`Toggling todo with id: ${id}`);
+        props.onToggleTodo(id);
+    };
+
+    const onDeleteTodo = (id: string) => {
+        console.log(`Deleting todo with id: ${id}`);
+        props.onDeleteTodo(id);
+    };
 
     /*
 

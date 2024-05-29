@@ -1,48 +1,47 @@
-import { memo, useState, useEffect, useReducer } from "react";
+import { memo, useState, useEffect } from "react";
 import { tss } from "tss-react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
 import { useEvent } from "tools/useEvent";
 import { deepEqual } from "tools/deepEqual";
+import type { TodoItem } from "./type";
+import { assert } from "tsafe/assert";
 
-export type Todo = {
-    id: string;
+// Todo item but without the id, we don't need it.
+export type TodoItemLike = {
     text: string;
     isDone: boolean;
 };
 
+// Make sure that the type `TodoItemLike` is a subset of `TodoItem`
+// This will give us red squiggles if we forget to update `TodoItemLike` when we update `TodoItem`
+assert<TodoItem extends TodoItemLike ? true : false>();
+
 type TodoProps = {
     className?: string;
-    todo: Todo;
+    todo: TodoItemLike;
     onUpdateTodoText: (text: string) => void;
     onToggleTodo: () => void;
     onDeleteTodo: () => void;
 };
 
 export const Todo = memo((props: TodoProps) => {
-    const { className, todo, onToggleTodo, onDeleteTodo } = props;
-
-    // NOTE: Make sure it's not stale for when used in the reducer.
-    // We know it's constant because we also used useListEvent() in the parent component
-    // but this component is not supposed to be aware of that.
-    const onUpdateTodoText = useEvent(props.onUpdateTodoText);
-
-    const [isEditing, setIsEditing] = useReducer((isEditing: boolean, isEditing_new: boolean) => {
-        if (isEditing_new === isEditing) {
-            return isEditing;
-        }
-
-        if (!isEditing_new) {
-            onUpdateTodoText(text);
-        }
-
-        return isEditing_new;
-    }, false);
-
-    const { classes, cx } = useStyles({ isEditing });
+    const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
     const [text, setText] = useState(todo.text);
+    const [isEditing, setIsEditing] = useState(false);
+
+    const onEditButtonClick = useEvent(() => {
+        if (isEditing) {
+            onUpdateTodoText(text);
+            setIsEditing(false);
+        } else {
+            setIsEditing(true);
+        }
+    });
+
+    const { classes, cx } = useStyles({ isEditing });
 
     useEffect(() => {
         setText(todo.text);
@@ -58,7 +57,6 @@ export const Todo = memo((props: TodoProps) => {
                         className={cx(fr.cx("fr-input"), classes.input)}
                         value={text}
                         onChange={e => setText(e.target.value)}
-                        onBlur={() => setIsEditing(false)}
                     />
                 ) : (
                     <span className={classes.text}>{todo.text}</span>
@@ -68,7 +66,7 @@ export const Todo = memo((props: TodoProps) => {
             <div className={classes.buttonsWrapper}>
                 <Button
                     iconId={isEditing ? "ri-check-line" : "ri-pencil-line"}
-                    onClick={() => setIsEditing(!isEditing)}
+                    onClick={onEditButtonClick}
                     priority="secondary"
                     title="Edit"
                 />
