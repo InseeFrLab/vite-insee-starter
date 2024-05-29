@@ -17,7 +17,7 @@ export const AddTodo = memo((props: Props) => {
             className={className}
             label="Add a todo"
             addon={
-                <Button iconId="ri-add-line" onClick={() => props.onAddTodo("todo")}>
+                <Button iconId="ri-add-line" onClick={() => props.onAddTodo(text)}>
                     Validate
                 </Button>
             }
