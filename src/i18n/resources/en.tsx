@@ -1,6 +1,6 @@
 import type { Translations } from "../types";
 
-export const translations: Translations<"fr"> = {
+export const translations: Translations<"en"> = {
     /* spell-checker: disable */
     Header: {
         "select language": "Select language",
