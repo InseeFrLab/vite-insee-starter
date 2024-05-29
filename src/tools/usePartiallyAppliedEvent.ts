@@ -2,27 +2,16 @@ import { useRef, useState } from "react";
 import { memoize } from "./memoize";
 import { id } from "tsafe/id";
 
-export type CallbackFactory<FactoryArgs extends unknown[], Args extends unknown[], R> = (
+export type PartiallyApplierEvent<FactoryArgs extends unknown[], Args extends unknown[], R> = (
     ...factoryArgs: FactoryArgs
 ) => (...args: Args) => R;
 
-/**
- * https://docs.powerhooks.dev/api-reference/useListCallbacks
- *
- *  const callbackFactory= useListCallbacks(
- *      ([key]: [string], [params]: [{ foo: number; }]) => {
- *          ...
- *      },
- *      []
- *  );
- *
- * WARNING: Factory args should not be of variable length.
- *
- */
-export function useListCallbacks<FactoryArgs extends unknown[], Args extends unknown[], R = void>(
-    callback: (...callbackArgs: [FactoryArgs, Args]) => R
-): CallbackFactory<FactoryArgs, Args, R> {
-    type Out = CallbackFactory<FactoryArgs, Args, R>;
+export function usePartiallyAppliedEvent<
+    FactoryArgs extends unknown[],
+    Args extends unknown[],
+    R = void
+>(callback: (...callbackArgs: [FactoryArgs, Args]) => R): PartiallyApplierEvent<FactoryArgs, Args, R> {
+    type Out = PartiallyApplierEvent<FactoryArgs, Args, R>;
 
     const callbackRef = useRef<typeof callback>(callback);
 

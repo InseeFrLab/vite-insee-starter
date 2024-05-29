@@ -3,7 +3,8 @@ import { tss } from "tss-react";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
-import { useConstCallback } from "tools/useConstCallback";
+import { useEvent } from "tools/useEvent";
+import { deepEqual } from "tools/deepEqual";
 
 export type Todo = {
     id: string;
@@ -23,9 +24,9 @@ export const Todo = memo((props: TodoProps) => {
     const { className, todo, onToggleTodo, onDeleteTodo } = props;
 
     // NOTE: Make sure it's not stale for when used in the reducer.
-    // We know it's constant because we also used useListCallbacks() in the parent component
+    // We know it's constant because we also used useListEvent() in the parent component
     // but this component is not supposed to be aware of that.
-    const onUpdateTodoText = useConstCallback(props.onUpdateTodoText);
+    const onUpdateTodoText = useEvent(props.onUpdateTodoText);
 
     const [isEditing, setIsEditing] = useReducer((isEditing: boolean, isEditing_new: boolean) => {
         if (isEditing_new === isEditing) {
@@ -80,7 +81,8 @@ export const Todo = memo((props: TodoProps) => {
             </div>
         </div>
     );
-});
+}, deepEqual);
+// NOTE: We use deepEqual above to avoid having the component re-render if the ref of the todo has changed but it's actually the same todo.
 
 const useStyles = tss
     .withName({ Todo })
