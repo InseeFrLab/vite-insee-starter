@@ -2,3 +2,4 @@
 /dist/
 /.eslintrc.js
 /src/vite-env.d.ts
+/src/routeTree.gen.ts
