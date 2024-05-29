@@ -4,6 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
 import { useEvent } from "tools/useEvent";
+import { deepEqual } from "tools/deepEqual";
 
 export type Todo = {
     id: string;
@@ -80,7 +81,8 @@ export const Todo = memo((props: TodoProps) => {
             </div>
         </div>
     );
-});
+}, deepEqual);
+// NOTE: We use deepEqual above to avoid having the component re-render if the ref of the todo has changed but it's actually the same todo.
 
 const useStyles = tss
     .withName({ Todo })
