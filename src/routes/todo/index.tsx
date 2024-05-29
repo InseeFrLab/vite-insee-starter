@@ -76,27 +76,3 @@ function TodoIndex() {
         />
     );
 }
-
-const mockTodos = [
-    {
-        id: "1",
-        text: "test1",
-        isDone: false
-    },
-
-    {
-        id: "2",
-        text: "test2",
-        isDone: false
-    },
-    {
-        id: "3",
-        text: "test3",
-        isDone: true
-    },
-    {
-        id: "4",
-        text: "test4",
-        isDone: true
-    }
-];
