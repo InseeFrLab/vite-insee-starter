@@ -5,8 +5,7 @@
  * OpenAPI spec version: 2.0.1
  */
 
-export interface Todo {
+export type PutTodo200 = {
+    /** The id of the newly created todo item */
     id: string;
-    isDone: boolean;
-    text: string;
-}
+};

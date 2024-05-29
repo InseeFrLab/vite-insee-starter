@@ -1,6 +1,6 @@
 {
     "openapi": "3.0.0",
-    "info": { "version": "1.0.8", "title": "My API" },
+    "info": { "version": "2.0.1", "title": "My API" },
     "components": {
         "schemas": {
             "Todo": {
@@ -24,21 +24,26 @@
                         "required": true,
                         "name": "id",
                         "in": "path"
-                    },
-                    {
-                        "schema": { "type": "string", "minLength": 1, "example": "Clean my room" },
-                        "required": true,
-                        "name": "text",
-                        "in": "query"
-                    },
-                    {
-                        "schema": { "type": "boolean", "example": false },
-                        "required": true,
-                        "name": "isDone",
-                        "in": "query"
                     }
                 ],
-                "responses": { "200": { "description": "Create or update a todo item" } }
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "text": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "example": "Clean my room"
+                                    },
+                                    "isDone": { "type": "boolean", "example": false }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": { "200": { "description": "Update an existing todo item" } }
             },
             "delete": {
                 "parameters": [
@@ -50,6 +55,47 @@
                     }
                 ],
                 "responses": { "200": { "description": "Deleted a todo item" } }
+            }
+        },
+        "/todo": {
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "text": {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "example": "Clean my room"
+                                    }
+                                },
+                                "required": ["text"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Create a new todo item returns the newly created todo item's id",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "description": "The id of the newly created todo item",
+                                            "example": "123"
+                                        }
+                                    },
+                                    "required": ["id"]
+                                }
+                            }
+                        }
+                    }
+                }
             }
         },
         "/todos": {

@@ -3,7 +3,9 @@ import { protectedLoader } from "oidc";
 
 export const Route = createFileRoute("/todo")({
     component: Layout,
-    beforeLoad: protectedLoader
+    beforeLoad: protectedLoader,
+    errorComponent: () => <>An error occurred</>,
+    pendingComponent: () => <>Loading ...</>
 });
 
 function Layout() {

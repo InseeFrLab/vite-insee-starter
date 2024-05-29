@@ -5,8 +5,7 @@
  * OpenAPI spec version: 2.0.1
  */
 
-export interface Todo {
-    id: string;
-    isDone: boolean;
+export type PutTodoBody = {
+    /** @minLength 1 */
     text: string;
-}
+};
