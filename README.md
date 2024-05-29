@@ -30,6 +30,7 @@ It's composed of:
 ```env
 git clone https://github.com/InseeFrLab/vite-insee-starter
 cd vite-insee-starter
+cp .env.sample .env.local
 yarn
 yarn dev
 ```
