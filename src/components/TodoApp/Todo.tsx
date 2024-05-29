@@ -27,6 +27,8 @@ type TodoProps = {
 };
 
 export const Todo = memo((props: TodoProps) => {
+    console.log(`Rendering <Todo /> ${JSON.stringify(props.todo)}`);
+
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
     const [text, setText] = useState(todo.text);
