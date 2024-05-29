@@ -27,7 +27,6 @@
         "@tanstack/react-router": "^1.33.6",
         "axios": "^1.7.1",
         "dayjs": "^1.11.11",
-        "lodash": "^4.17.21",
         "oidc-spa": "^4.6.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
