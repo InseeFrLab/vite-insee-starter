@@ -1,6 +1,7 @@
 import { memo, useState } from "react";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
+import { declareComponentKeys, useTranslation } from "i18n";
 
 type Props = {
     className?: string;
@@ -10,12 +11,14 @@ type Props = {
 export const AddTodo = memo((props: Props) => {
     const { className } = props;
 
+    const { t } = useTranslation("AddTodo");
+
     const [text, setText] = useState("");
 
     return (
         <Input
             className={className}
-            label="Add a todo"
+            label={t("add a todo")}
             addon={
                 <Button
                     iconId="ri-add-line"
@@ -26,7 +29,7 @@ export const AddTodo = memo((props: Props) => {
                         props.onAddTodo(text);
                     }}
                 >
-                    Validate
+                    {t("validate")}
                 </Button>
             }
             nativeInputProps={{
@@ -36,3 +39,7 @@ export const AddTodo = memo((props: Props) => {
         />
     );
 });
+
+const { i18n } = declareComponentKeys<"add a todo" | "validate">()("AddTodo");
+
+export type I18n = typeof i18n;

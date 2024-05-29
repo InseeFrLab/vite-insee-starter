@@ -7,10 +7,13 @@ const decodedIdTokenSchema = z.object({
     preferred_username: z.string()
 });
 
-export const { OidcProvider, useOidc, prOidc } = import.meta.env.VITE_OIDC_ISSUER
+const issuerUri = import.meta.env.VITE_OIDC_ISSUER;
+const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
+
+export const { OidcProvider, useOidc, prOidc } = issuerUri
     ? createReactOidc({
-          issuerUri: import.meta.env.VITE_OIDC_ISSUER,
-          clientId: import.meta.env.VITE_OIDC_CLIENT_ID,
+          issuerUri,
+          clientId,
           publicUrl: import.meta.env.BASE_URL,
           decodedIdTokenSchema: decodedIdTokenSchema
       })
@@ -35,3 +38,28 @@ export const protectedLoader = async () => {
         doesCurrentHrefRequiresAuth: true
     });
 };
+
+export function getKeycloakAccountUrl(params: { locale: string; accountPage: "home" | "password" }) {
+    const { locale, accountPage } = params;
+
+    const accountUrl = new URL(
+        `${issuerUri}/account${(() => {
+            switch (accountPage) {
+                case "home":
+                    return "";
+                case "password":
+                    return "/password";
+            }
+        })()}`
+    );
+
+    const searchParams = new URLSearchParams();
+
+    searchParams.append("kc_locale", locale);
+    searchParams.append("referrer", clientId);
+    searchParams.append("referrer_uri", window.location.href);
+
+    accountUrl.search = searchParams.toString();
+
+    return accountUrl.toString();
+}

@@ -5,6 +5,8 @@ import { OidcProvider } from "oidc";
 import { RouterProvider, createRouter, Link, type LinkProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { I18nFetchingSuspense } from "i18n";
+import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 
 export const queryClient = new QueryClient();
 
@@ -27,9 +29,13 @@ startReactDsfr({ defaultColorScheme: "system", Link });
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-            <OidcProvider>
-                <RouterProvider router={router} />
-            </OidcProvider>
+            <MuiDsfrThemeProvider>
+                <OidcProvider>
+                    <I18nFetchingSuspense>
+                        <RouterProvider router={router} />
+                    </I18nFetchingSuspense>
+                </OidcProvider>
+            </MuiDsfrThemeProvider>
         </QueryClientProvider>
     </React.StrictMode>
 );

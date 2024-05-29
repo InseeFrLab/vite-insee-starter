@@ -1,17 +1,15 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { useState } from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
-
+import React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import Chip from "@mui/material/Chip";
+
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import MenuList from "@mui/material/MenuList";
@@ -22,6 +20,7 @@ import ContentCut from "@mui/icons-material/ContentCut";
 import ContentCopy from "@mui/icons-material/ContentCopy";
 import ContentPaste from "@mui/icons-material/ContentPaste";
 import Cloud from "@mui/icons-material/Cloud";
+
 import dayjs, { Dayjs } from "dayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -30,40 +29,45 @@ import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
+import Box from "@mui/material/Box";
+import Badge from "@mui/material/Badge";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import MailIcon from "@mui/icons-material/Mail";
+
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+
+import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+
+import Link from "@mui/material/Link";
+
+import { styled } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Collapse from "@mui/material/Collapse";
+import Avatar from "@mui/material/Avatar";
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import { red } from "@mui/material/colors";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ShareIcon from "@mui/icons-material/Share";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+
 export const Route = createLazyFileRoute("/mui")({
     component: Mui
-});
-
-const muiDefaultDarkTheme = createTheme({
-    palette: {
-        mode: "dark"
-    }
-});
-
-const muiDefaultLightTheme = createTheme({
-    palette: {
-        mode: "light"
-    }
 });
 
 function Mui() {
     const { isDark, setIsDark } = useIsDark();
 
-    const [isProviderEnabled, setIsProviderEnabled] = useState(true);
-
-    const Children = () => (
+    return (
         <>
-            <FormControlLabel
-                control={
-                    <Switch
-                        checked={isProviderEnabled}
-                        onChange={event => setIsProviderEnabled(event.target.checked)}
-                        inputProps={{ "aria-label": "controlled" }}
-                    />
-                }
-                label="Is provider enabled"
-            />
-            <br />
             <FormControlLabel
                 control={
                     <Switch
@@ -74,26 +78,20 @@ function Mui() {
                 }
                 label="Dark mode"
             />
-
-            <Typography sx={{ mt: 7 }} variant="h4">
+            <Typography sx={{ mt: 2 }} variant="h4">
                 This is a place for testing MUI components
             </Typography>
-            <ComboBox />
+            <DataGridDemo />
             <BasicButtons />
+            <ComboBox />
             <BasicChips />
             <IconMenu />
             <MaterialUIPickers />
+            <BadgeVisibility />
+            <HorizontalLinearStepper />
+            <Links />
+            <RecipeReviewCard />
         </>
-    );
-
-    return isProviderEnabled ? (
-        <MuiDsfrThemeProvider>
-            <Children />
-        </MuiDsfrThemeProvider>
-    ) : (
-        <ThemeProvider theme={isDark ? muiDefaultDarkTheme : muiDefaultLightTheme}>
-            <Children />
-        </ThemeProvider>
     );
 }
 
@@ -244,20 +242,18 @@ const { ComboBox } = (() => {
 function BasicButtons() {
     return (
         <>
-            <Stack spacing={2} direction="row" sx={{ mt: 7 }}>
+            <Stack spacing={2} direction="row" sx={{ mt: 2 }}>
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
                 <Button variant="outlined">Outlined</Button>
             </Stack>
-            <Stack spacing={2} direction="row" sx={{ mt: 7 }}>
-                <Button color="secondary">Secondary</Button>
-                <Button color="secondary" variant="contained">
-                    Secondary contained
-                </Button>
-                <Button color="secondary" variant="outlined">
-                    Secondary contained
-                </Button>
-            </Stack>
+            {/*
+			<Stack spacing={2} direction="row" sx={{ mt: 7 }}>
+				<Button color="secondary">Secondary</Button>
+				<Button color="secondary" variant="contained">Secondary contained</Button>
+				<Button color="secondary" variant="outlined">Secondary contained</Button>
+			</Stack>
+	*/}
             <Stack spacing={2} direction="row" sx={{ mt: 7 }}>
                 <Button color="success">Success</Button>
                 <Button color="success" variant="contained">
@@ -306,6 +302,7 @@ function BasicChips() {
         </Stack>
     );
 }
+
 function IconMenu() {
     return (
         <Paper sx={{ width: 320, maxWidth: "100%", mt: 7 }}>
@@ -350,7 +347,7 @@ function IconMenu() {
 }
 
 function MaterialUIPickers() {
-    const [value, setValue] = useState<Dayjs | null>(dayjs("2014-08-18T21:11:54"));
+    const [value, setValue] = React.useState<Dayjs | null>(dayjs("2014-08-18T21:11:54"));
 
     const handleChange = (newValue: Dayjs | null) => {
         setValue(newValue);
@@ -359,11 +356,395 @@ function MaterialUIPickers() {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Stack spacing={3} sx={{ mt: 7 }}>
-                <DesktopDatePicker label="Date desktop" value={value} onChange={handleChange} />
-                <MobileDatePicker label="Date mobile" value={value} onChange={handleChange} />
-                <TimePicker label="Time" value={value} onChange={handleChange} />
-                <DateTimePicker label="Date&Time picker" value={value} onChange={handleChange} />
+                <DesktopDatePicker
+                    label="Date desktop"
+                    inputFormat="MM/DD/YYYY"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={params => <TextField {...params} />}
+                />
+                <MobileDatePicker
+                    label="Date mobile"
+                    inputFormat="MM/DD/YYYY"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={params => <TextField {...params} />}
+                />
+                <TimePicker
+                    label="Time"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={params => <TextField {...params} />}
+                />
+                <DateTimePicker
+                    label="Date&Time picker"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={params => <TextField {...params} />}
+                />
             </Stack>
         </LocalizationProvider>
     );
 }
+function BadgeVisibility() {
+    const [count, setCount] = React.useState(1);
+    const [invisible, setInvisible] = React.useState(false);
+
+    const handleBadgeVisibility = () => {
+        setInvisible(!invisible);
+    };
+
+    return (
+        <Box
+            sx={{
+                mt: 7,
+                color: "action.active",
+                display: "flex",
+                flexDirection: "column",
+                "& > *": {
+                    marginBottom: 2
+                },
+                "& .MuiBadge-root": {
+                    marginRight: 4
+                }
+            }}
+        >
+            <div>
+                <Badge color="secondary" badgeContent={count}>
+                    <MailIcon />
+                </Badge>
+                <ButtonGroup>
+                    <Button
+                        aria-label="reduce"
+                        onClick={() => {
+                            setCount(Math.max(count - 1, 0));
+                        }}
+                    >
+                        <RemoveIcon fontSize="small" />
+                    </Button>
+                    <Button
+                        aria-label="increase"
+                        onClick={() => {
+                            setCount(count + 1);
+                        }}
+                    >
+                        <AddIcon fontSize="small" />
+                    </Button>
+                </ButtonGroup>
+            </div>
+            <div>
+                <Badge color="secondary" variant="dot" invisible={invisible}>
+                    <MailIcon />
+                </Badge>
+                <FormControlLabel
+                    sx={{ color: "text.primary" }}
+                    control={<Switch checked={!invisible} onChange={handleBadgeVisibility} />}
+                    label="Show Badge"
+                />
+            </div>
+        </Box>
+    );
+}
+
+const { HorizontalLinearStepper } = (() => {
+    const steps = ["Select campaign settings", "Create an ad group", "Create an ad"];
+
+    function HorizontalLinearStepper() {
+        const [activeStep, setActiveStep] = React.useState(0);
+        const [skipped, setSkipped] = React.useState(new Set<number>());
+
+        const isStepOptional = (step: number) => {
+            return step === 1;
+        };
+
+        const isStepSkipped = (step: number) => {
+            return skipped.has(step);
+        };
+
+        const handleNext = () => {
+            let newSkipped = skipped;
+            if (isStepSkipped(activeStep)) {
+                newSkipped = new Set(newSkipped.values());
+                newSkipped.delete(activeStep);
+            }
+
+            setActiveStep(prevActiveStep => prevActiveStep + 1);
+            setSkipped(newSkipped);
+        };
+
+        const handleBack = () => {
+            setActiveStep(prevActiveStep => prevActiveStep - 1);
+        };
+
+        const handleSkip = () => {
+            if (!isStepOptional(activeStep)) {
+                // You probably want to guard against something like this,
+                // it should never occur unless someone's actively trying to break something.
+                throw new Error("You can't skip a step that isn't optional.");
+            }
+
+            setActiveStep(prevActiveStep => prevActiveStep + 1);
+            setSkipped(prevSkipped => {
+                const newSkipped = new Set(prevSkipped.values());
+                newSkipped.add(activeStep);
+                return newSkipped;
+            });
+        };
+
+        const handleReset = () => {
+            setActiveStep(0);
+        };
+
+        return (
+            <Box sx={{ width: "100%", mt: 7 }}>
+                <Stepper activeStep={activeStep}>
+                    {steps.map((label, index) => {
+                        const stepProps: { completed?: boolean } = {};
+                        const labelProps: {
+                            optional?: React.ReactNode;
+                        } = {};
+                        if (isStepOptional(index)) {
+                            labelProps.optional = <Typography variant="caption">Optional</Typography>;
+                        }
+                        if (isStepSkipped(index)) {
+                            stepProps.completed = false;
+                        }
+                        return (
+                            <Step key={label} {...stepProps}>
+                                <StepLabel {...labelProps}>{label}</StepLabel>
+                            </Step>
+                        );
+                    })}
+                </Stepper>
+                {activeStep === steps.length ? (
+                    <React.Fragment>
+                        <Typography sx={{ mt: 2, mb: 1 }}>
+                            All steps completed - you&apos;re finished
+                        </Typography>
+                        <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+                            <Box sx={{ flex: "1 1 auto" }} />
+                            <Button onClick={handleReset}>Reset</Button>
+                        </Box>
+                    </React.Fragment>
+                ) : (
+                    <React.Fragment>
+                        <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+                        <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+                            <Button
+                                color="inherit"
+                                disabled={activeStep === 0}
+                                onClick={handleBack}
+                                sx={{ mr: 1 }}
+                            >
+                                Back
+                            </Button>
+                            <Box sx={{ flex: "1 1 auto" }} />
+                            {isStepOptional(activeStep) && (
+                                <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+                                    Skip
+                                </Button>
+                            )}
+                            <Button onClick={handleNext}>
+                                {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                            </Button>
+                        </Box>
+                    </React.Fragment>
+                )}
+            </Box>
+        );
+    }
+
+    return { HorizontalLinearStepper };
+})();
+
+const { DataGridDemo } = (() => {
+    const columns: GridColDef[] = [
+        { field: "id", headerName: "ID", width: 90 },
+        {
+            field: "firstName",
+            headerName: "First name",
+            width: 150,
+            editable: true
+        },
+        {
+            field: "lastName",
+            headerName: "Last name",
+            width: 150,
+            editable: true
+        },
+        {
+            field: "age",
+            headerName: "Age",
+            type: "number",
+            width: 110,
+            editable: true
+        },
+        {
+            field: "fullName",
+            headerName: "Full name",
+            description: "This column has a value getter and is not sortable.",
+            sortable: false,
+            width: 160,
+            valueGetter: (params: GridValueGetterParams) =>
+                `${params.row.firstName || ""} ${params.row.lastName || ""}`
+        }
+    ];
+
+    const rows = [
+        { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
+        { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
+        { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
+        { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
+        { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
+        { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
+        { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
+        { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
+        { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 }
+    ];
+
+    function DataGridDemo() {
+        return (
+            <Box sx={{ height: 400, width: 800, mt: 7 }}>
+                <DataGrid rows={rows} columns={columns} checkboxSelection />
+            </Box>
+        );
+    }
+
+    return { DataGridDemo };
+})();
+
+const { Links } = (() => {
+    const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+
+    function Links() {
+        return (
+            <Box
+                sx={{
+                    typography: "body1",
+                    "& > :not(style) + :not(style)": {
+                        ml: 2
+                    },
+                    mt: 7
+                }}
+                onClick={preventDefault}
+            >
+                <Link href="#">Link</Link>
+                <Link href="#" target="_blank">
+                    Link target blank
+                </Link>
+                <Link href="#" color="inherit">
+                    {'color="inherit"'}
+                </Link>
+                <Link href="#" variant="body2">
+                    {'variant="body2"'}
+                </Link>
+            </Box>
+        );
+    }
+
+    return { Links };
+})();
+
+const { RecipeReviewCard } = (() => {
+    interface ExpandMoreProps extends IconButtonProps {
+        expand: boolean;
+    }
+
+    const ExpandMore = styled((props: ExpandMoreProps) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { expand, ...other } = props;
+        return <IconButton {...other} />;
+    })(({ theme, expand }) => ({
+        transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+        marginLeft: "auto",
+        transition: theme.transitions.create("transform", {
+            duration: theme.transitions.duration.shortest
+        })
+    }));
+
+    function RecipeReviewCard() {
+        const [expanded, setExpanded] = React.useState(false);
+
+        const handleExpandClick = () => {
+            setExpanded(!expanded);
+        };
+
+        return (
+            <Card sx={{ maxWidth: 345, mt: 7 }}>
+                <CardHeader
+                    avatar={
+                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                            R
+                        </Avatar>
+                    }
+                    action={
+                        <IconButton aria-label="settings">
+                            <MoreVertIcon />
+                        </IconButton>
+                    }
+                    title="Shrimp and Chorizo Paella"
+                    subheader="September 14, 2016"
+                />
+                <CardMedia
+                    component="img"
+                    height="194"
+                    image="https://mui.com/static/images/cards/paella.jpg"
+                    alt="Paella dish"
+                />
+                <CardContent>
+                    <Typography variant="body2" color="text.secondary">
+                        This impressive paella is a perfect party dish and a fun meal to cook together
+                        with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                    </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                    <IconButton aria-label="add to favorites">
+                        <FavoriteIcon />
+                    </IconButton>
+                    <IconButton aria-label="share">
+                        <ShareIcon />
+                    </IconButton>
+                    <ExpandMore
+                        expand={expanded}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                        <ExpandMoreIcon />
+                    </ExpandMore>
+                </CardActions>
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Typography paragraph>Method:</Typography>
+                        <Typography paragraph>
+                            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside
+                            for 10 minutes.
+                        </Typography>
+                        <Typography paragraph>
+                            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
+                            medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
+                            occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
+                            large plate and set aside, leaving chicken and chorizo in the pan. Add
+                            pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
+                            stirring often until thickened and fragrant, about 10 minutes. Add saffron
+                            broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+                        </Typography>
+                        <Typography paragraph>
+                            Add rice and stir very gently to distribute. Top with artichokes and peppers,
+                            and cook without stirring, until most of the liquid is absorbed, 15 to 18
+                            minutes. Reduce heat to medium-low, add reserved shrimp and mussels, tucking
+                            them down into the rice, and cook again without stirring, until mussels have
+                            opened and rice is just tender, 5 to 7 minutes more. (Discard any mussels
+                            that don&apos;t open.)
+                        </Typography>
+                        <Typography>
+                            Set aside off of the heat to let rest for 10 minutes, and then serve.
+                        </Typography>
+                    </CardContent>
+                </Collapse>
+            </Card>
+        );
+    }
+
+    return { RecipeReviewCard };
+})();

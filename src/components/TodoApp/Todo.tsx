@@ -7,6 +7,7 @@ import { useEvent } from "tools/useEvent";
 import { deepEqual } from "tools/deepEqual";
 import type { TodoItem } from "./type";
 import { assert } from "tsafe/assert";
+import { declareComponentKeys, useTranslation } from "i18n";
 
 // Todo item but without the id, we don't need it.
 export type TodoItemLike = {
@@ -28,6 +29,8 @@ type TodoProps = {
 
 export const Todo = memo((props: TodoProps) => {
     console.log(`Rendering <Todo /> ${JSON.stringify(props.todo)}`);
+
+    const { t } = useTranslation("Todo");
 
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
@@ -71,19 +74,23 @@ export const Todo = memo((props: TodoProps) => {
                     iconId={isEditing ? "ri-check-line" : "ri-pencil-line"}
                     onClick={onEditButtonClick}
                     priority="secondary"
-                    title="Edit"
+                    title={t("edit")}
                 />
                 <Button
                     iconId="ri-delete-bin-line"
                     onClick={onDeleteTodo}
                     priority="primary"
-                    title="Delete"
+                    title={t("delete")}
                 />
             </div>
         </div>
     );
 }, deepEqual);
 // NOTE: We use deepEqual above to avoid having the component re-render if the ref of the todo has changed but it's actually the same todo.
+
+const { i18n } = declareComponentKeys<"edit" | "delete">()("Todo");
+
+export type I18n = typeof i18n;
 
 const useStyles = tss
     .withName({ Todo })
