@@ -2558,6 +2558,11 @@ eslint-plugin-react-refresh@^0.4.6:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-refresh/-/eslint-plugin-react-refresh-0.4.7.tgz#1f597f9093b254f10ee0961c139a749acb19af7d"
   integrity sha512-yrj+KInFmwuQS2UQcg1SF83ha1tuHC1jMQbRNyuWtlEzzKRDgAl7L4Yp4NlDUZTZNlWvHEzOtJhMi40R7JxcSw==
 
+eslint-plugin-tss-unused-classes@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tss-unused-classes/-/eslint-plugin-tss-unused-classes-1.0.2.tgz#d4bc6ca40c1748bea1aaf3bc48271b96d7a1cd77"
+  integrity sha512-9Fs8Qs7G3cDAOBKqVhPw64Q/qRHeglu0Bm30OGWr+0Nd/2dRMD3zV5g65X/k2Y54aPvP7yVYjIl6Ql+o284ttA==
+
 eslint-scope@^7.2.2:
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-7.2.2.tgz#deb4f92563390f32006894af62a22dba1c46423f"
