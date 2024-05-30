@@ -1,5 +1,5 @@
 import { protectedLoader } from "oidc";
-import { useSuspenseQuery } from "@tanstack/react-query";
+import { useSuspenseQuery, useIsFetching, useIsMutating } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import {
     getGetTodosQueryKey,
@@ -68,10 +68,18 @@ function TodoIndex() {
 
     const { classes } = useStyles();
 
+    const isPending = (function useClosure() {
+        const fetchingCount = useIsFetching();
+        const mutatingCount = useIsMutating();
+
+        return fetchingCount !== 0 || mutatingCount !== 0;
+    })();
+
     return (
         <div className={classes.root}>
             <TodoApp
                 className={classes.todoApp}
+                isPending={isPending}
                 onAddTodo={addTodo}
                 onDeleteTodo={deleteTodo}
                 onToggleTodo={toggleTodo}
