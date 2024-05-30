@@ -1,7 +1,7 @@
 {
     "name": "vite-insee-starter",
     "private": true,
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "module",
     "scripts": {
         "postinstall": "copy-dsfr-to-public && vite-envs update-types",
