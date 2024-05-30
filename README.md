@@ -1,7 +1,7 @@
 # Single Page Application starter
 
 This is a suggested stack to build modern SPA.  
-It's hosted here: TODO
+It's hosted here : https://vite-insee-starter.demo-domain.ovh/
 
 It's composed of:
 
