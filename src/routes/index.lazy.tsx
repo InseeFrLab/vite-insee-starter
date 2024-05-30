@@ -1,5 +1,4 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import YouTube from "react-youtube";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { useOidc } from "oidc";
 import { tss } from "tss";
@@ -25,14 +24,6 @@ function Index() {
                         name: isUserLoggedIn ? oidcTokens.decodedIdToken.preferred_username : undefined
                     })}
                 </h3>
-                <YouTube
-                    aria-label={t("video aria label")}
-                    videoId="5q88JgXUAY4"
-                    opts={{
-                        height: "390",
-                        width: "640"
-                    }}
-                />
                 <MyComponent className={classes.myComponent} />
             </div>
         </div>
