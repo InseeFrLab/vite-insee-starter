@@ -35,10 +35,35 @@ yarn
 yarn dev
 ```
 
+## Deploying the APP  
+
+You can use the Docker Image published here: https://hub.docker.com/r/inseefrlab/vite-insee-starter  
+You have to set the environement variables:  
+
+```env
+VITE_API_URL=https://insee-todo-api.up.railway.app
+VITE_OIDC_ISSUER=https://auth.code.gouv.fr/auth/realms/playground
+VITE_OIDC_CLIENT_ID=vite-insee-starter
+```
+
+## Automatic publishing on Docker Hub
+
+The CI of this starter automatically publishes on dockerhub under `<name of the github org>/<name of the repo>` 
+
+For it to work you must have set the GitHub Actions secrets:  
+
+```
+${{ secrets.DOCKERHUB_USERNAME }}
+${{ secrets.DOCKERHUB_TOKEN }}
+```
+
+(It is configured in the option of the repo or the github org)
+
 ## The TODO rest API
 
 For demoing this stack we created a simple todo app REST API.  
-It's available here: https://github.com/InseeFrLab/todo-rest-api
+It's available here: https://github.com/InseeFrLab/todo-rest-api 
+and is deployed here: https://insee-todo-api.up.railway.app/doc
 
 ## Keycloak theme
 
