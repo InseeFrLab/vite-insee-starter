@@ -10,7 +10,7 @@ const decodedIdTokenSchema = z.object({
 const issuerUri = import.meta.env.VITE_OIDC_ISSUER;
 const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
 
-export const { OidcProvider, useOidc, prOidc } = issuerUri
+export const { OidcProvider, useOidc, getOidc } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,
@@ -27,8 +27,8 @@ export const { OidcProvider, useOidc, prOidc } = issuerUri
           }
       });
 
-export const protectedLoader = async () => {
-    const oidc = await prOidc;
+export const beforeLoadProtectedRoute = async () => {
+    const oidc = await getOidc();
 
     if (oidc.isUserLoggedIn) {
         return null;

@@ -1,13 +1,13 @@
 import Button from "@codegouvfr/react-dsfr/Button";
 import { createFileRoute } from "@tanstack/react-router";
-import { protectedLoader, useOidc, getKeycloakAccountUrl } from "oidc";
+import { beforeLoadProtectedRoute, useOidc, getKeycloakAccountUrl } from "oidc";
 import { useLang } from "i18n";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
 
 export const Route = createFileRoute("/account")({
     component: Account,
-    beforeLoad: protectedLoader
+    beforeLoad: beforeLoadProtectedRoute
 });
 
 function Account() {

@@ -1,4 +1,4 @@
-import { protectedLoader } from "oidc";
+import { beforeLoadProtectedRoute } from "oidc";
 import { useSuspenseQuery, useIsFetching, useIsMutating } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -15,7 +15,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 
 export const Route = createFileRoute("/todo")({
     component: TodoIndex,
-    beforeLoad: protectedLoader
+    beforeLoad: beforeLoadProtectedRoute
 });
 
 function TodoIndex() {

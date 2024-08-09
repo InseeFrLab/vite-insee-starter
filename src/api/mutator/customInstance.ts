@@ -1,14 +1,16 @@
 import axios, { type AxiosRequestConfig } from "axios";
-import { prOidc } from "oidc";
+import { getOidc } from "oidc";
 
 const baseInstance = axios.create({
     baseURL: import.meta.env.VITE_API_URL
 });
 
 const getAccessToken = async () => {
-    const oidc = await prOidc;
+    const oidc = await getOidc();
 
-    if (!oidc.isUserLoggedIn) return undefined;
+    if (!oidc.isUserLoggedIn) {
+        return undefined;
+    }
 
     return oidc.getTokens().accessToken;
 };
@@ -36,9 +38,8 @@ const onRequest = async (config: any) => ({
 baseInstance.interceptors.request.use(onRequest);
 
 // add a second `options` argument here if you want to pass extra options to each generated query
-export const customInstance = <T>(config: AxiosRequestConfig, options?: AxiosRequestConfig) => {
-    return baseInstance<T>({
+export const customInstance = <T>(config: AxiosRequestConfig, options?: AxiosRequestConfig) =>
+    baseInstance<T>({
         ...config,
         ...options
     }).then(({ data }) => data);
-};
