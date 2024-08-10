@@ -3,16 +3,18 @@ import type { Translations } from "../types";
 export const translations: Translations<"fr"> = {
     /* spell-checker: disable */
     Header: {
-        "select language": "Sélectionner la langue",
         "home link title": "Accueil - Nom de l'entité (ministère, secrétariat d'état, gouvernement)",
-        login: "Se connecter",
-        logout: "Se déconnecter",
-        "my account": "Mon compte",
         "service title": "Séminaire du développement",
         "operator logo alt": "Insee, mesurer pour comprendre",
         "page title home": "Acceuil",
         "page title mui": "Jouer avec Mui",
         "page title todo": "Application liste de tâches"
+    },
+    AuthButtons: {
+        login: "Se connecter",
+        register: "Créer un compte",
+        logout: "Se déconnecter",
+        "my account": "Mon compte"
     },
     Footer: {
         "operator logo alt": "Insee, mesurer pour comprendre",
