@@ -3260,13 +3260,13 @@ husky@^4.3.8:
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
 
-i18nifty@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.1.tgz#ee27e76cfdb8591d26ac980063567fac75a19c11"
-  integrity sha512-/exQ7rch7erPczJVy8gL+BD7TT24FfLFUvpLV1QW23tDB+tatq4/BN6j2V6nvADtn5GCFkhmWBe8ZzavDjQ3fQ==
+i18nifty@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.2.tgz#686d608c1ce819858afbbbd434e0ff4be7bd22df"
+  integrity sha512-pGOb7nsqPMBBFmqTgYMhOjcVWnfEOl66wH80ENZtMN7eOVq8lkM7NryzMtRYOmnAXMhCLePmIUqh1IMfckSzDg==
   dependencies:
-    powerhooks "^1.0.9"
-    tsafe "^1.6.5"
+    powerhooks "^1.0.12"
+    tsafe "^1.7.2"
 
 ignore@^5.2.0, ignore@^5.3.1:
   version "5.3.1"
@@ -4293,14 +4293,14 @@ postcss@^8.4.38:
     picocolors "^1.0.0"
     source-map-js "^1.2.0"
 
-powerhooks@^1.0.9:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.10.tgz#9d532b23294cba69d5872d859bdf843b91cb9c41"
-  integrity sha512-fJmKSVJk9Bkotl9rK1ryVPSqhY4xOZKxM6deyTaMbICK8jHh/CQztN2mNTxlKu6vkJBIFj1cRd/7N6slh3uM6w==
+powerhooks@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.12.tgz#772853776343af3ad3c7cd9c95c99432d8a325de"
+  integrity sha512-KBgUbUbm7XwFRIubNS6rwZMdSHGz97LAWPP6tSbBxI9nu1sIdrL7HDs/JRe6OZmv7zjw/G10JxPcJMKFtsHLSA==
   dependencies:
     evt "^2.5.7"
     memoizee "^0.4.15"
-    tsafe "^1.6.6"
+    tsafe "^1.7.2"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -4888,7 +4888,7 @@ ts-api-utils@^1.3.0:
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-1.3.0.tgz#4b490e27129f1e8e686b45cc4ab63714dc60eea1"
   integrity sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==
 
-tsafe@^1.6.5, tsafe@^1.6.6:
+tsafe@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.6.tgz#fd93e64d6eb13ef83ed1650669cc24bad4f5df9f"
   integrity sha512-gzkapsdbMNwBnTIjgO758GujLCj031IgHK/PKr2mrmkCSJMhSOR5FeOuSxKLMUoYc0vAA4RGEYYbjt/v6afD3g==
