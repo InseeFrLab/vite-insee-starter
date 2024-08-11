@@ -14,7 +14,7 @@
         "format:check": "npm run _format -- --list-different",
         "predev": "react-dsfr update-icons",
         "prebuild": "react-dsfr update-icons",
-        "openapi": "orval --config ./orval.config.ts"
+        "generate-todos-api-client": "tsx scripts/generate-todos-api-client.ts"
     },
     "dependencies": {
         "@codegouvfr/react-dsfr": "^1.11.2",
@@ -53,8 +53,10 @@
         "eslint-plugin-tss-unused-classes": "^1.0.2",
         "husky": "^4.3.8",
         "lint-staged": "^15.2.2",
+        "node-fetch": "^3.3.2",
         "orval": "^6.29.1",
         "prettier": "^3.2.5",
+        "tsx": "^4.17.0",
         "typescript": "^5.4.5",
         "vite": "^5.2.0"
     },

@@ -6,10 +6,10 @@ import { MyComponent } from "components/MyComponent";
 import { fr } from "@codegouvfr/react-dsfr";
 
 export const Route = createLazyFileRoute("/")({
-    component: Index
+    component: Page
 });
 
-function Index() {
+function Page() {
     const { t } = useTranslation("Index");
 
     const { isUserLoggedIn, oidcTokens } = useOidc();
@@ -30,7 +30,7 @@ function Index() {
     );
 }
 
-const useStyles = tss.withName({ Index }).create({
+const useStyles = tss.create({
     root: {
         display: "flex",
         justifyContent: "center"

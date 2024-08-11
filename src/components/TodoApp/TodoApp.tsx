@@ -6,6 +6,11 @@ import type { TodoItem } from "./type";
 import { fr } from "@codegouvfr/react-dsfr";
 import CircularProgress from "@mui/material/CircularProgress";
 
+/*
+NOTE: This component is abstracted away from the actual API calls in order
+to make it easily testable in tools like Storybook.
+*/
+
 type Props = {
     className?: string;
     isPending: boolean;
@@ -24,12 +29,15 @@ export function TodoApp(props: Props) {
 
     /*
 
+    The use of `usePartiallyAppliedEvent` here is to demo how to render large lists of 
+    components without having your app slow down to a crawl when the list gets large.  
+
     Example:  
 
     ```ts
     const todoId= "123"
 
-    const onUpdateEvent =  getOnUpdateTodoText(todoId);
+    const onUpdateEvent = getOnUpdateTodoText(todoId);
 
     const text = "Hello"
 
@@ -49,8 +57,8 @@ export function TodoApp(props: Props) {
     are stable.  
     Learn more: https://stackblitz.com/edit/react-ts-fyrwng?file=index.tsx
 
-    Hot take: The builtin useCallback() hook should never be used. In any scenario.  
-    It almost never enables to avoid rerender and is very error prone. It shouldn't exist in the first place.  
+    Hot take: The builtin useCallback() is almost always not what you actually want.    
+    It almost never enables to avoid rerender and is very error prone.   
     https://stackoverflow.com/questions/65890278/why-cant-usecallback-always-return-the-same-ref
 
     Note: This is the state of the art for React 18. React 19 shuffles the deck with it's pre-compiler

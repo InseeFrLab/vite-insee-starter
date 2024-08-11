@@ -6,11 +6,11 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
 
 export const Route = createFileRoute("/account")({
-    component: Account,
+    component: Page,
     beforeLoad: beforeLoadProtectedRoute
 });
 
-function Account() {
+function Page() {
     const { oidcTokens, renewTokens } = useOidc({ assertUserLoggedIn: true });
 
     const { lang } = useLang();

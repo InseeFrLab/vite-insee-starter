@@ -62,10 +62,10 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useStyles } from "tss";
 
 export const Route = createLazyFileRoute("/mui")({
-    component: Mui
+    component: Page
 });
 
-function Mui() {
+function Page() {
     const { isDark, setIsDark } = useIsDark();
 
     const { css } = useStyles();
