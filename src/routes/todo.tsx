@@ -13,7 +13,7 @@ export const Route = createFileRoute("/todo")({
 });
 
 function Page() {
-    const { todos, createTodo, deleteTodo, isPending, updateTodo } = useTodosApi();
+    const { todos, createTodo, deleteTodo, updateTodo, isPending } = useTodosApi();
 
     const { classes } = useStyles();
 
