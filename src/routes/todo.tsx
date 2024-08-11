@@ -1,5 +1,5 @@
 import { beforeLoadProtectedRoute } from "oidc";
-import { useSuspenseQuery, useIsFetching, useIsMutating } from "@tanstack/react-query";
+import { useSuspenseQuery, useQueryClient, useIsFetching, useIsMutating } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import {
     getGetTodosQueryKey,
@@ -9,7 +9,6 @@ import {
     usePutTodoId
 } from "api/endpoints/default";
 import { TodoApp } from "components/TodoApp";
-import { queryClient } from "main";
 import { tss } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
 
@@ -21,6 +20,8 @@ export const Route = createFileRoute("/todo")({
 function TodoIndex() {
     const todoQuery = useSuspenseQuery(getGetTodosQueryOptions());
     const todos = todoQuery.data;
+
+    const queryClient = useQueryClient();
 
     const mutationPutTodo = usePutTodoId({
         mutation: {

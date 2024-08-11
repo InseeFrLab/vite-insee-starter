@@ -2,11 +2,10 @@ import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
-import { QueryClient } from "@tanstack/react-query";
 import { AutoLogoutCountdown } from "components/AutoLogoutCountdown";
 import { tss, GlobalStyles } from "tss";
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRouteWithContext()({
     component: RootComponent,
     notFoundComponent: () => <>The route is not defined</>
 });

@@ -16,6 +16,7 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
           clientId,
           publicUrl: import.meta.env.BASE_URL,
           decodedIdTokenSchema: decodedIdTokenSchema
+          //doEnableDebugLogs: true
       })
     : createMockReactOidc({
           isUserInitiallyLoggedIn: false,

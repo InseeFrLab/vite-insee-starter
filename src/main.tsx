@@ -8,9 +8,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { I18nFetchingSuspense } from "i18n";
 import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 
-export const queryClient = new QueryClient();
+const queryClient = new QueryClient();
 
-const router = createRouter({ routeTree, context: { queryClient } });
+const router = createRouter({ routeTree });
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
     interface Register {

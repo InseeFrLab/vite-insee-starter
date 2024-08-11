@@ -28,8 +28,6 @@ type TodoProps = {
 };
 
 export const Todo = memo((props: TodoProps) => {
-    console.log(`Rendering <Todo /> ${JSON.stringify(props.todo)}`);
-
     const { t } = useTranslation("Todo");
 
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
