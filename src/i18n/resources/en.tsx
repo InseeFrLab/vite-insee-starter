@@ -31,9 +31,12 @@ export const translations: Translations<"en"> = {
         "add a todo": "Add a task",
         validate: "Validate"
     },
-    Index: {
+    DefaultPage: {
         welcome: ({ name }) => <>Welcome {name === undefined ? "" : <strong>{name}</strong>}!</>,
         "video aria label": "Demonstration video of react-dsfr"
+    },
+    TodoPage: {
+        "waking up container": "The REST API container is waking up ..."
     }
     /* spell-checker: enable */
 };

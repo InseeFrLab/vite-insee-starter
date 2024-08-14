@@ -31,9 +31,12 @@ export const translations: Translations<"fr"> = {
         "add a todo": "Ajouter une tâche",
         validate: "Valider"
     },
-    Index: {
+    DefaultPage: {
         welcome: ({ name }) => <>Bienvenue {name === undefined ? "" : <strong>{name}</strong>}!</>,
         "video aria label": "Video de démonstration de react-dsfr"
+    },
+    TodoPage: {
+        "waking up container": "Le conteneur de l'API REST est en cours de démarrage ..."
     }
     /* spell-checker: enable */
 };

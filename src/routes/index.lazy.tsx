@@ -10,7 +10,7 @@ export const Route = createLazyFileRoute("/")({
 });
 
 function Page() {
-    const { t } = useTranslation("Index");
+    const { t } = useTranslation("DefaultPage");
 
     const { isUserLoggedIn, oidcTokens } = useOidc();
 
@@ -53,6 +53,6 @@ const { i18n } = declareComponentKeys<
           R: JSX.Element;
       }
     | "video aria label"
->()("Index");
+>()("DefaultPage");
 
 export type I18n = typeof i18n;

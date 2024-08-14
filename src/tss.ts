@@ -1,4 +1,4 @@
-import { createTss, GlobalStyles } from "tss-react";
+import { createTss, GlobalStyles, keyframes } from "tss-react";
 import { useTheme } from "@mui/material/styles";
 import { useWindowInnerSize } from "@codegouvfr/react-dsfr/tools/useWindowInnerSize";
 import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsValuesPx";
@@ -30,4 +30,4 @@ export const { tss } = createTss({
 
 export const useStyles = tss.create({});
 
-export { GlobalStyles };
+export { GlobalStyles, keyframes };
