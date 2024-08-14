@@ -2,13 +2,7 @@ import { HeaderQuickAccessItem } from "@codegouvfr/react-dsfr/Header";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { useOidc } from "oidc";
 
-type Props = {
-    id?: string;
-};
-
-export function AuthButtons(props: Props) {
-    const { id } = props;
-
+export function AuthButtons() {
     const { isUserLoggedIn, login, logout } = useOidc();
 
     const { t } = useTranslation("AuthButtons");
@@ -17,7 +11,6 @@ export function AuthButtons(props: Props) {
         return (
             <>
                 <HeaderQuickAccessItem
-                    id={`login-${id}`}
                     quickAccessItem={{
                         iconId: "fr-icon-lock-line",
                         buttonProps: {
@@ -27,7 +20,6 @@ export function AuthButtons(props: Props) {
                     }}
                 />
                 <HeaderQuickAccessItem
-                    id={`register-${id}`}
                     quickAccessItem={{
                         iconId: "ri-id-card-line",
                         buttonProps: {
@@ -56,7 +48,6 @@ export function AuthButtons(props: Props) {
     return (
         <>
             <HeaderQuickAccessItem
-                id={`account-${id}`}
                 quickAccessItem={{
                     iconId: "fr-icon-account-fill",
                     linkProps: {
@@ -66,7 +57,6 @@ export function AuthButtons(props: Props) {
                 }}
             />
             <HeaderQuickAccessItem
-                id={`logout-${id}`}
                 quickAccessItem={{
                     iconId: "ri-logout-box-line",
                     buttonProps: {
