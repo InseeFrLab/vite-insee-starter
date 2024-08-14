@@ -17,7 +17,7 @@
         "generate-todos-api-client": "tsx scripts/generate-todos-api-client.ts"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.11.2",
+        "@codegouvfr/react-dsfr": "^1.11.3",
         "@emotion/react": "^11.11.4",
         "@emotion/styled": "^11.11.5",
         "@mui/icons-material": "^5.14.18",
@@ -26,7 +26,7 @@
         "@mui/x-data-grid": "^6.18.2",
         "@mui/x-date-pickers": "^5.0.12",
         "@tanstack/react-query": "^5.51.23",
-        "@tanstack/react-router": "^1.47.1",
+        "@tanstack/react-router": "^1.47.5",
         "axios": "^1.7.1",
         "dayjs": "^1.11.7",
         "i18nifty": "^3.2.2",
@@ -40,7 +40,7 @@
         "zod": "^3.23.8"
     },
     "devDependencies": {
-        "@tanstack/router-devtools": "^1.47.1",
+        "@tanstack/router-devtools": "^1.47.5",
         "@tanstack/router-vite-plugin": "^1.47.0",
         "@types/react": "^18.2.66",
         "@types/react-dom": "^18.2.22",
