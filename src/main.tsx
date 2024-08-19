@@ -26,6 +26,8 @@ declare module "@codegouvfr/react-dsfr/spa" {
 
 startReactDsfr({ defaultColorScheme: "system", Link });
 
+console.log(typeof import.meta.env.PROD, import.meta.env.PROD);
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
