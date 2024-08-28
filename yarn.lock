@@ -4033,10 +4033,10 @@ object.assign@^4.1.5:
     has-symbols "^1.0.3"
     object-keys "^1.1.1"
 
-oidc-spa@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.1.2.tgz#32c48a9932777e4f231dd83cecb5a41430bdac1b"
-  integrity sha512-iHAOwPYHgFMPNAEjJxkEjUEtDE8YPx8bP6eniKd+L3JRQpj27kWP25xpH40enb7DQgJ+gPdU6Ft8TvUByWcpjQ==
+oidc-spa@^5.2.7:
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.2.7.tgz#74c5b730fb9a18c6221ae80245a0e6cecf86282e"
+  integrity sha512-OGl4YnQoZzoF1Dg1pd3rJ96wkdd8n8N7t/fbfpZutAAmTvJlZK3ok9PbaYDDeNLvqlt6GK5zdw+ntaNs6vHkXQ==
 
 once@^1.3.0:
   version "1.4.0"
