@@ -24,6 +24,9 @@ function Page() {
                         name: isUserLoggedIn ? oidcTokens.decodedIdToken.preferred_username : undefined
                     })}
                 </h3>
+                <a href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
+                    InseeFrLab/vite-insee-starter
+                </a>
                 <MyComponent className={classes.myComponent} />
             </div>
         </div>

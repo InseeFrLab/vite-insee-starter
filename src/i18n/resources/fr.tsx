@@ -4,7 +4,7 @@ export const translations: Translations<"fr"> = {
     /* spell-checker: disable */
     Header: {
         "home link title": "Accueil - Nom de l'entité (ministère, secrétariat d'état, gouvernement)",
-        "service title": "Séminaire du développement",
+        "service title": "Modèle d'Application Web de l'Insee",
         "operator logo alt": "Insee, mesurer pour comprendre",
         "page title home": "Acceuil",
         "page title mui": "Jouer avec Mui",
