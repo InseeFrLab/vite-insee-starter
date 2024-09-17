@@ -435,10 +435,10 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@codegouvfr/react-dsfr@^1.11.5":
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.11.5.tgz#eff36084642d2dede7eb5c024540d562123f9f5e"
-  integrity sha512-+49AVVeRwGBq0YS6jUyhyPdN8OSg71fOYaPid5AeUIeCpsn3rOK5zgcXHnyT3vc88dKXferuljB8666UDvChzQ==
+"@codegouvfr/react-dsfr@^1.13.5":
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.13.5.tgz#59086c7d5bbbb5d490e6c15060f2f849128cadf2"
+  integrity sha512-hEHNqwbG5CkmYekP6lGr1WIomLkqWU24CbEYAA66jQnk3oFUaMMimVZWfo28rYAjUc2OUkCUy/7WRz+gVBzRWQ==
   dependencies:
     tsafe "^1.7.2"
     yargs-parser "^21.1.1"
