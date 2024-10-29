@@ -1,0 +1,24 @@
+x-react-volumes: &react-volumes
+    - ./:/opt/app
+
+services:
+    front:
+        container_name: reactapp
+        image: node:20
+        hostname: front
+        profiles:
+            - dev
+        volumes: *react-volumes
+        tty: true
+        stdin_open: true # without this node doesn't start
+        working_dir: /opt/app
+        ports:
+            - 3000:3000 # use by react
+            - 5173:5173 # use by vite
+        env_file: ".env-compose"
+        environment:
+            WATCHPACK_POLLING: true
+            FAST_REFRESH: false
+            HTTP_PROXY: ${HTTP_PROXY}
+            HTTPS_PROXY: ${HTTPS_PROXY}
+            NO_PROXY: ${NO_PROXY}
