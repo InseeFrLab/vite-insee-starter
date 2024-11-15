@@ -7,16 +7,21 @@ RUN yarn install --frozen-lockfile
 RUN yarn build
 
 # production environment
-FROM nginxinc/nginx-unprivileged:1.25-alpine
+FROM nginxinc/nginx-unprivileged:1.27-alpine
 
 # Non root user
 ENV NGINX_USER_ID=101
 ENV NGINX_GROUP_ID=101
 ENV NGINX_USER=nginx
 
-USER $NGINX_USER_ID
 
-COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf    
+RUN rm etc/nginx/conf.d/default.conf
+COPY --chown=$NGINX_USER:$NGINX_USER --from=build /app/nginx.conf /etc/nginx/conf.d/nginx.conf
+
 WORKDIR /usr/share/nginx/html
-COPY --from=build /app/dist .
+COPY --chown=$NGINX_USER:$NGINX_USER --from=build /app/dist .
+
+USER $NGINX_USER_ID
+EXPOSE 8080
+
 ENTRYPOINT sh -c "./vite-envs.sh && nginx -g 'daemon off;'"
