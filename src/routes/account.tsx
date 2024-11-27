@@ -36,7 +36,7 @@ function Page() {
             <div>
                 <p>OpenID Connect Access Token:</p>
                 <p>{oidcTokens.accessToken}</p>
-                <Button onClick={renewTokens}>Renew token</Button>
+                <Button onClick={() => renewTokens()}>Renew token</Button>
             </div>
         </>
     );

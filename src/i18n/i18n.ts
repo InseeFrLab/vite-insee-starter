@@ -1,6 +1,6 @@
 import { createI18nApi, declareComponentKeys } from "i18nifty";
 import { languages, fallbackLanguage } from "./types";
-import { ComponentKey } from "./types";
+import type { ComponentKey } from "./types";
 export { declareComponentKeys };
 
 export type LocalizedString = Parameters<typeof resolveLocalizedString>[0];

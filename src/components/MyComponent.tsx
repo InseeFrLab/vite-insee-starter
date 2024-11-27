@@ -2,7 +2,7 @@ import { useState } from "react";
 import { tss } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
 
-export type Props = {
+type Props = {
     className?: string;
 };
 

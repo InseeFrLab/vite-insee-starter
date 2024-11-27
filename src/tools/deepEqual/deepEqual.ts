@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { MapLike, SetLike, DateLike, ArrayLike } from "./types";
 import { assert } from "tsafe/assert";
 import { is } from "tsafe/is";
@@ -119,8 +118,8 @@ export const deepEqual = (() => {
         }
 
         //NOTE: The two following lines shouldn't be necessary...
-        assert(is<Object>(o1));
-        assert(is<Object>(o2));
+        assert(is<object>(o1));
+        assert(is<object>(o2));
 
         if (ArrayLike.match<any>(o1)) {
             if (!ArrayLike.match<any>(o2)) {

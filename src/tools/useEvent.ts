@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Parameters } from "tsafe/Parameters";
+import type { Parameters } from "tsafe/Parameters";
 
 /**
  * https://stackoverflow.com/questions/65890278/why-cant-usecallback-always-return-the-same-ref

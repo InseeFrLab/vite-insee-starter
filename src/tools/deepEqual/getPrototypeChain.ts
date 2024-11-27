@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-types */
-
-export function getPrototypeChain(obj: Object, callback?: (proto: Object) => boolean): Object[] {
+export function getPrototypeChain(obj: object, callback?: (proto: object) => boolean): object[] {
     const proto = Object.getPrototypeOf(obj);
 
     if (!proto) {
@@ -15,7 +13,7 @@ export function getPrototypeChain(obj: Object, callback?: (proto: Object) => boo
 
     return [proto, ...getPrototypeChain(proto)];
 }
-getPrototypeChain.isMatched = (obj: Object, regExp: RegExp): boolean => {
+getPrototypeChain.isMatched = (obj: object, regExp: RegExp): boolean => {
     let out = false;
 
     getPrototypeChain(obj, ({ constructor }) => {
