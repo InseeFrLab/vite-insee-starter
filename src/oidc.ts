@@ -1,6 +1,7 @@
 import { createReactOidc } from "oidc-spa/react";
 import { createMockReactOidc } from "oidc-spa/mock/react";
 import { z } from "zod";
+import { getIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 
 const decodedIdTokenSchema = z.object({
     sub: z.string(),
@@ -15,7 +16,10 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
           issuerUri,
           clientId,
           publicUrl: import.meta.env.BASE_URL,
-          decodedIdTokenSchema: decodedIdTokenSchema
+          decodedIdTokenSchema: decodedIdTokenSchema,
+          extraQueryParams: () => ({
+              dark: getIsDark() ? "true" : "false"
+          })
           //doEnableDebugLogs: true
       })
     : createMockReactOidc({
