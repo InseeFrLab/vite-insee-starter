@@ -56,6 +56,6 @@ const { i18n } = declareComponentKeys<
           R: JSX.Element;
       }
     | "video aria label"
->()("DefaultPage");
+>()({ DefaultPage: Page });
 
 export type I18n = typeof i18n;

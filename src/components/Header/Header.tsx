@@ -6,7 +6,7 @@ import { LanguageSelect } from "./LanguageSelect";
 import { AuthButtons } from "./AuthButtons";
 
 export function Header() {
-    const { t } = useTranslation("Header");
+    const { t } = useTranslation({ Header });
 
     return (
         <DsfrHeader
@@ -53,6 +53,6 @@ const { i18n } = declareComponentKeys<
     | "page title home"
     | "page title mui"
     | "page title todo"
->()("Header");
+>()({ Header });
 
 export type I18n = typeof i18n;

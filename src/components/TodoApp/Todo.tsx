@@ -28,7 +28,7 @@ type TodoProps = {
 };
 
 export const Todo = memo((props: TodoProps) => {
-    const { t } = useTranslation("Todo");
+    const { t } = useTranslation({ Todo });
 
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
@@ -86,7 +86,7 @@ export const Todo = memo((props: TodoProps) => {
 }, deepEqual);
 // NOTE: We use deepEqual above to avoid having the component re-render if the ref of the todo has changed but it's actually the same todo.
 
-const { i18n } = declareComponentKeys<"edit" | "delete">()("Todo");
+const { i18n } = declareComponentKeys<"edit" | "delete">()({ Todo });
 
 export type I18n = typeof i18n;
 

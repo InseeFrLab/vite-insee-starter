@@ -7,6 +7,7 @@ import { routeTree } from "./routeTree.gen";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { I18nFetchingSuspense } from "i18n";
 import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
+import { useLang } from "i18n";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +25,14 @@ declare module "@codegouvfr/react-dsfr/spa" {
     }
 }
 
-startReactDsfr({ defaultColorScheme: "system", Link });
+startReactDsfr({
+    defaultColorScheme: "system",
+    Link,
+    useLang: function useLangDsfr() {
+        const { lang } = useLang();
+        return lang;
+    }
+});
 
 console.log(typeof import.meta.env.PROD, import.meta.env.PROD);
 

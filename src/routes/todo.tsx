@@ -54,7 +54,7 @@ function Page() {
     );
 }
 
-const { i18n } = declareComponentKeys<"waking up container">()("TodoPage");
+const { i18n } = declareComponentKeys<"waking up container">()({ TodoPage: Page });
 
 export type I18n = typeof i18n;
 

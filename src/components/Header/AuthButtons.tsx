@@ -5,7 +5,7 @@ import { useOidc } from "oidc";
 export function AuthButtons() {
     const { isUserLoggedIn, login, logout } = useOidc();
 
-    const { t } = useTranslation("AuthButtons");
+    const { t } = useTranslation({ AuthButtons });
 
     if (!isUserLoggedIn) {
         return (
@@ -72,6 +72,6 @@ export function AuthButtons() {
     );
 }
 
-const { i18n } = declareComponentKeys<"login" | "register" | "logout" | "my account">()("AuthButtons");
+const { i18n } = declareComponentKeys<"login" | "register" | "logout" | "my account">()({ AuthButtons });
 
 export type I18n = typeof i18n;

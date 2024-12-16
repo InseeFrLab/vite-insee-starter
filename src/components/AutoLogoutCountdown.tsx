@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useOidc } from "oidc";
 import { useStyles } from "tss";
+import { declareComponentKeys } from "i18nifty";
+import { useTranslation } from "i18n";
 
 export function AutoLogoutCountdown() {
     const { isUserLoggedIn, subscribeToAutoLogoutCountdown } = useOidc();
@@ -33,6 +35,8 @@ export function AutoLogoutCountdown() {
 
     const { css } = useStyles();
 
+    const { t } = useTranslation({ AutoLogoutCountdown });
+
     if (secondsLeft === undefined) {
         return null;
     }
@@ -55,9 +59,17 @@ export function AutoLogoutCountdown() {
             })}
         >
             <div className={css({ textAlign: "center" })}>
-                <p>Are you still there?</p>
-                <p>You will be logged out in {secondsLeft}</p>
+                <p>{t("paragrah still there")}</p>
+                <p>{t("paragrah will be logged out", { secondsLeft })}</p>
             </div>
         </div>
     );
 }
+
+const { i18n } = declareComponentKeys<
+    "paragrah still there" | { K: "paragrah will be logged out"; P: { secondsLeft: number } }
+>()({
+    AutoLogoutCountdown
+});
+
+export type I18n = typeof i18n;
