@@ -1307,9 +1307,9 @@
     "@tanstack/query-core" "5.62.7"
 
 "@tanstack/react-router@^1.90.0":
-  version "1.91.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.91.0.tgz#8aa77ffcf5b8cc23dfbf9d3a17b471d6e5c97b13"
-  integrity sha512-OdjgkPWtxtEJFm2A3chPVa1Jy0dd6jsF6BFMjLh9eW0YoK0AsW+D1+52BCXR3Pq4EdF7OXCk2RfjvzY81sJ7bg==
+  version "1.91.3"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.91.3.tgz#9a18c7c4357d1e54fb08526c14aaa6ce459ec2e3"
+  integrity sha512-T6k50ApwcWKYjJB4VSK2WhXu/p40luynNJg5QC3oIqk24p0tLlgXIblXoTJzy7lVvDmQ4lwHCP9dBTvLy5NhVA==
   dependencies:
     "@tanstack/history" "1.90.0"
     "@tanstack/react-store" "^0.6.1"
@@ -1326,9 +1326,9 @@
     use-sync-external-store "^1.2.2"
 
 "@tanstack/router-devtools@^1.90.0":
-  version "1.91.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.91.0.tgz#dca89dc49bbe3049e19ba8c8f0ff7723ec383e0e"
-  integrity sha512-a5LjwuF57HyWQ4nt3bqmST1FO5mRH3JLbhBBE9vwrI94yYQsaOf+OTeYNldV7SMMtyUBbVZefmrJTA6kfKtBTA==
+  version "1.91.3"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.91.3.tgz#b869c9817d9d39e37ef29dab3c10a6fc2657b7c9"
+  integrity sha512-b/WOhWEC7+Znh0+OrSGxl7RMCwHT5vX6fygDN1wh1yiUOjs32EJquu4c9deWzRDlF3jV6ji7XYWs1XgKXcsrww==
   dependencies:
     clsx "^2.1.1"
     goober "^2.1.16"
@@ -1343,10 +1343,10 @@
     tsx "^4.19.2"
     zod "^3.23.8"
 
-"@tanstack/router-plugin@^1.91.0":
-  version "1.91.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.91.0.tgz#e58bc53f45b6db088b3274709724e0e5f8797e9d"
-  integrity sha512-aqgpsLDNgNY07UawOtU++bSDsuRmdt7i9PN1XbAxu1aY3uVTlLwdbg4OJIX30XXwJVRcXtLRr/SCQ5M7PyvkjQ==
+"@tanstack/router-plugin@^1.91.1":
+  version "1.91.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.91.1.tgz#71c87b3e88addbd5c790ab569e79534f840dba8b"
+  integrity sha512-+htKBNRKwdZjpgT0ee32oBb7gpH3o0cJUKvx74oTfZ9N5oth255pns1ka4Sa6lhC/gyvC3NLgk/lMqD7eVJejA==
   dependencies:
     "@babel/core" "^7.26.0"
     "@babel/generator" "^7.26.3"
@@ -1362,17 +1362,17 @@
     "@types/babel__generator" "^7.6.8"
     "@types/babel__template" "^7.4.4"
     "@types/babel__traverse" "^7.20.6"
-    babel-dead-code-elimination "^1.0.7"
+    babel-dead-code-elimination "^1.0.8"
     chokidar "^3.6.0"
     unplugin "^1.16.0"
     zod "^3.23.8"
 
 "@tanstack/router-vite-plugin@^1.87.13":
-  version "1.91.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.91.0.tgz#aa6daed8b23f74ac2836a4af2ba1bb446564b824"
-  integrity sha512-sE9YSDRqOGicUPrN+RCDgiBoc6fz/SVG3NsZgwO7NY8SrkUvuaVd8PG8zzOFOIUH1tmLW8Vb1T7S7xjDWvxeHg==
+  version "1.91.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.91.1.tgz#0e5bace59cbcaf4c2ac8ceaf05806d97e30eb13d"
+  integrity sha512-wJvDJQOeQrUgLNuv88tf1ERuB48DKf9BkybNNSaIZkfAn4biA8ciyfiZiwnMUVh5zljaaEYSdds4nMiqlPhrrw==
   dependencies:
-    "@tanstack/router-plugin" "^1.91.0"
+    "@tanstack/router-plugin" "^1.91.1"
 
 "@tanstack/store@0.6.0":
   version "0.6.0"
@@ -1749,10 +1749,10 @@ axios@^1.7.9:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
-babel-dead-code-elimination@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/babel-dead-code-elimination/-/babel-dead-code-elimination-1.0.7.tgz#d647cc7db743bedf6d94691a7b9a52ce8e84c582"
-  integrity sha512-i5/SpxQWT/2n/hBMQC3n4Zxdxjx5x6FdjByG3RLkEgE2bLSpsuiJFECeK/8GO8ZPfiQ6rGwlU4RK6b+I1VPI6A==
+babel-dead-code-elimination@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/babel-dead-code-elimination/-/babel-dead-code-elimination-1.0.8.tgz#d8d14a7da8dc1650238834c2395594b77b716099"
+  integrity sha512-og6HQERk0Cmm+nTT4Od2wbPtgABXFMPaHACjbKLulZIFMkYyXZLkUGuAxdgpMJBrxyt/XFpSz++lNzjbcMnPkQ==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/parser" "^7.23.6"
@@ -1837,9 +1837,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001688:
-  version "1.0.30001689"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001689.tgz#67ca960dd5f443903e19949aeacc9d28f6e10910"
-  integrity sha512-CmeR2VBycfa+5/jOfnp/NpWPGd06nf1XYiefUvhXFfZE4GkRc9jv+eGPS4nT558WS/8lYCzV8SlANCIPvbWP1g==
+  version "1.0.30001690"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001690.tgz#f2d15e3aaf8e18f76b2b8c1481abde063b8104c8"
+  integrity sha512-5ExiE3qQN6oF8Clf8ifIDcMRCRE/dMGcETG/XGMD8/XiXm6HXQgQTh1yZYLXXpSOsEUlJm1Xr7kGULZTuGtP/w==
 
 chalk@^4.0.0, chalk@^4.1.2:
   version "4.1.2"
