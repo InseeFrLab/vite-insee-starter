@@ -1412,17 +1412,17 @@
   resolved "https://registry.yarnpkg.com/@tanstack/history/-/history-1.95.2.tgz#dbe688889904365748e9c3ebdca391718ac73a7e"
   integrity sha512-FgUauZLg+nRybH5dKyAYokmXs064rHc0qpMizKxTegSTMHj/z2B6T7pjEG2Zd6dBegeYNVL97ROg7Srr9cuBug==
 
-"@tanstack/query-core@5.62.16":
-  version "5.62.16"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.62.16.tgz#f7efc92b1562a054748bc00c7f8d9d833407503b"
-  integrity sha512-9Sgft7Qavcd+sN0V25xVyo0nfmcZXBuODy3FVG7BMWTg1HMLm8wwG5tNlLlmSic1u7l1v786oavn+STiFaPH2g==
+"@tanstack/query-core@5.64.1":
+  version "5.64.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.64.1.tgz#d56e26b3e29fc68a89d140f1fd92900bc8f3fc86"
+  integrity sha512-978Wx4Wl4UJZbmvU/rkaM9cQtXXrbhK0lsz/UZhYIbyKYA8E4LdomTwyh2GHZ4oU0BKKoDH4YlKk2VscCUgNmg==
 
 "@tanstack/react-query@^5.62.7":
-  version "5.63.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.63.0.tgz#18e00e24a485f707cfd41f4b30679f70e6ca6016"
-  integrity sha512-QWizLzSiog8xqIRYmuJRok9VELlXVBAwtINgVCgW1SNvamQwWDO5R0XFSkjoBEj53x9Of1KAthLRBUC5xmtVLQ==
+  version "5.64.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.64.1.tgz#46b4182f5b045299e4be8d0a91c549ac5dc0a20c"
+  integrity sha512-vW5ggHpIO2Yjj44b4sB+Fd3cdnlMJppXRBJkEHvld6FXh3j5dwWJoQo7mGtKI2RbSFyiyu/PhGAy0+Vv5ev9Eg==
   dependencies:
-    "@tanstack/query-core" "5.62.16"
+    "@tanstack/query-core" "5.64.1"
 
 "@tanstack/react-router@^1.90.0":
   version "1.95.3"
@@ -1575,11 +1575,6 @@
   version "15.7.14"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.14.tgz#1433419d73b2a7ebfc6918dcefd2ec0d5cd698f2"
   integrity sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==
-
-"@types/prop-types@^15.7.13":
-  version "15.7.13"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.13.tgz#2af91918ee12d9d32914feb13f5326658461b451"
-  integrity sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==
 
 "@types/react-dom@^18.3.5":
   version "18.3.5"
