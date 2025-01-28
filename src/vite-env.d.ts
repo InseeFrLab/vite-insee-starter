@@ -9,7 +9,6 @@ type ImportMetaEnv = {
   VITE_TODOS_API_URL: string
   VITE_OIDC_ISSUER: string
   VITE_OIDC_CLIENT_ID: string
-  VITE_OLTP_ENDPOINT_URL: string
   BASE_URL: string
   MODE: string
   DEV: boolean

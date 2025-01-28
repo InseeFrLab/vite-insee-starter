@@ -15,7 +15,7 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,
-          publicUrl: import.meta.env.BASE_URL,
+          BASE_URL: import.meta.env.BASE_URL,
           decodedIdTokenSchema: decodedIdTokenSchema,
           extraQueryParams: () => ({
               dark: getIsDark() ? "true" : "false"
@@ -24,6 +24,7 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
       })
     : createMockReactOidc({
           isUserInitiallyLoggedIn: false,
+          homeUrl: import.meta.env.BASE_URL,
           mockedTokens: {
               decodedIdToken: {
                   sub: "123",

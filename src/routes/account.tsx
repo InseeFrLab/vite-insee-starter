@@ -11,7 +11,7 @@ export const Route = createFileRoute("/account")({
 });
 
 function Page() {
-    const { oidcTokens, renewTokens } = useOidc({ assertUserLoggedIn: true });
+    const { oidcTokens, renewTokens } = useOidc({ assert: "user logged in" });
 
     const { lang } = useLang();
 
