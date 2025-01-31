@@ -1439,20 +1439,20 @@
     clsx "^2.1.1"
     goober "^2.1.16"
 
-"@tanstack/router-generator@^1.98.4":
-  version "1.98.4"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.98.4.tgz#04b3572ba3dbad4d436acde5375b76ddc7ba2a45"
-  integrity sha512-Xw003wakc3+/ZNPhX/5M1ux568BOXLSJ4MV034Tfq4fz+12WTij4uIy3uUC6zirW2p8hKRlqRKJSxaUWE5WCMw==
+"@tanstack/router-generator@^1.98.6":
+  version "1.98.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.98.6.tgz#721bb01a5168761fe5d6a61159fcf10df35279a9"
+  integrity sha512-3TQwtIafN2n3P6ydkp+NlTFWIBRKGY+VTI7g2wo4Ac2XuIhYavgxE/ME4kNoThsytcPinD/qCTvBhYNfKoeAVg==
   dependencies:
     "@tanstack/virtual-file-routes" "^1.98.1"
     prettier "^3.4.2"
     tsx "^4.19.2"
     zod "^3.24.1"
 
-"@tanstack/router-plugin@^1.98.5":
-  version "1.98.5"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.98.5.tgz#77444e3c2e0aafe0f5c74d8f78642b86bc3706c3"
-  integrity sha512-QGZ92jEsgZGsscvEd/YigUka1wPPlXY8E4OtG3IK0w3c8YnedbfC2q/W6kIM7CPbGf5s19ieNIMRnVByuTdaCA==
+"@tanstack/router-plugin@^1.98.6":
+  version "1.98.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.98.6.tgz#ded3069aa51fb1fbd9cb486591f5cd936b50a267"
+  integrity sha512-cMDO6y+eIXY309jzFm9piYRlBRLR9NIVGBtEpIO0r0eaQ6Ns2ue7vRC2Cf70dC5Fb4eo50RIMN/QP11jCOwcsA==
   dependencies:
     "@babel/core" "^7.26.7"
     "@babel/plugin-syntax-jsx" "^7.25.9"
@@ -1460,7 +1460,7 @@
     "@babel/template" "^7.25.9"
     "@babel/traverse" "^7.26.7"
     "@babel/types" "^7.26.7"
-    "@tanstack/router-generator" "^1.98.4"
+    "@tanstack/router-generator" "^1.98.6"
     "@tanstack/router-utils" "^1.98.5"
     "@tanstack/virtual-file-routes" "^1.98.1"
     "@types/babel__core" "^7.20.5"
@@ -1482,11 +1482,11 @@
     diff "^7.0.0"
 
 "@tanstack/router-vite-plugin@^1.97.14":
-  version "1.98.5"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.98.5.tgz#73087bb39079a0d33e2cc91469c2997f2c172772"
-  integrity sha512-8cS8pPfymQLncQTdDApa7CTjg1H/e0RdpdVk+Ibc70UP/0neKHHG/RlQUoUS5xAYd488ZhYifhdilIZjIODNHg==
+  version "1.98.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.98.6.tgz#ebb608b95abec42f9d30cd49864ce2ff23997f85"
+  integrity sha512-tgjitUnnke4xLiVrB+xrFnvpv6a8ihG4ATI+sVyGOp0MZ+rscIprBTHah51uPq3om/7JcOfTsS+AGAPUybMWJA==
   dependencies:
-    "@tanstack/router-plugin" "^1.98.5"
+    "@tanstack/router-plugin" "^1.98.6"
 
 "@tanstack/store@0.7.0", "@tanstack/store@^0.7.0":
   version "0.7.0"
