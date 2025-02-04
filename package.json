@@ -3,7 +3,7 @@
     "private": true,
     "repository": "https://github.com/InseeFrLab/vite-insee-starter.git",
     "license": "MIT",
-    "version": "2.2.3",
+    "version": "2.2.4",
     "type": "module",
     "scripts": {
         "postinstall": "vite-envs update-types",
