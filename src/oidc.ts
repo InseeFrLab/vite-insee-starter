@@ -10,21 +10,23 @@ const decodedIdTokenSchema = z.object({
 
 const issuerUri = import.meta.env.VITE_OIDC_ISSUER;
 const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
+const homeUrl = import.meta.env.BASE_URL;
+
+console.log({ issuerUri, clientId, homeUrl });
 
 export const { OidcProvider, useOidc, getOidc } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,
-          BASE_URL: import.meta.env.BASE_URL,
+          homeUrl,
           decodedIdTokenSchema: decodedIdTokenSchema,
           extraQueryParams: () => ({
               dark: getIsDark() ? "true" : "false"
           })
-          //doEnableDebugLogs: true
       })
     : createMockReactOidc({
           isUserInitiallyLoggedIn: false,
-          homeUrl: import.meta.env.BASE_URL,
+          homeUrl,
           mockedTokens: {
               decodedIdToken: {
                   sub: "123",
