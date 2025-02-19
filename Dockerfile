@@ -3,7 +3,7 @@
 FROM node:22-alpine as build
 WORKDIR /app
 COPY . .
-RUN yarn install --frozen-lockfile
+RUN yarn install --frozen-lockfile --network-timeout 1000000
 RUN yarn build
 
 # production environment
