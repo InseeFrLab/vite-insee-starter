@@ -22,7 +22,8 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
           decodedIdTokenSchema: decodedIdTokenSchema,
           extraQueryParams: () => ({
               dark: getIsDark() ? "true" : "false"
-          })
+          }),
+          debugLogs: true
       })
     : createMockReactOidc({
           isUserInitiallyLoggedIn: false,
