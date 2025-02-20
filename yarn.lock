@@ -2739,10 +2739,10 @@ eventemitter3@^5.0.1:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-5.0.1.tgz#53f5ffd0a492ac800721bb42c66b841de96423c4"
   integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
 
-evt@^2.5.8:
-  version "2.5.8"
-  resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.8.tgz#4cc4e2db92d89cc43e00a0755703317f5f9b6d4c"
-  integrity sha512-wjurRtEqepH03fZSzkCUAw2tNNtEoeoEYXf7EqG8uU52wQ3D/+ctyQE8hf+YR/5DXZlwl2jNGLMm4hAd/wyD6g==
+evt@^2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.9.tgz#cd270e50ce1e7c586bf86242c054dd958d06a5c4"
+  integrity sha512-GpjX476FSlttEGWHT8BdVMoI8wGXQGbEOtKcP4E+kggg+yJzXBZN2n4x7TS/zPBJ1DZqWI+rguZZApjjzQ0HpA==
   dependencies:
     minimal-polyfills "^2.2.3"
     run-exclusive "^2.2.19"
@@ -3180,11 +3180,11 @@ husky@^9.1.7:
   integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 i18nifty@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.3.tgz#dfb40441e1c7e2993debd14c09dd7e20b439fa9a"
-  integrity sha512-LqEbyPMHdfLNqySeBe6hQF97OYRkCtAryUfSjDx+eoJGXNMtRMypHoYYN+recYEx9RQjDubOOzfIVDjv587jug==
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.4.tgz#cb427830ea9b7588057ccf09499cedd9ca386041"
+  integrity sha512-2pGtran5qXyuiB5PG3p1o1qjQPZLoEDxgVjF+CbhMZPVnEC86HRKgFWsSu7cpL7ayz0VvJ9b50GGLzD9OKqqIQ==
   dependencies:
-    powerhooks "^1.0.19"
+    powerhooks "^1.0.20"
     tsafe "^1.8.5"
 
 ignore@^5.2.0, ignore@^5.3.1:
@@ -4189,12 +4189,12 @@ postcss@^8.4.49:
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
-powerhooks@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.19.tgz#e93ce44f55d31ca26a4511883a49cfe5341d47af"
-  integrity sha512-kmZX0LLvJyaIphwf2FjKABAQwQFrRqsEA41N4CB8EzfDobyXle545t4teajVo/NPboy0HEaioyv55FWN7d58/Q==
+powerhooks@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.20.tgz#2a634dc26907ebfa45d5602e03bd8a6535ccec2d"
+  integrity sha512-OdKPWt6Zd3p8bu85nlGKFsrvhU0Nyg2N436ne0Z1JtkZPXj22z/9mk9Acc3jHtG2Qnr5xIkFl6ueZo/sPT9Z6A==
   dependencies:
-    evt "^2.5.8"
+    evt "^2.5.9"
     memoizee "^0.4.17"
     tsafe "^1.8.5"
 
