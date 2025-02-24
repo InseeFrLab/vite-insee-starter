@@ -1,11 +1,18 @@
 import { HeaderQuickAccessItem } from "@codegouvfr/react-dsfr/Header";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { useOidc } from "oidc";
+import { tss } from "tss";
+import { fr } from "@codegouvfr/react-dsfr";
+import { useMatchRoute } from "@tanstack/react-router";
 
 export function AuthButtons() {
     const { isUserLoggedIn, login, logout } = useOidc();
 
     const { t } = useTranslation({ AuthButtons });
+
+    const matchRoute = useMatchRoute();
+
+    const { cx, classes } = useStyles({ isOnAccountPage: matchRoute({ to: "/account" }) !== false });
 
     if (!isUserLoggedIn) {
         return (
@@ -51,7 +58,8 @@ export function AuthButtons() {
                 quickAccessItem={{
                     iconId: "fr-icon-account-fill",
                     linkProps: {
-                        to: "/account"
+                        to: "/account",
+                        className: cx(fr.cx("fr-btn--tertiary"), classes.myAccountButton)
                     },
                     text: t("my account")
                 }}
@@ -71,6 +79,19 @@ export function AuthButtons() {
         </>
     );
 }
+
+const useStyles = tss
+    .withName({ AuthButtons })
+    .withParams<{ isOnAccountPage: boolean }>()
+    .create(({ isOnAccountPage }) => ({
+        myAccountButton: {
+            "&&": {
+                backgroundColor: !isOnAccountPage
+                    ? undefined
+                    : fr.colors.decisions.background.default.grey.hover
+            }
+        }
+    }));
 
 const { i18n } = declareComponentKeys<"login" | "register" | "logout" | "my account">()({ AuthButtons });
 

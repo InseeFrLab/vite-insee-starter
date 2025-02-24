@@ -4,9 +4,12 @@ import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { LanguageSelect } from "./LanguageSelect";
 import { AuthButtons } from "./AuthButtons";
+import { useMatchRoute } from "@tanstack/react-router";
 
 export function Header() {
     const { t } = useTranslation({ Header });
+
+    const matchRoute = useMatchRoute();
 
     return (
         <DsfrHeader
@@ -40,7 +43,8 @@ export function Header() {
                     text: label,
                     linkProps: {
                         to
-                    }
+                    },
+                    isActive: matchRoute({ to }) !== false
                 })))()}
         />
     );
