@@ -39,7 +39,7 @@ function Page() {
                 href={parseKeycloakIssuerUri(issuerUri)!.getAccountUrl({
                     locale: lang,
                     clientId,
-                    backToAppFromAccountUrl: import.meta.env.BASE_URL
+                    backToAppFromAccountUrl: location.href
                 })}
             >
                 Go to Keycloak Account Management Page
