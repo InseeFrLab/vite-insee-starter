@@ -9,7 +9,9 @@ axiosInstance.interceptors.request.use(async config => {
     const oidc = await getOidc();
 
     if (oidc.isUserLoggedIn) {
-        config.headers.Authorization = `Bearer ${oidc.getTokens().accessToken}`;
+        const { accessToken } = await oidc.getTokens();
+
+        config.headers.Authorization = `Bearer ${accessToken}`;
     }
 
     return config;
@@ -17,7 +19,4 @@ axiosInstance.interceptors.request.use(async config => {
 
 // NOTE: Meant to be used by orval generated client
 export const fetch = <T>(config: AxiosRequestConfig, options?: AxiosRequestConfig): Promise<T> =>
-    axiosInstance({
-        ...config,
-        ...options
-    }).then(({ data }) => data);
+    axiosInstance({ ...config, ...options }).then(({ data }) => data);

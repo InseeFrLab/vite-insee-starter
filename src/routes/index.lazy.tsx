@@ -12,7 +12,7 @@ export const Route = createLazyFileRoute("/")({
 function Page() {
     const { t } = useTranslation("DefaultPage");
 
-    const { isUserLoggedIn, oidcTokens } = useOidc();
+    const { isUserLoggedIn, decodedIdToken } = useOidc();
 
     const { classes } = useStyles();
 
@@ -21,7 +21,7 @@ function Page() {
             <div className={classes.content}>
                 <h3>
                     {t("welcome", {
-                        name: isUserLoggedIn ? oidcTokens.decodedIdToken.preferred_username : undefined
+                        name: isUserLoggedIn ? decodedIdToken.preferred_username : undefined
                     })}
                 </h3>
                 <a href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
