@@ -12,7 +12,7 @@ export function MyComponent(props: Props) {
     const [clickCount, setClickCount] = useState(0);
 
     const { classes, cx } = useStyles({
-        isBigger: clickCount > 2
+        isBigger: clickCount >= 2
     });
 
     return (

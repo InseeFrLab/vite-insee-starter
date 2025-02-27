@@ -1,5 +1,5 @@
-import { beforeLoadProtectedRoute } from "oidc";
 import { createFileRoute } from "@tanstack/react-router";
+import { withAuthenticationRequired } from "oidc";
 import { useTodosApi } from "todos-api";
 import { TodoApp } from "components/TodoApp";
 import { tss, keyframes } from "tss";
@@ -9,8 +9,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { declareComponentKeys, useTranslation } from "i18n";
 
 export const Route = createFileRoute("/todo")({
-    component: Page,
-    beforeLoad: beforeLoadProtectedRoute
+    component: withAuthenticationRequired(Page)
 });
 
 function Page() {

@@ -12,7 +12,7 @@ const issuerUri = import.meta.env.VITE_OIDC_ISSUER_URI;
 const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
 const homeUrl = import.meta.env.BASE_URL;
 
-export const { OidcProvider, useOidc, getOidc } = issuerUri
+export const { OidcProvider, useOidc, getOidc, withAuthenticationRequired } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,
@@ -33,15 +33,3 @@ export const { OidcProvider, useOidc, getOidc } = issuerUri
               } satisfies z.infer<typeof decodedIdTokenSchema>
           }
       });
-
-export const beforeLoadProtectedRoute = async () => {
-    const oidc = await getOidc();
-
-    if (oidc.isUserLoggedIn) {
-        return null;
-    }
-
-    await oidc.login({
-        doesCurrentHrefRequiresAuth: true
-    });
-};

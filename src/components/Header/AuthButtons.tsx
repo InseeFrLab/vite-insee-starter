@@ -21,7 +21,7 @@ export function AuthButtons() {
                     quickAccessItem={{
                         iconId: "fr-icon-lock-line",
                         buttonProps: {
-                            onClick: () => login({ doesCurrentHrefRequiresAuth: false })
+                            onClick: () => login()
                         },
                         text: t("login")
                     }}
@@ -32,7 +32,6 @@ export function AuthButtons() {
                         buttonProps: {
                             onClick: () =>
                                 login({
-                                    doesCurrentHrefRequiresAuth: false,
                                     transformUrlBeforeRedirect: url => {
                                         const urlObj = new URL(url);
 
