@@ -12,7 +12,7 @@ const issuerUri = import.meta.env.VITE_OIDC_ISSUER_URI;
 const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
 const homeUrl = import.meta.env.BASE_URL;
 
-export const { OidcProvider, useOidc, getOidc, withAuthenticationRequired } = issuerUri
+export const { OidcProvider, useOidc, getOidc, withLoginRequired } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,

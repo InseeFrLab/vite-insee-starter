@@ -1,6 +1,6 @@
 import Button from "@codegouvfr/react-dsfr/Button";
 import { createFileRoute } from "@tanstack/react-router";
-import { useOidc, withAuthenticationRequired } from "oidc";
+import { useOidc, withLoginRequired } from "oidc";
 import { parseKeycloakIssuerUri } from "oidc-spa/tools/parseKeycloakIssuerUri";
 import { decodeJwt } from "oidc-spa/tools/decodeJwt";
 import { useLang } from "i18n";
@@ -8,7 +8,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
 
 export const Route = createFileRoute("/account")({
-    component: withAuthenticationRequired(Page)
+    component: withLoginRequired(Page)
 });
 
 function Page() {
