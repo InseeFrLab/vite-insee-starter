@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { withLoginEnforced } from "oidc";
+import { enforceLogin } from "oidc";
 import { useTodosApi } from "todos-api";
 import { TodoApp } from "components/TodoApp";
 import { tss, keyframes } from "tss";
@@ -9,7 +9,10 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { declareComponentKeys, useTranslation } from "i18n";
 
 export const Route = createFileRoute("/todo")({
-    component: withLoginEnforced(Page)
+    component: Page,
+    beforeLoad: async () => {
+        await enforceLogin();
+    }
 });
 
 function Page() {

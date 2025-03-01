@@ -13,7 +13,7 @@ const issuerUri = import.meta.env.VITE_OIDC_ISSUER_URI;
 const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
 const homeUrl = import.meta.env.BASE_URL;
 
-export const { OidcProvider, useOidc, getOidc, withLoginEnforced } = issuerUri
+export const { OidcProvider, useOidc, getOidc } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,
@@ -35,3 +35,14 @@ export const { OidcProvider, useOidc, getOidc, withLoginEnforced } = issuerUri
               } satisfies z.infer<typeof decodedIdTokenSchema>
           }
       });
+
+export async function enforceLogin(): Promise<void | never> {
+    const oidc = await getOidc();
+
+    if (!oidc.isUserLoggedIn) {
+        await oidc.login({
+            doesCurrentHrefRequiresAuth: true
+        });
+        // Never here
+    }
+}
