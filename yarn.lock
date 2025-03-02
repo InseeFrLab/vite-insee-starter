@@ -3992,9 +3992,9 @@ object.assign@^4.1.7:
     object-keys "^1.1.1"
 
 oidc-spa@^6.9.1:
-  version "6.9.1"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.9.1.tgz#98a0fb119231c1ff7f428cfca7be95566f4a4adb"
-  integrity sha512-l0DN33tMth0gjRwlmc7/JNYLGhYNSHTTp6av6ti7ubWcXyDmiT9tEZMVDsTQf2fkGEEFoi97heUcKnfOtSPK+w==
+  version "6.9.4"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.9.4.tgz#cd76a0460a46ced05cc0e8333babbe0f1e4fed8a"
+  integrity sha512-24AswImnpbeP9ae9v3yak8SrmxBSql6K4sDGfND0aeSmjbiWv4cDYVULaEDYTD6PQa3JqaoYwKU9Zriv4IJiew==
 
 onetime@^5.1.2:
   version "5.1.2"
