@@ -3139,11 +3139,11 @@ husky@^9.1.7:
   integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==
 
 i18nifty@^3.2.3:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.4.tgz#cb427830ea9b7588057ccf09499cedd9ca386041"
-  integrity sha512-2pGtran5qXyuiB5PG3p1o1qjQPZLoEDxgVjF+CbhMZPVnEC86HRKgFWsSu7cpL7ayz0VvJ9b50GGLzD9OKqqIQ==
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/i18nifty/-/i18nifty-3.2.5.tgz#2ddc7065592f4a80d5ac106b261548273d1a2f71"
+  integrity sha512-uids7FCHXwIzchlYGnnY7m7YJR6VRhZT+X7ltoi+Gd3wz4OcA/HDFKEzYJVDGy3ispbxkzdNSWLzmUOueKNbKg==
   dependencies:
-    powerhooks "^1.0.20"
+    powerhooks "^1.0.21"
     tsafe "^1.8.5"
 
 ignore@^5.2.0, ignore@^5.3.1:
@@ -4182,10 +4182,10 @@ postcss@^8.5.2:
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
-powerhooks@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.20.tgz#2a634dc26907ebfa45d5602e03bd8a6535ccec2d"
-  integrity sha512-OdKPWt6Zd3p8bu85nlGKFsrvhU0Nyg2N436ne0Z1JtkZPXj22z/9mk9Acc3jHtG2Qnr5xIkFl6ueZo/sPT9Z6A==
+powerhooks@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-1.0.21.tgz#a0b31193570558be17501fea85a87dc6c7d46ca2"
+  integrity sha512-U+e0+mGtnJPHIPatZ2rWynt3Cc20mtBm26xnBRx0GLzRDc6SqQ2/lO9oleDRfYEdYUX5iOeWizjHq2lCNA/aRQ==
   dependencies:
     evt "^2.5.9"
     memoizee "^0.4.17"
