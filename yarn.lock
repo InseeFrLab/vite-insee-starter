@@ -796,9 +796,9 @@
     react-is "^19.0.0"
 
 "@mui/x-data-grid@^7.24.0":
-  version "7.27.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-7.27.2.tgz#79d2beb4c18bb1cabc2e39d07f61825af25bb3a4"
-  integrity sha512-Nj6PWp6WN0gkps676j1Jai3mP1fQotJbqMTvllU7LwQp09S/RE/uJicYdqfeWQLxtQipWm5dnAY63gzsTiAHGA==
+  version "7.27.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-7.27.3.tgz#6eeb9490fd06d3336d3f5caecd336c49bc09b7e3"
+  integrity sha512-7zbDbFrhV6ODjyn3ImOZG34nbMbCvmHgqYTYP273TNAj8hMy4BiLyiKFFZTzVddIj3KQ6qLzBpByhqifGgEDOg==
   dependencies:
     "@babel/runtime" "^7.25.7"
     "@mui/utils" "^5.16.6 || ^6.0.0"
@@ -809,9 +809,9 @@
     use-sync-external-store "^1.0.0"
 
 "@mui/x-date-pickers@^7.24.0":
-  version "7.27.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-7.27.1.tgz#5c9769744598b1e10c1919ce0589b8d235131a17"
-  integrity sha512-2YPhTM9TM39dmIkEQdSB6P6NASePB9LuhXXKQqq0PX4FXGymYEPz/acQXkk617zwfxJJaDhJZ6g8SAv5pklTJQ==
+  version "7.27.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-7.27.3.tgz#61171daf74802c17f9d861068eab422231389502"
+  integrity sha512-igfKTPC4ZVCmS5j/NXcXBtj/hHseQHzRpCpIB1PMnJGhMdRYXnz8qZz5XhlNBKlzJVXkGu6Uil+obZpCLNj1xg==
   dependencies:
     "@babel/runtime" "^7.25.7"
     "@mui/utils" "^5.16.6 || ^6.0.0"
