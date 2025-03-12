@@ -1,10 +1,8 @@
-import { memo, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { tss } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
-import { useEvent } from "tools/useEvent";
-import { deepEqual } from "tools/deepEqual";
 import type { TodoItem } from "./type";
 import { assert } from "tsafe/assert";
 import { declareComponentKeys, useTranslation } from "i18n";
@@ -27,7 +25,7 @@ type TodoProps = {
     onDeleteTodo: () => void;
 };
 
-export const Todo = memo((props: TodoProps) => {
+export function Todo(props: TodoProps) {
     const { t } = useTranslation({ Todo });
 
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
@@ -39,15 +37,6 @@ export const Todo = memo((props: TodoProps) => {
     }, [todo.text]);
 
     const [isEditing, setIsEditing] = useState(false);
-
-    const onEditButtonClick = useEvent(() => {
-        if (isEditing) {
-            onUpdateTodoText(text);
-            setIsEditing(false);
-        } else {
-            setIsEditing(true);
-        }
-    });
 
     const { classes, cx } = useStyles({ isEditing });
 
@@ -70,7 +59,14 @@ export const Todo = memo((props: TodoProps) => {
             <div className={classes.buttonsWrapper}>
                 <Button
                     iconId={isEditing ? "ri-check-line" : "ri-pencil-line"}
-                    onClick={onEditButtonClick}
+                    onClick={() => {
+                        if (isEditing) {
+                            onUpdateTodoText(text);
+                            setIsEditing(false);
+                        } else {
+                            setIsEditing(true);
+                        }
+                    }}
                     priority="secondary"
                     title={t("edit")}
                 />
@@ -83,8 +79,7 @@ export const Todo = memo((props: TodoProps) => {
             </div>
         </div>
     );
-}, deepEqual);
-// NOTE: We use deepEqual above to avoid having the component re-render if the ref of the todo has changed but it's actually the same todo.
+}
 
 const { i18n } = declareComponentKeys<"edit" | "delete">()({ Todo });
 
