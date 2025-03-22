@@ -18,7 +18,7 @@ declare module "@tanstack/react-router" {
 
 declare module "@codegouvfr/react-dsfr/spa" {
     interface RegisterLink {
-        Link: (props: LinkProps) => JSX.Element;
+        Link: (props: LinkProps) => React.ReactElement;
     }
 }
 

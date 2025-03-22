@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { useOidc } from "oidc";
@@ -53,7 +54,7 @@ const { i18n } = declareComponentKeys<
           P: {
               name: string | undefined;
           };
-          R: JSX.Element;
+          R: ReactElement;
       }
     | "video aria label"
 >()({ DefaultPage: Page });
