@@ -3875,7 +3875,7 @@ object.assign@^4.1.7:
     has-symbols "^1.1.0"
     object-keys "^1.1.1"
 
-oidc-spa@^6.12.3:
+oidc-spa@^6.12.4:
   version "6.12.4"
   resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.12.4.tgz#d68d165bde12ee412ad67bd17e53a3e0b57792f5"
   integrity sha512-O28Mq6jm5P2gFzoYf5TcH3miAPa+T8aXX1JCLcfrBy3yb01ov7SZQHKtogXjRhTzHUppTbjYo7KT5vPMaDVi7w==
