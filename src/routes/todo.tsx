@@ -1,21 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { enforceLogin } from "oidc";
-import { useTodosApi } from "todos-api";
 import { TodoApp } from "components/TodoApp";
 import { tss, keyframes } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { assert } from "tsafe/assert";
 import CircularProgress from "@mui/material/CircularProgress";
 import { declareComponentKeys, useTranslation } from "i18n";
-import { getGetTodosQueryOptions } from "todos-api/client.gen";
+import {
+    getGetTodosQueryKey,
+    getGetTodosQueryOptions,
+    useDeleteTodoId,
+    useGetTodos,
+    usePutTodo,
+    usePutTodoId
+} from "todos-api";
+import { useIsMutating, useIsFetching, useQueryClient } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/todo")({
     component: Page,
     pendingComponent: PendingTodo,
-    beforeLoad: async params => {
-        await enforceLogin(params);
-    },
-    loader: async ({ context: { queryClient }, abortController }) => {
+    beforeLoad: enforceLogin,
+    loader: ({ context: { queryClient }, abortController }) => {
         queryClient.prefetchQuery(
             getGetTodosQueryOptions({ request: { signal: abortController.signal } })
         );
@@ -35,7 +40,28 @@ function PendingTodo() {
     );
 }
 function Page() {
-    const { todos, createTodo, deleteTodo, updateTodo, isPending } = useTodosApi();
+    const queryClient = useQueryClient();
+
+    const { data: todos } = useGetTodos();
+
+    const { mutate: createTodo } = usePutTodo({
+        mutation: {
+            onSuccess: () => queryClient.invalidateQueries({ queryKey: getGetTodosQueryKey() })
+        }
+    });
+
+    const { mutate: updateTodo } = usePutTodoId({
+        mutation: { onSuccess: () => queryClient.invalidateQueries({ queryKey: getGetTodosQueryKey() }) }
+    });
+
+    const { mutate: deleteTodo } = useDeleteTodoId({
+        mutation: { onSuccess: () => queryClient.invalidateQueries({ queryKey: getGetTodosQueryKey() }) }
+    });
+
+    const mutationCount = useIsMutating();
+    const fetchingCount = useIsFetching();
+
+    const isPending = fetchingCount !== 0 || mutationCount !== 0;
 
     const { classes } = useStyles();
 
@@ -49,8 +75,8 @@ function Page() {
                 className={classes.todoApp}
                 todos={todos}
                 isPending={isPending}
-                onAddTodo={(text: string) => createTodo({ data: { text } })}
-                onDeleteTodo={(id: string) => deleteTodo({ id })}
+                onAddTodo={text => createTodo({ data: { text } })}
+                onDeleteTodo={id => deleteTodo({ id })}
                 onUpdateTodoText={(id, text) => updateTodo({ id, data: { text } })}
                 onToggleTodo={id => {
                     const todo = todos.find(todo => todo.id === id);
