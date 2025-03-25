@@ -7,11 +7,8 @@ import { routeTree } from "./routeTree.gen";
 import { I18nFetchingSuspense } from "i18n";
 import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
 import { useLang } from "i18n";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
-
-const router = createRouter({ routeTree, context: { queryClient }, defaultPreload: "intent" });
+const router = createRouter({ routeTree, defaultPreload: "intent" });
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
@@ -37,14 +34,12 @@ startReactDsfr({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <MuiDsfrThemeProvider>
-                <OidcProvider>
-                    <I18nFetchingSuspense>
-                        <RouterProvider router={router} />
-                    </I18nFetchingSuspense>
-                </OidcProvider>
-            </MuiDsfrThemeProvider>
-        </QueryClientProvider>
+        <MuiDsfrThemeProvider>
+            <OidcProvider>
+                <I18nFetchingSuspense>
+                    <RouterProvider router={router} />
+                </I18nFetchingSuspense>
+            </OidcProvider>
+        </MuiDsfrThemeProvider>
     </React.StrictMode>
 );
