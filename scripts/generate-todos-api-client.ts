@@ -1,10 +1,8 @@
 import * as fs from "fs";
-import { join as pathJoin } from "path";
+import { join as pathJoin, resolve } from "path";
 import { assert } from "tsafe/assert";
 import fetch from "node-fetch";
 import * as child_process from "child_process";
-import type { defineConfig } from "orval";
-import type { Param0 } from "tsafe";
 
 const projectDirPath = process.cwd();
 
@@ -36,41 +34,22 @@ const projectDirPath = process.cwd();
         await fetch(`${todosApiUrl}/doc`).then(response => response.text())
     );
 
+    const originalOrvalConfigPath = pathJoin(projectDirPath, "orval.config.ts");
     const orvalConfigFilePath = pathJoin(cacheDirPath, "orval.config.ts");
 
-    const todosApiSrcDirPath = pathJoin(projectDirPath, "src", "todos-api");
+    const configContent = fs
+        .readFileSync(originalOrvalConfigPath, "utf-8")
+        .replace(/(path|target):\s*['"]([^'"]+)['"]/g, (_, key, relativePath) => {
+            const absolutePath = resolve(projectDirPath, relativePath);
+            return `${key}: '${absolutePath.replace(/\\/g, "\\\\")}'`;
+        })
+        .replace(/todos:\s*{/, match => {
+            return `${match}\n    input: '${todosOpenApiJsonFilePath.replace(/\\/g, "\\\\")}',`;
+        });
 
-    const generatedFilePath = pathJoin(todosApiSrcDirPath, "client.gen.ts");
-
-    const orvalConfig: Param0<typeof defineConfig> = {
-        todos: {
-            input: todosOpenApiJsonFilePath,
-            output: {
-                target: generatedFilePath,
-                override: {
-                    mutator: {
-                        path: pathJoin(todosApiSrcDirPath, "axiosInstance.ts"),
-                        name: "fetch"
-                    }
-                }
-            }
-        }
-    };
-
-    fs.writeFileSync(
-        orvalConfigFilePath,
-        Buffer.from(
-            [
-                `import { defineConfig } from "orval";`,
-                `export default defineConfig(${JSON.stringify(orvalConfig)});`
-            ].join("\n"),
-            "utf8"
-        )
-    );
+    fs.writeFileSync(orvalConfigFilePath, configContent, "utf-8");
 
     run(`npx orval --config ${orvalConfigFilePath}`);
-
-    run(`npx prettier --write ${generatedFilePath}`);
 })();
 
 function run(command: string) {

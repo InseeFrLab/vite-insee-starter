@@ -1,54 +1,34 @@
-import { useQuery, useMutation, useIsMutating, useIsFetching, QueryClient } from "@tanstack/react-query";
+import { useIsMutating, useIsFetching, useQueryClient } from "@tanstack/react-query";
 
-import { getTodos, putTodo, putTodoId, deleteTodoId } from "./client.gen";
+import {
+    usePutTodo,
+    getGetTodosQueryKey,
+    usePutTodoId,
+    useDeleteTodoId,
+    useGetTodos
+} from "./client.gen";
 
-const queryKey = ["todos"];
-
-const queryClient = new QueryClient();
+const queryKey = getGetTodosQueryKey();
 
 export function useTodosApi() {
-    const { data: todos } = useQuery(
-        {
-            queryKey,
-            queryFn: getTodos
-        },
-        queryClient
-    );
+    const queryClient = useQueryClient();
 
-    const { mutate: createTodo } = useMutation(
-        {
-            mutationFn: async (text: string) => {
-                await putTodo({ text });
-            },
-            onSuccess: () => queryClient.invalidateQueries({ queryKey })
-        },
-        queryClient
-    );
+    const { data: todos } = useGetTodos();
 
-    const { mutate: updateTodo } = useMutation(
-        {
-            mutationFn: async (params: { id: string; text?: string; isDone?: boolean }) => {
-                const { id, text, isDone } = params;
+    const { mutate: createTodo } = usePutTodo({
+        mutation: { onSuccess: () => queryClient.invalidateQueries({ queryKey }) }
+    });
 
-                await putTodoId(id, { text, isDone });
-            },
-            onSuccess: () => queryClient.invalidateQueries({ queryKey })
-        },
-        queryClient
-    );
+    const { mutate: updateTodo } = usePutTodoId({
+        mutation: { onSuccess: () => queryClient.invalidateQueries({ queryKey }) }
+    });
 
-    const { mutate: deleteTodo } = useMutation(
-        {
-            mutationFn: async (id: string) => {
-                await deleteTodoId(id);
-            },
-            onSuccess: () => queryClient.invalidateQueries({ queryKey })
-        },
-        queryClient
-    );
+    const { mutate: deleteTodo } = useDeleteTodoId({
+        mutation: { onSuccess: () => queryClient.invalidateQueries({ queryKey }) }
+    });
 
-    const mutationCount = useIsMutating({}, queryClient);
-    const fetchingCount = useIsFetching({}, queryClient);
+    const mutationCount = useIsMutating();
+    const fetchingCount = useIsFetching();
 
     return {
         todos,

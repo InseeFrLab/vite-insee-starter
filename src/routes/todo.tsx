@@ -7,29 +7,40 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { assert } from "tsafe/assert";
 import CircularProgress from "@mui/material/CircularProgress";
 import { declareComponentKeys, useTranslation } from "i18n";
+import { getGetTodosQueryOptions } from "todos-api/client.gen";
 
 export const Route = createFileRoute("/todo")({
     component: Page,
+    pendingComponent: PendingTodo,
     beforeLoad: async params => {
         await enforceLogin(params);
+    },
+    loader: async ({ context: { queryClient }, abortController }) => {
+        queryClient.prefetchQuery(
+            getGetTodosQueryOptions({ request: { signal: abortController.signal } })
+        );
     }
 });
 
+function PendingTodo() {
+    const { classes } = useStyles();
+    const { t } = useTranslation("TodoPage");
+
+    return (
+        <div className={classes.circularProgressWrapper}>
+            <CircularProgress />
+            <br />
+            <h5 className={classes.delayedMessage}>{t("waking up container")}</h5>
+        </div>
+    );
+}
 function Page() {
     const { todos, createTodo, deleteTodo, updateTodo, isPending } = useTodosApi();
 
     const { classes } = useStyles();
 
-    const { t } = useTranslation("TodoPage");
-
     if (todos === undefined) {
-        return (
-            <div className={classes.circularProgressWrapper}>
-                <CircularProgress />
-                <br />
-                <h5 className={classes.delayedMessage}>{t("waking up container")}</h5>
-            </div>
-        );
+        return <PendingTodo />;
     }
 
     return (
@@ -38,9 +49,9 @@ function Page() {
                 className={classes.todoApp}
                 todos={todos}
                 isPending={isPending}
-                onAddTodo={createTodo}
-                onDeleteTodo={deleteTodo}
-                onUpdateTodoText={(id, text) => updateTodo({ id, text })}
+                onAddTodo={(text: string) => createTodo({ data: { text } })}
+                onDeleteTodo={(id: string) => deleteTodo({ id })}
+                onUpdateTodoText={(id, text) => updateTodo({ id, data: { text } })}
                 onToggleTodo={id => {
                     const todo = todos.find(todo => todo.id === id);
 
@@ -48,7 +59,7 @@ function Page() {
 
                     updateTodo({
                         id,
-                        isDone: !todo.isDone
+                        data: { isDone: !todo.isDone }
                     });
                 }}
             />

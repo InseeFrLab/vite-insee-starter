@@ -7,7 +7,7 @@
     "type": "module",
     "scripts": {
         "postinstall": "vite-envs update-types",
-        "dev": "vite --host",
+        "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint ./src",
         "preview": "vite preview",
