@@ -10,7 +10,9 @@ export const Route = createRootRouteWithContext<{
     queryClient: QueryClient;
 }>()({
     component: RootComponent,
-    notFoundComponent: () => <>The route is not defined</>
+    notFoundComponent: () => <>The route is not defined</>,
+    pendingComponent: () => <div>Loading...</div>,
+    errorComponent: () => <div>An error occurred</div>
 });
 
 function RootComponent() {

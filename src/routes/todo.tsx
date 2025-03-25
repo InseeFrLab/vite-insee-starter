@@ -18,16 +18,16 @@ import { useIsMutating, useIsFetching, useQueryClient } from "@tanstack/react-qu
 
 export const Route = createFileRoute("/todo")({
     component: Page,
-    pendingComponent: PendingTodo,
     beforeLoad: enforceLogin,
-    loader: ({ context: { queryClient }, abortController }) => {
-        queryClient.prefetchQuery(
+    loader: async ({ context: { queryClient }, abortController }) => {
+        await queryClient.prefetchQuery(
             getGetTodosQueryOptions({ request: { signal: abortController.signal } })
         );
-    }
+    },
+    pendingComponent: Pending
 });
 
-function PendingTodo() {
+function Pending() {
     const { classes } = useStyles();
     const { t } = useTranslation("TodoPage");
 
@@ -39,10 +39,13 @@ function PendingTodo() {
         </div>
     );
 }
+
 function Page() {
     const queryClient = useQueryClient();
 
     const { data: todos } = useGetTodos();
+
+    assert(todos !== undefined, "Data should have been preloaded"); // We are sure because we await prefetchQuery in loader
 
     const { mutate: createTodo } = usePutTodo({
         mutation: {
@@ -64,10 +67,6 @@ function Page() {
     const isPending = fetchingCount !== 0 || mutationCount !== 0;
 
     const { classes } = useStyles();
-
-    if (todos === undefined) {
-        return <PendingTodo />;
-    }
 
     return (
         <div className={classes.root}>
