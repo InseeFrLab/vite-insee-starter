@@ -3880,10 +3880,10 @@ object.assign@^4.1.7:
     has-symbols "^1.1.0"
     object-keys "^1.1.1"
 
-oidc-spa@^6.12.4:
-  version "6.12.5"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.12.5.tgz#eb272179a6b990d848813a83bb9f92259c451693"
-  integrity sha512-fJ+HFfjuB16G/juVYbqN+RaJL3KZLXEPbjrDQ4PB2agp4aZ3I1mCsbAzCjuaZOrNNzYWvlabwTZInEcjyj6bog==
+oidc-spa@^6.13.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.13.0.tgz#739f68642e436f58506838f89eeac10e47c38756"
+  integrity sha512-vqU3EpCG8O2DfbUb5lfi5f1wb/wrnqcebwQn+AuVD1Y8J+AQHJI+G1aMNqLlqKBcxaJc5J1EkmN2NEuQgrIcQw==
 
 onetime@^5.1.2:
   version "5.1.2"

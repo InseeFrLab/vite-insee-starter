@@ -10,8 +10,8 @@ import { declareComponentKeys, useTranslation } from "i18n";
 
 export const Route = createFileRoute("/todo")({
     component: Page,
-    beforeLoad: async () => {
-        await enforceLogin();
+    beforeLoad: async params => {
+        await enforceLogin(params);
     }
 });
 
