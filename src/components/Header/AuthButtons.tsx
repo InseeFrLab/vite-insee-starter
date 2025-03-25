@@ -8,7 +8,7 @@ import { useMatchRoute } from "@tanstack/react-router";
 export function AuthButtons() {
     const { isUserLoggedIn, login, logout } = useOidc();
 
-    const { t } = useTranslation({ AuthButtons });
+    const { t } = useTranslation("AuthButtons");
 
     const matchRoute = useMatchRoute();
 
@@ -92,6 +92,6 @@ const useStyles = tss
         }
     }));
 
-const { i18n } = declareComponentKeys<"login" | "register" | "logout" | "my account">()({ AuthButtons });
+const { i18n } = declareComponentKeys<"login" | "register" | "logout" | "my account">()("AuthButtons");
 
 export type I18n = typeof i18n;

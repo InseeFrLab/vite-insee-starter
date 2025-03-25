@@ -11,7 +11,7 @@ type Props = {
 export const AddTodo = memo((props: Props) => {
     const { className } = props;
 
-    const { t } = useTranslation({ AddTodo });
+    const { t } = useTranslation("AddTodo");
 
     const [text, setText] = useState("");
 
@@ -46,6 +46,6 @@ export const AddTodo = memo((props: Props) => {
     );
 });
 
-const { i18n } = declareComponentKeys<"add a todo" | "validate">()({ AddTodo });
+const { i18n } = declareComponentKeys<"add a todo" | "validate">()("AddTodo");
 
 export type I18n = typeof i18n;

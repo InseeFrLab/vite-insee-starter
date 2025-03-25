@@ -4,7 +4,7 @@ import logoInsee from "assets/logo-insee.png";
 import { declareComponentKeys, useTranslation } from "i18n";
 
 export function Footer() {
-    const { t } = useTranslation({ Footer });
+    const { t } = useTranslation("Footer");
 
     return (
         <DSFRFooter
@@ -20,6 +20,6 @@ export function Footer() {
     );
 }
 
-const { i18n } = declareComponentKeys<"content description" | "operator logo alt">()({ Footer });
+const { i18n } = declareComponentKeys<"content description" | "operator logo alt">()("Footer");
 
 export type I18n = typeof i18n;

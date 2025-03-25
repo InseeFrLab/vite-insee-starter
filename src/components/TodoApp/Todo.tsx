@@ -26,7 +26,7 @@ type TodoProps = {
 };
 
 export function Todo(props: TodoProps) {
-    const { t } = useTranslation({ Todo });
+    const { t } = useTranslation("Todo");
 
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
@@ -81,7 +81,7 @@ export function Todo(props: TodoProps) {
     );
 }
 
-const { i18n } = declareComponentKeys<"edit" | "delete">()({ Todo });
+const { i18n } = declareComponentKeys<"edit" | "delete">()("Todo");
 
 export type I18n = typeof i18n;
 

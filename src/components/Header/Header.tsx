@@ -7,7 +7,7 @@ import { AuthButtons } from "./AuthButtons";
 import { useMatchRoute } from "@tanstack/react-router";
 
 export function Header() {
-    const { t } = useTranslation({ Header });
+    const { t } = useTranslation("Header");
 
     const matchRoute = useMatchRoute();
 
@@ -57,6 +57,6 @@ const { i18n } = declareComponentKeys<
     | "page title home"
     | "page title mui"
     | "page title todo"
->()({ Header });
+>()("Header");
 
 export type I18n = typeof i18n;

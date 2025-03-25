@@ -31,7 +31,7 @@ export const translations: Translations<"fr"> = {
         "add a todo": "Ajouter une tâche",
         validate: "Valider"
     },
-    DefaultPage: {
+    HomePage: {
         welcome: ({ name }) => <>Bienvenue {name === undefined ? "" : <strong>{name}</strong>}!</>,
         "video aria label": "Video de démonstration de react-dsfr"
     },

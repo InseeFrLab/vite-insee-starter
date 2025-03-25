@@ -35,7 +35,7 @@ export function AutoLogoutCountdown() {
 
     const { css } = useStyles();
 
-    const { t } = useTranslation({ AutoLogoutCountdown });
+    const { t } = useTranslation("AutoLogoutCountdown");
 
     if (secondsLeft === undefined) {
         return null;
@@ -68,8 +68,6 @@ export function AutoLogoutCountdown() {
 
 const { i18n } = declareComponentKeys<
     "paragrah still there" | { K: "paragrah will be logged out"; P: { secondsLeft: number } }
->()({
-    AutoLogoutCountdown
-});
+>()("AutoLogoutCountdown");
 
 export type I18n = typeof i18n;
