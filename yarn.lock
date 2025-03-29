@@ -1401,10 +1401,10 @@
     tsx "^4.19.2"
     zod "^3.24.2"
 
-"@tanstack/router-plugin@^1.114.29":
-  version "1.114.29"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.114.29.tgz#16cd84d60580a060cc96c74e8d89941e81bb4043"
-  integrity sha512-0xWAtyiselqTQiV9O8WtgFb/DN4yOgTP75uHAwxpHq6upcnBFBXqVw8DO/KR6AoTRsN96HdtuyjhK98JuQqngA==
+"@tanstack/router-plugin@^1.114.30":
+  version "1.114.30"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.114.30.tgz#497a6485b639ac56b4408a21a8c4f2bc8be5f9a3"
+  integrity sha512-CvCQ/Iv91QEmus/cCH6LFDktCR5mMyfhugoWEzJ1y1zopCYHdYSLvsTwpmYdNOru83NqFu/4EcGS0P2mXukNAQ==
   dependencies:
     "@babel/core" "^7.26.8"
     "@babel/plugin-syntax-jsx" "^7.25.9"
@@ -1419,7 +1419,7 @@
     "@types/babel__core" "^7.20.5"
     "@types/babel__template" "^7.4.4"
     "@types/babel__traverse" "^7.20.6"
-    babel-dead-code-elimination "^1.0.9"
+    babel-dead-code-elimination "^1.0.10"
     chokidar "^3.6.0"
     unplugin "^2.1.2"
     zod "^3.24.2"
@@ -1435,11 +1435,11 @@
     diff "^7.0.0"
 
 "@tanstack/router-vite-plugin@^1.114.27":
-  version "1.114.29"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.114.29.tgz#e178b95851c696a98549cdef7e40fca4d39eff48"
-  integrity sha512-6IQ+gYrNBXVO0VeeUrk49vzOsbtxCt6aG+/HfGJ9ez7O2m1QvxShNJNpRmnTnAycszhYFVyUg3Wd2Kl1wR3qBQ==
+  version "1.114.30"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.114.30.tgz#2af7d1759dace15a4a1a85b8ed2469373e7419b4"
+  integrity sha512-jUAg0VqSKIvl06NFB5i4ZPj7+YGgdS0iziwIDP+3qFMbs0smsc27duFqPkVC6VJJaeBsjQqtwgGlZtg1iCuJSg==
   dependencies:
-    "@tanstack/router-plugin" "^1.114.29"
+    "@tanstack/router-plugin" "^1.114.30"
 
 "@tanstack/store@0.7.0", "@tanstack/store@^0.7.0":
   version "0.7.0"
@@ -1807,10 +1807,10 @@ axios@^1.8.4:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
-babel-dead-code-elimination@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/babel-dead-code-elimination/-/babel-dead-code-elimination-1.0.9.tgz#c994291aeef33ad1d535cf44577c582da62cda44"
-  integrity sha512-JLIhax/xullfInZjtu13UJjaLHDeTzt3vOeomaSUdO/nAMEL/pWC/laKrSvWylXMnVWyL5bpmG9njqBZlUQOdg==
+babel-dead-code-elimination@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/babel-dead-code-elimination/-/babel-dead-code-elimination-1.0.10.tgz#e230562b57bf72ff3de4639ac763ba54f15d37b0"
+  integrity sha512-DV5bdJZTzZ0zn0DC24v3jD7Mnidh6xhKa4GfKCbq3sfW8kaWhDdZjP3i81geA8T33tdYqWKw4D3fVv0CwEgKVA==
   dependencies:
     "@babel/core" "^7.23.7"
     "@babel/parser" "^7.23.6"
@@ -2174,9 +2174,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.73:
-  version "1.5.125"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.125.tgz#544d29660f1646db616dfa843f6d4493b31e9be7"
-  integrity sha512-A2+qEsSUc95QvyFDl7PNwkDDNphIKBVfBBtWWkPGRbiWEgzLo0SvLygYF6HgzVduHd+4WGPB/WD64POFgwzY3g==
+  version "1.5.128"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.128.tgz#8ea537b369c32527b3cc47df7973bffe5d3c2980"
+  integrity sha512-bo1A4HH/NS522Ws0QNFIzyPcyUUNV/yyy70Ho1xqfGYzPUme2F/xr4tlEOuM6/A538U1vDA7a4XfCd1CKRegKQ==
 
 emoji-regex@^10.3.0:
   version "10.4.0"
