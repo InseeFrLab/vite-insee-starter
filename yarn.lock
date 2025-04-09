@@ -321,9 +321,9 @@
     "@babel/helper-validator-identifier" "^7.25.9"
 
 "@codegouvfr/react-dsfr@^1.20.4":
-  version "1.22.3"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.22.3.tgz#6d21c4e118238fd7aef186dac8926537410b69e8"
-  integrity sha512-bVRlmAg6Anqm5wGkNDMTJYRWZ6qiVibo2LMuBiNy0l5Y9ShJqDwbAehrwTRw6BblKgLVMHVslKR+Oel33STavA==
+  version "1.22.4"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.22.4.tgz#3c64f248b6ba7c4268cf4059c9e28e5317287904"
+  integrity sha512-c1AaNNOLVtXFbULBnQlr1+CdJLlk+70+m0+CjW5pgobtWt+53LQ6DRNEjV7v9BeLdtLFFxT8Wwn2K5fHnPkC9A==
   dependencies:
     tsafe "^1.8.5"
     yargs-parser "^21.1.1"
