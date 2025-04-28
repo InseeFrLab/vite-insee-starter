@@ -131,10 +131,13 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                                 "--background-active-blue-france": muiTheme.palette.primary.main,
                                 "--text-action-high-blue-france": muiTheme.palette.primary.main,
                                 "--border-plain-blue-france": muiTheme.palette.primary.main,
-                                "--text-title-grey": muiTheme.palette.text.primary
+                                "--border-active-blue-france": muiTheme.palette.primary.main,
+                                "--text-title-grey": muiTheme.palette.text.primary,
+                                "--background-action-high-blue-france": muiTheme.palette.primary.main,
+                                "--border-default-grey": muiTheme.palette.divider,
+                                "--border-action-high-blue-france": muiTheme.palette.primary.main
 
                                 // options:
-
                                 /*
                                 "--blue-france-sun-113-625": muiTheme.palette.primary.main,
                                 "--blue-france-sun-113-625-active": muiTheme.palette.primary.light,
