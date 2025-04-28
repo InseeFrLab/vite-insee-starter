@@ -5,7 +5,7 @@ import { OidcProvider } from "oidc";
 import { RouterProvider, createRouter, Link, type LinkProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { I18nFetchingSuspense } from "i18n";
-import { createMuiThemeProvider } from "react-dsfr/mui-white-label";
+import { createMuiThemeProviderWithOptionalGovernmentalBranding } from "react-dsfr/mui-white-label";
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -46,7 +46,7 @@ startReactDsfr({
 
 const IS_GOVERNMENT_BRANDING_ENABLED: boolean = false;
 
-const { MuiThemeProvider } = createMuiThemeProvider({
+const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBranding({
     createMuiTheme: ({ isDark, muiTheme_gov }) => {
         if (IS_GOVERNMENT_BRANDING_ENABLED) {
             return muiTheme_gov;

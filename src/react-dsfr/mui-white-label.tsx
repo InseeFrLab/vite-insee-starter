@@ -3,8 +3,10 @@ import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsVal
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { createMuiDsfrTheme } from "./mui";
 import * as mui from "@mui/material/styles";
+import { fr } from "@codegouvfr/react-dsfr";
+import { Global, css } from "@emotion/react";
 
-export function createMuiThemeProvider(params: {
+export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
     createMuiTheme: (params: {
         isDark: boolean;
         /**
@@ -62,9 +64,64 @@ export function createMuiThemeProvider(params: {
         const { muiTheme, isGov } = useMuiTheme();
 
         return (
-            <context_isGov.Provider value={isGov}>
-                <mui.ThemeProvider theme={muiTheme}>{children}</mui.ThemeProvider>
-            </context_isGov.Provider>
+            <>
+                {!isGov && (
+                    <Global
+                        styles={css({
+                            ":root": {
+                                "--blue-france-sun-113-625": muiTheme.palette.primary.main,
+                                "--blue-france-sun-113-625-active": muiTheme.palette.primary.light,
+                                "--blue-france-sun-113-625-hover": muiTheme.palette.primary.dark,
+                                "--blue-france-975-sun-113": muiTheme.palette.primary.contrastText,
+
+                                "--blue-france-950-100": muiTheme.palette.secondary.main,
+                                "--blue-france-950-100-active": muiTheme.palette.secondary.light,
+                                "--blue-france-950-100-hover": muiTheme.palette.secondary.dark,
+                                //"--blue-france-sun-113-625": muiTheme.palette.secondary.contrastText,
+
+                                "--grey-50-1000": muiTheme.palette.text.primary,
+                                "--grey-200-850": muiTheme.palette.text.secondary,
+                                "--grey-625-425": muiTheme.palette.text.disabled,
+
+                                "--grey-900-175": muiTheme.palette.divider,
+
+                                //"--grey-200-850": muiTheme.palette.action.active,
+                                "--grey-975-100": muiTheme.palette.action.hover,
+                                "--blue-france-925-125-active": muiTheme.palette.action.selected,
+                                //"--grey-625-425": muiTheme.palette.action.disabled,
+                                "--grey-925-125": muiTheme.palette.action.disabledBackground,
+                                //"--blue-france-sun-113-625-active": muiTheme.palette.action.focus,
+
+                                "--grey-1000-50": muiTheme.palette.background.default,
+                                "--grey-1000-100": muiTheme.palette.background.paper
+                            },
+                            body: {
+                                fontFamily: muiTheme.typography.fontFamily,
+                                fontSize: muiTheme.typography.fontSize,
+                                //"lineHeight": muiTheme.typography.lineHeight,
+
+                                color: muiTheme.palette.text.primary,
+                                backgroundColor: muiTheme.palette.background.default
+                            },
+                            [`.${fr.cx("fr-header__logo")}`]: {
+                                display: "none"
+                            },
+                            [`.${fr.cx("fr-footer__brand")} .${fr.cx("fr-logo")}`]: {
+                                display: "none"
+                            },
+                            [`.${fr.cx("fr-footer__content-list")}`]: {
+                                display: "none"
+                            },
+                            [`.${fr.cx("fr-footer__bottom-copy")}`]: {
+                                display: "none"
+                            }
+                        })}
+                    />
+                )}
+                <context_isGov.Provider value={isGov}>
+                    <mui.ThemeProvider theme={muiTheme}>{children}</mui.ThemeProvider>
+                </context_isGov.Provider>
+            </>
         );
     }
 
