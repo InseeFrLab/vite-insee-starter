@@ -9,7 +9,7 @@ import { createMuiThemeProviderWithOptionalGovernmentalBranding } from "react-ds
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import faviconIcoUrl from "assets/favicon.ico";
+import logoInseePngUrl from "assets/logo-insee.png";
 
 const queryClient = new QueryClient();
 
@@ -59,7 +59,8 @@ const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBrand
             }
         });
 
-        return { muiTheme, faviconUrl: faviconIcoUrl };
+        return { muiTheme, faviconUrl: logoInseePngUrl };
+        //return { muiTheme };
     }
 });
 

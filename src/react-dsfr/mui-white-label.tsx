@@ -74,6 +74,9 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
             link.rel = "icon";
             link.href = faviconUrl;
             link.type = (() => {
+                if (faviconUrl.startsWith("data:")) {
+                    return faviconUrl.split("data:")[1].split(",")[0];
+                }
                 switch (faviconUrl.split(".").pop()?.toLowerCase()) {
                     case "svg":
                         return "image/svg+xml";
