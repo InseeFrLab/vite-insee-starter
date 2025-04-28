@@ -48,12 +48,12 @@ startReactDsfr({
 const IS_GOVERNMENT_BRANDING_ENABLED: boolean = false;
 
 const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBranding({
-    createMuiTheme: ({ isDark, muiTheme_gov }) => {
+    createMuiTheme: ({ isDark, theme_gov }) => {
         if (IS_GOVERNMENT_BRANDING_ENABLED) {
-            return { muiTheme: muiTheme_gov };
+            return { theme: theme_gov };
         }
 
-        const muiTheme = createTheme({
+        const theme = createTheme({
             palette: {
                 mode: isDark ? "dark" : "light"
                 /*
@@ -68,10 +68,10 @@ const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBrand
             }
         });
 
-        console.log(muiTheme);
+        console.log(theme);
 
-        return { muiTheme, faviconUrl: logoInseePngUrl };
-        //return { muiTheme };
+        return { theme, faviconUrl: logoInseePngUrl };
+        //return { theme };
     }
 });
 

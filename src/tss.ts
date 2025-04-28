@@ -10,7 +10,7 @@ const customColors = {
 
 // Here you put all the things that you might need for styling.
 function useContext() {
-    const muiTheme = useTheme();
+    const theme = useTheme();
 
     const { windowInnerWidth, windowInnerHeight } = useWindowInnerSize();
 
@@ -19,7 +19,7 @@ function useContext() {
     const { isGov } = useIsGov();
 
     return {
-        muiTheme,
+        theme,
         isGov,
         windowInnerWidth,
         windowInnerHeight,

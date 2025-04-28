@@ -19,8 +19,8 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
          * That is to say before augmentation.
          * Make sure to set your custom properties if any are declared at the type level.
          **/
-        muiTheme_gov: mui.Theme;
-    }) => { muiTheme: mui.Theme; faviconUrl?: string };
+        theme_gov: mui.Theme;
+    }) => { theme: mui.Theme; faviconUrl?: string };
 }) {
     const { createMuiTheme } = params;
 
@@ -28,52 +28,51 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
         const { isDark } = useIsDark();
         const { breakpointsValues } = useBreakpointsValuesPx();
 
-        const { muiTheme, isGov, faviconUrl_userProvided } = useMemo(() => {
-            const muiTheme_gov = createMuiDsfrTheme({ isDark, breakpointsValues });
+        const { theme, isGov, faviconUrl_userProvided } = useMemo(() => {
+            const theme_gov = createMuiDsfrTheme({ isDark, breakpointsValues });
 
             // @ts-expect-error: Technic to detect if user is using the government theme
-            muiTheme_gov.palette.isGov = true;
+            theme_gov.palette.isGov = true;
 
-            const { muiTheme, faviconUrl: faviconUrl_userProvided } = createMuiTheme({
+            const { theme, faviconUrl: faviconUrl_userProvided } = createMuiTheme({
                 isDark,
-                muiTheme_gov
+                theme_gov
             });
 
             let isGov: boolean;
 
             // @ts-expect-error: We know what we are doing
-            if (muiTheme.palette.isGov) {
+            if (theme.palette.isGov) {
                 isGov = true;
                 // @ts-expect-error: We know what we are doing
-                delete muiTheme.palette.isGov;
+                delete theme.palette.isGov;
             } else {
                 isGov = false;
             }
 
             // NOTE: We do not allow customization of the spacing and breakpoints
             if (!isGov) {
-                muiTheme.spacing = structuredCloneButFunctions(muiTheme_gov.spacing);
-                muiTheme.breakpoints = structuredCloneButFunctions(muiTheme_gov.breakpoints);
+                theme.spacing = structuredCloneButFunctions(theme_gov.spacing);
+                theme.breakpoints = structuredCloneButFunctions(theme_gov.breakpoints);
 
-                muiTheme.components ??= {};
+                theme.components ??= {};
 
                 deepAssign({
-                    target: muiTheme.components as any,
+                    target: theme.components as any,
                     source: structuredCloneButFunctions({
-                        MuiTablePagination: muiTheme_gov.components!.MuiTablePagination
+                        MuiTablePagination: theme_gov.components!.MuiTablePagination
                     }) as any
                 });
 
-                muiTheme.typography = structuredCloneButFunctions(
-                    muiTheme_gov.typography,
-                    ({ key, value }) => (key !== "fontFamily" ? value : muiTheme.typography.fontFamily)
+                theme.typography = structuredCloneButFunctions(theme_gov.typography, ({ key, value }) =>
+                    key !== "fontFamily" ? value : theme.typography.fontFamily
                 );
             }
 
-            return { muiTheme, isGov, faviconUrl_userProvided };
+            return { theme, isGov, faviconUrl_userProvided };
         }, [isDark, breakpointsValues]);
 
-        return { muiTheme, isGov, faviconUrl_userProvided };
+        return { theme, isGov, faviconUrl_userProvided };
     }
 
     function useFavicon(params: { faviconUrl: string }) {
@@ -115,7 +114,7 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
     function MuiThemeProvider(props: { children: ReactNode }) {
         const { children } = props;
 
-        const { muiTheme, isGov, faviconUrl_userProvided } = useMuiTheme();
+        const { theme, isGov, faviconUrl_userProvided } = useMuiTheme();
 
         useFavicon({
             faviconUrl: faviconUrl_userProvided ?? (isGov ? marianneFaviconSvgUrl : blankFaviconSvgUrl)
@@ -127,52 +126,52 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                     <Global
                         styles={css({
                             ":root": {
-                                "--text-active-blue-france": muiTheme.palette.primary.main,
-                                "--background-active-blue-france": muiTheme.palette.primary.main,
-                                "--text-action-high-blue-france": muiTheme.palette.primary.main,
-                                "--border-plain-blue-france": muiTheme.palette.primary.main,
-                                "--border-active-blue-france": muiTheme.palette.primary.main,
-                                "--text-title-grey": muiTheme.palette.text.primary,
-                                "--background-action-high-blue-france": muiTheme.palette.primary.main,
-                                "--border-default-grey": muiTheme.palette.divider,
-                                "--border-action-high-blue-france": muiTheme.palette.primary.main
+                                "--text-active-blue-france": theme.palette.primary.main,
+                                "--background-active-blue-france": theme.palette.primary.main,
+                                "--text-action-high-blue-france": theme.palette.primary.main,
+                                "--border-plain-blue-france": theme.palette.primary.main,
+                                "--border-active-blue-france": theme.palette.primary.main,
+                                "--text-title-grey": theme.palette.text.primary,
+                                "--background-action-high-blue-france": theme.palette.primary.main,
+                                "--border-default-grey": theme.palette.divider,
+                                "--border-action-high-blue-france": theme.palette.primary.main
 
                                 // options:
                                 /*
-                                "--blue-france-sun-113-625": muiTheme.palette.primary.main,
-                                "--blue-france-sun-113-625-active": muiTheme.palette.primary.light,
-                                "--blue-france-sun-113-625-hover": muiTheme.palette.primary.dark,
-                                "--blue-france-975-sun-113": muiTheme.palette.primary.contrastText,
+                                "--blue-france-sun-113-625": theme.palette.primary.main,
+                                "--blue-france-sun-113-625-active": theme.palette.primary.light,
+                                "--blue-france-sun-113-625-hover": theme.palette.primary.dark,
+                                "--blue-france-975-sun-113": theme.palette.primary.contrastText,
 
-                                "--blue-france-950-100": muiTheme.palette.secondary.main,
-                                "--blue-france-950-100-active": muiTheme.palette.secondary.light,
-                                "--blue-france-950-100-hover": muiTheme.palette.secondary.dark,
-                                //"--blue-france-sun-113-625": muiTheme.palette.secondary.contrastText,
+                                "--blue-france-950-100": theme.palette.secondary.main,
+                                "--blue-france-950-100-active": theme.palette.secondary.light,
+                                "--blue-france-950-100-hover": theme.palette.secondary.dark,
+                                //"--blue-france-sun-113-625": theme.palette.secondary.contrastText,
 
-                                "--grey-50-1000": muiTheme.palette.text.primary,
-                                "--grey-200-850": muiTheme.palette.text.secondary,
-                                "--grey-625-425": muiTheme.palette.text.disabled,
+                                "--grey-50-1000": theme.palette.text.primary,
+                                "--grey-200-850": theme.palette.text.secondary,
+                                "--grey-625-425": theme.palette.text.disabled,
 
-                                "--grey-900-175": muiTheme.palette.divider,
+                                "--grey-900-175": theme.palette.divider,
 
-                                //"--grey-200-850": muiTheme.palette.action.active,
-                                "--grey-975-100": muiTheme.palette.action.hover,
-                                "--blue-france-925-125-active": muiTheme.palette.action.selected,
-                                //"--grey-625-425": muiTheme.palette.action.disabled,
-                                "--grey-925-125": muiTheme.palette.action.disabledBackground,
-                                //"--blue-france-sun-113-625-active": muiTheme.palette.action.focus,
+                                //"--grey-200-850": theme.palette.action.active,
+                                "--grey-975-100": theme.palette.action.hover,
+                                "--blue-france-925-125-active": theme.palette.action.selected,
+                                //"--grey-625-425": theme.palette.action.disabled,
+                                "--grey-925-125": theme.palette.action.disabledBackground,
+                                //"--blue-france-sun-113-625-active": theme.palette.action.focus,
 
-                                "--grey-1000-50": muiTheme.palette.background.default,
-                                "--grey-1000-100": muiTheme.palette.background.paper
+                                "--grey-1000-50": theme.palette.background.default,
+                                "--grey-1000-100": theme.palette.background.paper
                                 */
                             },
                             body: {
-                                fontFamily: muiTheme.typography.fontFamily,
-                                fontSize: muiTheme.typography.fontSize,
-                                //"lineHeight": muiTheme.typography.lineHeight,
+                                fontFamily: theme.typography.fontFamily,
+                                fontSize: theme.typography.fontSize,
+                                //"lineHeight": theme.typography.lineHeight,
 
-                                color: muiTheme.palette.text.primary,
-                                backgroundColor: muiTheme.palette.background.default
+                                color: theme.palette.text.primary,
+                                backgroundColor: theme.palette.background.default
                             },
                             [`.${fr.cx("fr-header__logo")}`]: {
                                 display: "none"
@@ -190,7 +189,7 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                     />
                 )}
                 <context_isGov.Provider value={isGov}>
-                    <mui.ThemeProvider theme={muiTheme}>{children}</mui.ThemeProvider>
+                    <mui.ThemeProvider theme={theme}>{children}</mui.ThemeProvider>
                 </context_isGov.Provider>
             </>
         );
