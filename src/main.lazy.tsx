@@ -59,6 +59,8 @@ const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBrand
             }
         });
 
+        console.log(muiTheme.components);
+
         return { muiTheme, faviconUrl: logoInseePngUrl };
         //return { muiTheme };
     }
