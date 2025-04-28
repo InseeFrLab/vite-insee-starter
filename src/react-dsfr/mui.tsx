@@ -26,7 +26,6 @@ export function getMuiDsfrThemeOptions(params: {
     const { isDark, breakpointsValues } = params;
 
     const { options, decisions } = fr.colors.getHex({ isDark });
-    //const { options, decisions } = fr.colors;
 
     return {
         shape: {

@@ -8,6 +8,7 @@ import { Global, css } from "@emotion/react";
 import marianneFaviconSvgUrl from "@codegouvfr/react-dsfr/favicon/favicon.svg";
 import blankFaviconSvgUrl from "./blank-favicon.svg";
 import { deepAssign } from "./tools/deepAssign";
+import { structuredCloneButFunctions } from "./tools/structuredCloneButFunctions";
 
 export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
     createMuiTheme: (params: {
@@ -51,28 +52,22 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
 
             // NOTE: We do not allow customization of the spacing and breakpoints
             if (!isGov) {
-                muiTheme.spacing = muiTheme_gov.spacing;
-                muiTheme.breakpoints = muiTheme_gov.breakpoints;
+                muiTheme.spacing = structuredCloneButFunctions(muiTheme_gov.spacing);
+                muiTheme.breakpoints = structuredCloneButFunctions(muiTheme_gov.breakpoints);
 
                 muiTheme.components ??= {};
 
                 deepAssign({
                     target: muiTheme.components as any,
-                    source: {
-                        MuiTablePagination: {
-                            styleOverrides: {
-                                displayedRows: {
-                                    //Fixes: https://user-images.githubusercontent.com/6702424/206063347-65e7d13c-3dea-410c-a0e0-51cf214deba0.png
-                                    margin: "unset"
-                                },
-                                selectLabel: {
-                                    //Fixes: https://github.com/codegouvfr/react-dsfr/assets/6702424/678a7f69-d4e8-4897-85f0-65c605b46900
-                                    margin: "unset"
-                                }
-                            }
-                        }
-                    }
+                    source: structuredCloneButFunctions({
+                        MuiTablePagination: muiTheme_gov.components!.MuiTablePagination
+                    }) as any
                 });
+
+                muiTheme.typography = structuredCloneButFunctions(
+                    muiTheme_gov.typography,
+                    ({ key, value }) => (key !== "fontFamily" ? value : muiTheme.typography.fontFamily)
+                );
             }
 
             return { muiTheme, isGov, faviconUrl_userProvided };
@@ -132,11 +127,11 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                     <Global
                         styles={css({
                             ":root": {
-                                //"--text-active-blue-france": "#AA0000"
                                 "--text-active-blue-france": muiTheme.palette.primary.main,
                                 "--background-active-blue-france": muiTheme.palette.primary.main,
                                 "--text-action-high-blue-france": muiTheme.palette.primary.main,
-                                "--border-plain-blue-france": muiTheme.palette.primary.main
+                                "--border-plain-blue-france": muiTheme.palette.primary.main,
+                                "--text-title-grey": muiTheme.palette.text.primary
 
                                 // options:
 
