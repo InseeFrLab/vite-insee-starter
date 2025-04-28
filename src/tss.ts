@@ -2,7 +2,7 @@ import { createTss, GlobalStyles, keyframes } from "tss-react";
 import { useTheme } from "@mui/material/styles";
 import { useWindowInnerSize } from "@codegouvfr/react-dsfr/tools/useWindowInnerSize";
 import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsValuesPx";
-import { useIsGov } from "react-dsfr/mui-white-label";
+import { useIsGov } from "@codegouvfr/react-dsfr/mui";
 
 const customColors = {
     myCustomColor: "#ff0000"
