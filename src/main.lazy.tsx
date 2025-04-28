@@ -9,6 +9,7 @@ import { createMuiThemeProviderWithOptionalGovernmentalBranding } from "react-ds
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import faviconIcoUrl from "assets/favicon.ico";
 
 const queryClient = new QueryClient();
 
@@ -49,14 +50,16 @@ const IS_GOVERNMENT_BRANDING_ENABLED: boolean = false;
 const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBranding({
     createMuiTheme: ({ isDark, muiTheme_gov }) => {
         if (IS_GOVERNMENT_BRANDING_ENABLED) {
-            return muiTheme_gov;
+            return { muiTheme: muiTheme_gov };
         }
 
-        return createTheme({
+        const muiTheme = createTheme({
             palette: {
                 mode: isDark ? "dark" : "light"
             }
         });
+
+        return { muiTheme, faviconUrl: faviconIcoUrl };
     }
 });
 

@@ -1,10 +1,12 @@
-import { useMemo, createContext, useContext, type ReactNode } from "react";
+import { useMemo, createContext, useContext, useEffect, type ReactNode } from "react";
 import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsValuesPx";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { createMuiDsfrTheme } from "./mui";
 import * as mui from "@mui/material/styles";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Global, css } from "@emotion/react";
+import marianneFaviconSvgUrl from "@codegouvfr/react-dsfr/favicon/favicon.svg";
+import blankFaviconSvgUrl from "./blank-favicon.svg";
 
 export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
     createMuiTheme: (params: {
@@ -16,7 +18,7 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
          * Make sure to set your custom properties if any are declared at the type level.
          **/
         muiTheme_gov: mui.Theme;
-    }) => mui.Theme;
+    }) => { muiTheme: mui.Theme; faviconUrl?: string };
 }) {
     const { createMuiTheme } = params;
 
@@ -24,13 +26,13 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
         const { isDark } = useIsDark();
         const { breakpointsValues } = useBreakpointsValuesPx();
 
-        const { muiTheme, isGov } = useMemo(() => {
+        const { muiTheme, isGov, faviconUrl_userProvided } = useMemo(() => {
             const muiTheme_gov = createMuiDsfrTheme({ isDark, breakpointsValues });
 
             // @ts-expect-error: Technic to detect if user is using the government theme
             muiTheme_gov.palette.isGov = true;
 
-            const muiTheme = createMuiTheme({
+            const { muiTheme, faviconUrl: faviconUrl_userProvided } = createMuiTheme({
                 isDark,
                 muiTheme_gov
             });
@@ -52,16 +54,53 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                 muiTheme.breakpoints = muiTheme_gov.breakpoints;
             }
 
-            return { muiTheme, isGov };
+            return { muiTheme, isGov, faviconUrl_userProvided };
         }, [isDark, breakpointsValues]);
 
-        return { muiTheme, isGov };
+        return { muiTheme, isGov, faviconUrl_userProvided };
+    }
+
+    function useFavicon(params: { faviconUrl: string }) {
+        const { faviconUrl } = params;
+
+        useEffect(() => {
+            document
+                .querySelectorAll(
+                    'link[rel="apple-touch-icon"], link[rel="icon"], link[rel="shortcut icon"]'
+                )
+                .forEach(link => link.remove());
+
+            const link = document.createElement("link");
+            link.rel = "icon";
+            link.href = faviconUrl;
+            link.type = (() => {
+                switch (faviconUrl.split(".").pop()?.toLowerCase()) {
+                    case "svg":
+                        return "image/svg+xml";
+                    case "png":
+                        return "image/png";
+                    case "ico":
+                        return "image/x-icon";
+                    default:
+                        throw new Error("Unsupported favicon file type");
+                }
+            })();
+            document.head.appendChild(link);
+
+            return () => {
+                link.remove();
+            };
+        }, [faviconUrl]);
     }
 
     function MuiThemeProvider(props: { children: ReactNode }) {
         const { children } = props;
 
-        const { muiTheme, isGov } = useMuiTheme();
+        const { muiTheme, isGov, faviconUrl_userProvided } = useMuiTheme();
+
+        useFavicon({
+            faviconUrl: faviconUrl_userProvided ?? (isGov ? marianneFaviconSvgUrl : blankFaviconSvgUrl)
+        });
 
         return (
             <>
