@@ -5,6 +5,8 @@ import { useOidc } from "oidc";
 import { tss } from "tss";
 import { MyComponent } from "components/MyComponent";
 import { fr } from "@codegouvfr/react-dsfr";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 export const Route = createLazyFileRoute("/")({
     component: Page
@@ -15,19 +17,24 @@ function Page() {
 
     const { isUserLoggedIn, decodedIdToken } = useOidc();
 
-    const { classes } = useStyles();
+    const { classes, isGov } = useStyles();
 
     return (
         <div className={classes.root}>
             <div className={classes.content}>
-                <h3>
+                <Typography variant="h3">
                     {t("welcome", {
                         name: isUserLoggedIn ? decodedIdToken.preferred_username : undefined
                     })}
-                </h3>
-                <a href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
+                </Typography>
+                <Typography variant="body1">
+                    {isGov
+                        ? "French Government Branding Enabled"
+                        : "French Government Branding disabled, using custom branding"}
+                </Typography>
+                <Link href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
                     InseeFrLab/vite-insee-starter
-                </a>
+                </Link>
                 <MyComponent className={classes.myComponent} />
             </div>
         </div>

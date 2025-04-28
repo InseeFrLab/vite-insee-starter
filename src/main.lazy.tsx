@@ -56,6 +56,15 @@ const { MuiThemeProvider } = createMuiThemeProviderWithOptionalGovernmentalBrand
         const muiTheme = createTheme({
             palette: {
                 mode: isDark ? "dark" : "light"
+                /*
+                primary: {
+                    main: isDark?"#02AFFF" :"#3467AE",
+                    
+                },
+                secondary: {
+                    main: "#FFC403"
+                }
+                */
             }
         });
 

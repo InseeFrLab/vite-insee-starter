@@ -2,6 +2,7 @@ import { createTss, GlobalStyles, keyframes } from "tss-react";
 import { useTheme } from "@mui/material/styles";
 import { useWindowInnerSize } from "@codegouvfr/react-dsfr/tools/useWindowInnerSize";
 import { useBreakpointsValuesPx } from "@codegouvfr/react-dsfr/useBreakpointsValuesPx";
+import { useIsGov } from "react-dsfr/mui-white-label";
 
 const customColors = {
     myCustomColor: "#ff0000"
@@ -15,8 +16,11 @@ function useContext() {
 
     const { breakpointsValues } = useBreakpointsValuesPx();
 
+    const { isGov } = useIsGov();
+
     return {
         muiTheme,
+        isGov,
         windowInnerWidth,
         windowInnerHeight,
         customColors,

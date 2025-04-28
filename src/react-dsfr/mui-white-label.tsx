@@ -132,6 +132,15 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
                     <Global
                         styles={css({
                             ":root": {
+                                //"--text-active-blue-france": "#AA0000"
+                                "--text-active-blue-france": muiTheme.palette.primary.main,
+                                "--background-active-blue-france": muiTheme.palette.primary.main,
+                                "--text-action-high-blue-france": muiTheme.palette.primary.main,
+                                "--border-plain-blue-france": muiTheme.palette.primary.main
+
+                                // options:
+
+                                /*
                                 "--blue-france-sun-113-625": muiTheme.palette.primary.main,
                                 "--blue-france-sun-113-625-active": muiTheme.palette.primary.light,
                                 "--blue-france-sun-113-625-hover": muiTheme.palette.primary.dark,
@@ -157,6 +166,7 @@ export function createMuiThemeProviderWithOptionalGovernmentalBranding(params: {
 
                                 "--grey-1000-50": muiTheme.palette.background.default,
                                 "--grey-1000-100": muiTheme.palette.background.paper
+                                */
                             },
                             body: {
                                 fontFamily: muiTheme.typography.fontFamily,
