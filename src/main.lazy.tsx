@@ -5,9 +5,11 @@ import { OidcProvider } from "oidc";
 import { RouterProvider, createRouter, Link, type LinkProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { I18nFetchingSuspense } from "i18n";
-import { MuiDsfrThemeProvider } from "@codegouvfr/react-dsfr/mui";
+import { createDsfrCustomBrandingProvider } from "@codegouvfr/react-dsfr/mui";
+import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import logoInseePngUrl from "assets/logo-insee.png";
 
 const queryClient = new QueryClient();
 
@@ -43,16 +45,41 @@ startReactDsfr({
     }
 });
 
+const { DsfrCustomBrandingProvider } = createDsfrCustomBrandingProvider({
+    createMuiTheme: ({ isDark, theme_gov }) => {
+        if (import.meta.env.VITE_IS_GOV_INSTANCE === "true") {
+            return { theme: theme_gov };
+        }
+
+        const theme = createTheme({
+            palette: {
+                mode: isDark ? "dark" : "light"
+                /*
+                primary: {
+                    main: isDark?"#02AFFF" :"#3467AE",
+                    
+                },
+                secondary: {
+                    main: "#FFC403"
+                }
+                */
+            }
+        });
+
+        return { theme, faviconUrl: logoInseePngUrl };
+    }
+});
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-            <MuiDsfrThemeProvider>
+            <DsfrCustomBrandingProvider>
                 <OidcProvider>
                     <I18nFetchingSuspense>
                         <RouterProvider router={router} />
                     </I18nFetchingSuspense>
                 </OidcProvider>
-            </MuiDsfrThemeProvider>
+            </DsfrCustomBrandingProvider>
         </QueryClientProvider>
     </React.StrictMode>
 );
