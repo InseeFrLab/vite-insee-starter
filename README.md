@@ -35,6 +35,11 @@ yarn
 yarn dev
 ```
 
+## White label
+
+By default, the app comes with a french government branding.  
+You can however make the app white label by setting `VITE_IS_GOV_INSTANCE=false` in `.env.local`.
+
 ## Deploying the APP
 
 You can use the Docker Image published here: https://hub.docker.com/r/inseefrlab/vite-insee-starter  
