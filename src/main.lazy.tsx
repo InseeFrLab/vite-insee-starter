@@ -10,6 +10,7 @@ import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import logoInseePngUrl from "assets/logo-insee.png";
+import "assets/geist/main.css";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,9 @@ const { DsfrCustomBrandingProvider } = createDsfrCustomBrandingProvider({
                     main: "#FFC403"
                 }
                 */
+            },
+            typography: {
+                fontFamily: '"Geist"'
             }
         });
 
