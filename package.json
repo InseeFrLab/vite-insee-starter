@@ -20,7 +20,7 @@
         "prepare": "husky"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.23.1",
+        "@codegouvfr/react-dsfr": "^1.23.2",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
         "@mui/icons-material": "^6.4.8",
