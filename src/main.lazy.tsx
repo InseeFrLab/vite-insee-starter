@@ -9,11 +9,7 @@ import { createDsfrCustomBrandingProvider } from "@codegouvfr/react-dsfr/mui";
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { GlobalStyles } from "tss";
-import { fr } from "@codegouvfr/react-dsfr";
 import logoInseePngUrl from "assets/logo-insee.png";
-import { useTheme } from "@mui/material/styles";
-import { darken } from "@mui/material/styles";
 
 import "assets/geist/main.css";
 
@@ -85,36 +81,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <DsfrCustomBrandingProvider>
                 <OidcProvider>
                     <I18nFetchingSuspense>
-                        <>
-                            <Global />
-                            <RouterProvider router={router} />
-                        </>
+                        <RouterProvider router={router} />
                     </I18nFetchingSuspense>
                 </OidcProvider>
             </DsfrCustomBrandingProvider>
         </QueryClientProvider>
     </React.StrictMode>
 );
-
-function Global() {
-    const theme = useTheme();
-
-    return (
-        <GlobalStyles
-            styles={{
-                [`.${fr.cx("fr-btn")}`]: {
-                    "--hover-tint": theme.palette.primary.dark,
-                    "--active-tint": darken(theme.palette.primary.main, 0.24),
-                    "&:hover, &:active": {
-                        color: theme.palette.primary.contrastText
-                    }
-                },
-                [`.${fr.cx("fr-input")}`]: {
-                    "&&&": {
-                        borderTopLeftRadius: `0px`
-                    }
-                }
-            }}
-        />
-    );
-}
