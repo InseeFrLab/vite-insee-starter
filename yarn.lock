@@ -320,10 +320,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@codegouvfr/react-dsfr@^1.23.6":
-  version "1.23.6"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.23.6.tgz#ac4232dd99d294b073e5f816f4b97692d2e7f2a7"
-  integrity sha512-c8uQAWLsnM6eRk7kg1XHs3MXwbrE2aj1+OqDySddX8AaVxaVev8b3bPaRh33vl5jbeCSaTuG2JXbmNZKOFvaBw==
+"@codegouvfr/react-dsfr@^1.23.14":
+  version "1.23.14"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.23.14.tgz#7b28cdcda1a238a0765f87748a500a609008fd30"
+  integrity sha512-6EY9uG/tIKhwivmN/FYX9bd8pgg2A5s78ELP5W6FuHpNhbT8qGU2jL4cSNn2RiIibQXMsk9AQaTHEfnqFzccFQ==
   dependencies:
     tsafe "^1.8.5"
     yargs-parser "^21.1.1"
