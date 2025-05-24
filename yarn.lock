@@ -798,35 +798,35 @@
     react-is "^19.1.0"
 
 "@mui/x-data-grid@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-8.3.1.tgz#4bb4d8ce794b073cd140a8877ede2069afbd4c08"
-  integrity sha512-mSo2g0ZZzasDQ4kKrFdJVk7dJgz77jF/e8udvGqnnTgnQXlqLMpKne/veL3gRdi3TJxxTv2vqXtX7IZfWGJecQ==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-8.4.0.tgz#cef56df7c1c1b40278ca55dae112b9aaece0e8c5"
+  integrity sha512-c0fgMhvQTjCSo3LgRK1Mdk2msktCl9uwMYUYlP6bbqJ7I03IvS+1aZ+s3nSLmaq1aVh7sE2Bnuz63OnVerTLJA==
   dependencies:
     "@babel/runtime" "^7.27.1"
     "@mui/utils" "^7.0.2"
-    "@mui/x-internals" "8.3.1"
+    "@mui/x-internals" "8.4.0"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     reselect "^5.1.1"
     use-sync-external-store "^1.5.0"
 
 "@mui/x-date-pickers@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-8.3.1.tgz#270a7489aab8872e24f005f57f90a765febc1615"
-  integrity sha512-QokQvtfrKy802mrs6aH3r351Xhl5r/TYjcIVX97dCp32HRMFD7ygQV9S7+hQYqqpEN8iWEH+L5jJPSIottd/5g==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-8.4.0.tgz#ae1da45c760258d59c842a92333a28dfceab009a"
+  integrity sha512-x7jI7JnKK25xL3yjD2Z1r86gAWtabKj9ogI2WDKd/v9WwE1VxmDD/NTiXprEZFo9psPOoqr+juPGDz5Cb2v7jw==
   dependencies:
     "@babel/runtime" "^7.27.1"
     "@mui/utils" "^7.0.2"
-    "@mui/x-internals" "8.3.1"
+    "@mui/x-internals" "8.4.0"
     "@types/react-transition-group" "^4.4.12"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     react-transition-group "^4.4.5"
 
-"@mui/x-internals@8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-8.3.1.tgz#1d83b984eee7e847594348513a6356df0be8b457"
-  integrity sha512-8kIxT66cea63iEseEIHSWzKju2Wzl7MsWFoAUQEyRvYqOFa2j9Un2Vn/EH2vy9nm/MtMAYpwOE/nt68/KTIA2w==
+"@mui/x-internals@8.4.0":
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-8.4.0.tgz#593b36cab7050fe1e4ca8dc3ce455349a3edae5d"
+  integrity sha512-Z7FCahC4MLfTVzEwnKOB7P1fiR9DzFuMzHOPRNaMXc/rsS7unbtBKAG94yvsRzReCyjzZUVA7h37lnQ1DoPKJw==
   dependencies:
     "@babel/runtime" "^7.27.1"
     "@mui/utils" "^7.0.2"
@@ -951,6 +951,11 @@
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
+
+"@rolldown/pluginutils@1.0.0-beta.9":
+  version "1.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.9.tgz#68ef9fff5a9791a642cea0dc4380ce6cb487a84a"
+  integrity sha512-e9MeMtVWo186sgvFFJOPGy7/d2j2mZhLJIdVW0C/xDluuOvymEATqz6zKsP0ZmXGzQtqlyjz5sC1sYQUoJG98w==
 
 "@rollup/rollup-android-arm-eabi@4.41.0":
   version "4.41.0"
@@ -1294,17 +1299,17 @@
   resolved "https://registry.yarnpkg.com/@tanstack/history/-/history-1.115.0.tgz#ded6595eaed4abd94127b539e51fe6de95f65ff8"
   integrity sha512-K7JJNrRVvyjAVnbXOH2XLRhFXDkeP54Kt2P4FR1Kl2KDGlIbkua5VqZQD2rot3qaDrpufyUa63nuLai1kOLTsQ==
 
-"@tanstack/query-core@5.76.2":
-  version "5.76.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.76.2.tgz#67439edc48ff5a654c8e25979be4660e6402130b"
-  integrity sha512-PFGwWh5ss9cJQ67l6bZ7hqXbisX2gy13G2jP+VGY1bgdbCfOMWh6UBVnN62QbFXro6CCoX9hYzTnZHr6Rz00YQ==
+"@tanstack/query-core@5.77.0":
+  version "5.77.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.77.0.tgz#5115cd96a5fd835f91d33e2dd4a64182d52de543"
+  integrity sha512-PFeWjgMQjOsnxBwnW/TJoO0pCja2dzuMQoZ3Diho7dPz7FnTUwTrjNmdf08evrhSE5nvPIKeqV6R0fvQfmhGeg==
 
 "@tanstack/react-query@^5.76.1":
-  version "5.76.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.76.2.tgz#3fd2247648f5332f1c203554b639b83c0c00039d"
-  integrity sha512-rGkWberCrFdIxMdvSAJM/UOKeu0O/JVTbMmfhQoJpiU9Uq0EDx2EMCadnNuJWbXR4smDA2t7DY3NKkYFmDVS5A==
+  version "5.77.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.77.0.tgz#6d0f30b24bd98e9530a76789481a11b3693aa5db"
+  integrity sha512-jX52ot8WxWzWnAknpRSEWj6PTR/7nkULOfoiaVPk6nKu0otwt30UMBC9PTg/m1x0uhz1g71/imwjViTm/oYHxA==
   dependencies:
-    "@tanstack/query-core" "5.76.2"
+    "@tanstack/query-core" "5.77.0"
 
 "@tanstack/react-router-devtools@^1.120.9":
   version "1.120.9"
@@ -1642,13 +1647,14 @@
     eslint-visitor-keys "^4.2.0"
 
 "@vitejs/plugin-react@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.4.1.tgz#d7d1e9c9616d7536b0953637edfee7c6cbe2fe0f"
-  integrity sha512-IpEm5ZmeXAP/osiBXVVP5KjFMzbWOonMs0NaQQl+xYnUAcq4oHUBsF2+p4MgKWG4YMmFYJU8A6sxRPuowllm6w==
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.5.0.tgz#ef2bad6be3031af2b2105b7ab2754f710e890a32"
+  integrity sha512-JuLWaEqypaJmOJPLWwO335Ig6jSgC1FTONCWAxnqcQthLTK/Yc9aH6hr9z/87xciejbQcnP3GnA1FWUSWeXaeg==
   dependencies:
     "@babel/core" "^7.26.10"
     "@babel/plugin-transform-react-jsx-self" "^7.25.9"
     "@babel/plugin-transform-react-jsx-source" "^7.25.9"
+    "@rolldown/pluginutils" "1.0.0-beta.9"
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.17.0"
 
