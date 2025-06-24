@@ -10,79 +10,33 @@
 
 import { createFileRoute } from '@tanstack/react-router'
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as TodoRouteImport } from './routes/todo'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as TodoImport } from './routes/todo'
+const MuiLazyRouteImport = createFileRoute('/mui')()
+const AccountLazyRouteImport = createFileRoute('/account')()
+const IndexLazyRouteImport = createFileRoute('/')()
 
-// Create Virtual Routes
-
-const MuiLazyImport = createFileRoute('/mui')()
-const AccountLazyImport = createFileRoute('/account')()
-const IndexLazyImport = createFileRoute('/')()
-
-// Create/Update Routes
-
-const MuiLazyRoute = MuiLazyImport.update({
+const MuiLazyRoute = MuiLazyRouteImport.update({
   id: '/mui',
   path: '/mui',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/mui.lazy').then((d) => d.Route))
-
-const AccountLazyRoute = AccountLazyImport.update({
+const AccountLazyRoute = AccountLazyRouteImport.update({
   id: '/account',
   path: '/account',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/account.lazy').then((d) => d.Route))
-
-const TodoRoute = TodoImport.update({
+const TodoRoute = TodoRouteImport.update({
   id: '/todo',
   path: '/todo',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const IndexLazyRoute = IndexLazyImport.update({
+const IndexLazyRoute = IndexLazyRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
-
-// Populate the FileRoutesByPath interface
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/todo': {
-      id: '/todo'
-      path: '/todo'
-      fullPath: '/todo'
-      preLoaderRoute: typeof TodoImport
-      parentRoute: typeof rootRoute
-    }
-    '/account': {
-      id: '/account'
-      path: '/account'
-      fullPath: '/account'
-      preLoaderRoute: typeof AccountLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/mui': {
-      id: '/mui'
-      path: '/mui'
-      fullPath: '/mui'
-      preLoaderRoute: typeof MuiLazyImport
-      parentRoute: typeof rootRoute
-    }
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
@@ -90,22 +44,19 @@ export interface FileRoutesByFullPath {
   '/account': typeof AccountLazyRoute
   '/mui': typeof MuiLazyRoute
 }
-
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/todo': typeof TodoRoute
   '/account': typeof AccountLazyRoute
   '/mui': typeof MuiLazyRoute
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute
+  __root__: typeof rootRouteImport
   '/': typeof IndexLazyRoute
   '/todo': typeof TodoRoute
   '/account': typeof AccountLazyRoute
   '/mui': typeof MuiLazyRoute
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/todo' | '/account' | '/mui'
@@ -114,12 +65,44 @@ export interface FileRouteTypes {
   id: '__root__' | '/' | '/todo' | '/account' | '/mui'
   fileRoutesById: FileRoutesById
 }
-
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   TodoRoute: typeof TodoRoute
   AccountLazyRoute: typeof AccountLazyRoute
   MuiLazyRoute: typeof MuiLazyRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/mui': {
+      id: '/mui'
+      path: '/mui'
+      fullPath: '/mui'
+      preLoaderRoute: typeof MuiLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/todo': {
+      id: '/todo'
+      path: '/todo'
+      fullPath: '/todo'
+      preLoaderRoute: typeof TodoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -128,35 +111,6 @@ const rootRouteChildren: RootRouteChildren = {
   AccountLazyRoute: AccountLazyRoute,
   MuiLazyRoute: MuiLazyRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/todo",
-        "/account",
-        "/mui"
-      ]
-    },
-    "/": {
-      "filePath": "index.lazy.tsx"
-    },
-    "/todo": {
-      "filePath": "todo.tsx"
-    },
-    "/account": {
-      "filePath": "account.lazy.tsx"
-    },
-    "/mui": {
-      "filePath": "mui.lazy.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */
