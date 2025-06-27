@@ -1509,17 +1509,17 @@
   dependencies:
     "@tanstack/query-core" "5.81.2"
 
-"@tanstack/react-router-devtools@^1.121.40":
-  version "1.121.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.121.40.tgz#3248a8f8a566ee8f7e4544f5ecb5a9d8995188a9"
-  integrity sha512-vohAKKA0cGxA3xeSx+oi7h8Q4D7PBPQGoAbXSPoTvMECDb/8RzjdrKL0ho+e3rFmVTHWuSV4efHP3wScBZ/Pkg==
+"@tanstack/react-router-devtools@^1.121.41":
+  version "1.121.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.121.41.tgz#0197474bceaaddd7b1cbcd9ab3437680a704054c"
+  integrity sha512-ezbBWXBK7U/yV7bZGMwshxYe1+tOJb/Ur3HA6Xu6iUEcBOpv/5agz2jeYcQmfign69ziR3rWecGApPJZYbrPQQ==
   dependencies:
     "@tanstack/router-devtools-core" "^1.121.40"
 
 "@tanstack/react-router@^1.121.34":
-  version "1.121.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.121.40.tgz#ffcf5159798fcb2ed55117f91a6dcb25d2d27499"
-  integrity sha512-uUho2mf/9NpRqzXqmj67yHCVC89bGo9M9yYAoVnGdRbbABo+tzsDN3QunPKzvQLSBkYUxol6AEOJBIOUdAKkqA==
+  version "1.121.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.121.41.tgz#7c2aa1826246f11b931e30e806df87825297117b"
+  integrity sha512-hbk3AbIJ5A+VtManyuaLCrrJu562bR/GvkiYxBR7Sgk3OTWcc1vuAjbpEmgjCaD7lFSJGwgQqMLsUmqu9u3URw==
   dependencies:
     "@tanstack/history" "1.121.34"
     "@tanstack/react-store" "^0.7.0"
@@ -1559,11 +1559,11 @@
     solid-js "^1.9.5"
 
 "@tanstack/router-devtools@^1.121.34":
-  version "1.121.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.121.40.tgz#10fb04deb9e96150b0ca2ff02c7bc9508c96a1fa"
-  integrity sha512-kRGvYWykj6VPo3Txfe5nzw4DgQOMVm6DzFNoyUfCPfCJD9K5qWufB72+mB1JAHwCvnQO0yNb42Sm22TiOinuTg==
+  version "1.121.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.121.41.tgz#5afc6d5aa1d997492959bf3ca0dcdf867564b843"
+  integrity sha512-kmK1HeVaykdLgiWP+QLVWKNPm7Qp1ex9P3UuAgiUnpEt444RCpCFs3S9hbDRHsObYxSJZEJsbYwCl+9TKSDexg==
   dependencies:
-    "@tanstack/react-router-devtools" "^1.121.40"
+    "@tanstack/react-router-devtools" "^1.121.41"
     clsx "^2.1.1"
     goober "^2.1.16"
 
@@ -1581,10 +1581,10 @@
     tsx "^4.19.2"
     zod "^3.24.2"
 
-"@tanstack/router-plugin@^1.121.40":
-  version "1.121.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.121.40.tgz#8f3fd2758be6a7db1598f130c0b145645fd91b7d"
-  integrity sha512-KJNMri4PE4wTB61BgFl9ju5xCdF1X46m6vnU444U0YxAJXAHPvn52tD/jlU1nMMqBc3j36nBQwcQd69YmitaEA==
+"@tanstack/router-plugin@^1.121.41":
+  version "1.121.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.121.41.tgz#e888453bb850e128689ab669e20f0ebbdc56ca39"
+  integrity sha512-kgDMJQpPdP7ug2LdT7DkOQf5xiLdnTlj7kVaHorPoPmtbPKh3aYt1KfaNf12i0eaq7uMD6V/Um8xSo+zxZag5A==
   dependencies:
     "@babel/core" "^7.26.8"
     "@babel/plugin-syntax-jsx" "^7.25.9"
@@ -1614,11 +1614,11 @@
     diff "^8.0.2"
 
 "@tanstack/router-vite-plugin@^1.121.34":
-  version "1.121.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.121.40.tgz#8415ab94934a79e57a2b171de0b539e71430937a"
-  integrity sha512-oaSDmU/LJGBgy85rxFUNuulR+6bpx84uG+TGqHk1q+bxoNgQRJcn3dvHpRCwQQImTLbPiV5leHMP+lY4mhC/3g==
+  version "1.121.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.121.41.tgz#e20317a74eb24eb0ee902c1eb3dc00761023ec27"
+  integrity sha512-J3HPNoQUDiylp/F+1JGF5QeEsRsaHhLiiNh4xiCqStTu5Qul1lm7vjMDVpmwXuUKA8GxE3prP4VilroOTSBP7g==
   dependencies:
-    "@tanstack/router-plugin" "^1.121.40"
+    "@tanstack/router-plugin" "^1.121.41"
 
 "@tanstack/store@0.7.1", "@tanstack/store@^0.7.0":
   version "0.7.1"
@@ -2608,9 +2608,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.173:
-  version "1.5.176"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.176.tgz#f4bbbd2c0a9a6a2a527c884eacc18244fa79dd88"
-  integrity sha512-2nDK9orkm7M9ZZkjO3PjbEd3VUulQLyg5T9O3enJdFvUg46Hzd4DUvTvAuEgbdHYXyFsiG4A5sO9IzToMH1cDg==
+  version "1.5.177"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.177.tgz#db730d8254959184e65320a3a0b7edcd29c54f60"
+  integrity sha512-7EH2G59nLsEMj97fpDuvVcYi6lwTcM1xuWw3PssD8xzboAW7zj7iB3COEEEATUfjLHrs5uKBLQT03V/8URx06g==
 
 emoji-regex@^10.3.0:
   version "10.4.0"
