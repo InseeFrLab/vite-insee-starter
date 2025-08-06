@@ -8,6 +8,8 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
 
 export const Route = createLazyFileRoute("/account")({
+    // NOTE: Here we use withLoginEnforced instead of before: enforceLogin
+    // because we are in a lazy route and lazy routes do not have loaders.
     component: withLoginEnforced(Page)
 });
 
