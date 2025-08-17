@@ -1,8 +1,6 @@
-import Button from "@codegouvfr/react-dsfr/Button";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useOidc, withLoginEnforced } from "oidc";
 import { parseKeycloakIssuerUri } from "oidc-spa/tools/parseKeycloakIssuerUri";
-import { decodeJwt } from "oidc-spa/tools/decodeJwt";
 import { useLang } from "i18n";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
@@ -15,18 +13,12 @@ export const Route = createLazyFileRoute("/account")({
 
 function Page() {
     const {
-        tokens,
-        renewTokens,
         params: { issuerUri, clientId }
     } = useOidc({ assert: "user logged in" });
 
     const { lang } = useLang();
 
     const { cx, css } = useStyles();
-
-    if (tokens === undefined) {
-        return null;
-    }
 
     return (
         <>
@@ -45,15 +37,6 @@ function Page() {
             >
                 Go to Keycloak Account Management Page
             </a>
-            <div>
-                <p>OpenID-Connect Access Token:</p>
-                <p>{tokens.accessToken}</p>
-                <Button onClick={() => renewTokens()}>Renew token</Button>
-                <br />
-                <br />
-                <h3>Decoded Access Token:</h3>
-                <pre>{JSON.stringify(decodeJwt(tokens.accessToken), null, 2)}</pre>
-            </div>
         </>
     );
 }

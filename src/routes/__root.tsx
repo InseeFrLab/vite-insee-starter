@@ -3,7 +3,7 @@ import { QueryClient } from "@tanstack/react-query";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
-import { AutoLogoutCountdown } from "components/AutoLogoutCountdown";
+import { AutoLogoutWarningOverlay } from "components/AutoLogoutWarningOverlay";
 import { tss, GlobalStyles } from "tss";
 
 export const Route = createRootRouteWithContext<{
@@ -35,7 +35,7 @@ function RootComponent() {
             <main className={classes.main}>
                 <Outlet />
             </main>
-            <AutoLogoutCountdown />
+            <AutoLogoutWarningOverlay />
             <Footer />
         </div>
     );

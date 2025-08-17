@@ -1,37 +1,15 @@
-import { useState, useEffect } from "react";
 import { useOidc } from "oidc";
 import { useStyles } from "tss";
 import { declareComponentKeys } from "i18nifty";
 import { useTranslation } from "i18n";
 
-export function AutoLogoutCountdown() {
-    const { isUserLoggedIn, subscribeToAutoLogoutCountdown } = useOidc();
-    const [secondsLeft, setSecondsLeft] = useState<number | undefined>(undefined);
-
-    useEffect(
-        () => {
-            if (!isUserLoggedIn) {
-                return;
-            }
-
-            const { unsubscribeFromAutoLogoutCountdown } = subscribeToAutoLogoutCountdown(
-                ({ secondsLeft }) =>
-                    setSecondsLeft(
-                        secondsLeft === undefined || secondsLeft > 60 ? undefined : secondsLeft
-                    )
-            );
-
-            return () => {
-                unsubscribeFromAutoLogoutCountdown();
-            };
-        },
-        // NOTE: These dependency array could very well be empty
-        // we're just making react-hooks/exhaustive-deps happy.
-        // Unless you're hot swapping the oidc context isUserLoggedIn
-        // and subscribeToAutoLogoutCountdown never change for the
-        // lifetime of the app.
-        [isUserLoggedIn, subscribeToAutoLogoutCountdown]
-    );
+export function AutoLogoutWarningOverlay() {
+    const { useAutoLogoutWarningCountdown } = useOidc();
+    const { secondsLeft } = useAutoLogoutWarningCountdown({
+        // How many seconds before auto logout do we start
+        // displaying the overlay.
+        warningDurationSeconds: 45
+    });
 
     const { css } = useStyles();
 
