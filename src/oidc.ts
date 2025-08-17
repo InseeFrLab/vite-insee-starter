@@ -23,9 +23,9 @@ export const { OidcProvider, useOidc, getOidc, enforceLogin, withLoginEnforced }
           clientId,
           homeUrl,
           decodedIdTokenSchema: decodedIdTokenSchema,
-          extraQueryParams: ({ isSilent }) => ({
-              dark: isSilent ? undefined : getIsDark() ? "true" : "false",
-              ui_locales: isSilent ? undefined : $lang.current
+          extraQueryParams: () => ({
+              dark: getIsDark() ? "true" : "false",
+              ui_locales: $lang.current
           }),
           debugLogs: true
       })
