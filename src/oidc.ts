@@ -17,7 +17,7 @@ if (!issuerUri) {
     console.log("=============  VITE_OIDC_ISSUER_URI not set, USING MOCK OIDC =============");
 }
 
-export const { OidcProvider, useOidc, getOidc, enforceLogin, withLoginEnforced } = issuerUri
+export const { OidcProvider, useOidc, getOidc, enforceLogin } = issuerUri
     ? createReactOidc({
           issuerUri,
           clientId,

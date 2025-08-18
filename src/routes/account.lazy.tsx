@@ -1,14 +1,12 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { useOidc, withLoginEnforced } from "oidc";
+import { useOidc } from "oidc";
 import { parseKeycloakIssuerUri } from "oidc-spa/tools/parseKeycloakIssuerUri";
 import { useLang } from "i18n";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
 
 export const Route = createLazyFileRoute("/account")({
-    // NOTE: Here we use withLoginEnforced instead of before: enforceLogin
-    // because we are in a lazy route and lazy routes do not have loaders.
-    component: withLoginEnforced(Page)
+    component: Page
 });
 
 function Page() {
