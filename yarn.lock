@@ -5430,9 +5430,9 @@ ts-api-utils@^2.1.0:
   integrity sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==
 
 tsafe@^1.8.5:
-  version "1.8.9"
-  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.8.9.tgz#9313bfe62b9eb2153bf90e31918a0cc8431be5f6"
-  integrity sha512-TtwH4IHaA4/ep5jY+IA4Rt1UWcBpWpQ9257CNR1kRh55eoWa/k8t4skId3o8Ecr+WCSMYxC9aOjXBE8ZgE6JnA==
+  version "1.8.10"
+  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.8.10.tgz#98e28f0beeca4e6632a8481a300fa85dd92826c0"
+  integrity sha512-2bBiNHk6Ts4LZQ4+6OxF/BtkJ8YWqo1VMbMo6qrRIZoqAwM8xuwWUx9g3C/p6cCdUmNWeOWIaiJzgO5zWy1Cdg==
 
 tsconfck@^2.0.1:
   version "2.1.2"
