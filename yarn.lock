@@ -910,49 +910,49 @@
     react-is "^19.1.1"
 
 "@mui/x-data-grid@^8.5.3":
-  version "8.11.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-8.11.2.tgz#6ab6ef37a3b40b2da10201522d38e7491c864a37"
-  integrity sha512-GSMDD4SuqTtsbZQMnTDFlVtewbPINmxTcGDeMQpJAQG8DMgV24UaoT1FYTqJiBkqnib6avz8ME0q/6i6BQGt3w==
+  version "8.11.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-8.11.3.tgz#fbd703f583273008cb64291faca300a0204b5174"
+  integrity sha512-zd71bRYrm4uFh44/p/kQEtYHdslDy6uzC4NdF0qWYtf2Q0CkmC0ZZHkS4jnqf0iAawFVX2LgJtS7A6L6/ik9aQ==
   dependencies:
     "@babel/runtime" "^7.28.2"
     "@mui/utils" "^7.3.2"
-    "@mui/x-internals" "8.11.2"
-    "@mui/x-virtualizer" "0.1.6"
+    "@mui/x-internals" "8.11.3"
+    "@mui/x-virtualizer" "0.1.7"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     use-sync-external-store "^1.5.0"
 
 "@mui/x-date-pickers@^8.5.3":
-  version "8.11.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-8.11.2.tgz#9104921bacc794e4eb0312c4953f0197398dfbe9"
-  integrity sha512-izosRFdlo0Aq4nrQ2klOQBLB+yCX3bIlErF/gxZfaXK/kb8NToweZjhHdiyy+hr+VrxK0A71AWI6LkPyfG2WCg==
+  version "8.11.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-8.11.3.tgz#d54eb975dbb3c4d5222052aba8dfbcee498d1bd5"
+  integrity sha512-RCvaACeTvlT930jn4s4weD/3Ow30sy7A4dRK8vmA3Pc3RIBy/b2CC4nYdkMiOwI56cjOVF4WPLFp5hBcEeGSvQ==
   dependencies:
     "@babel/runtime" "^7.28.2"
     "@mui/utils" "^7.3.2"
-    "@mui/x-internals" "8.11.2"
+    "@mui/x-internals" "8.11.3"
     "@types/react-transition-group" "^4.4.12"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     react-transition-group "^4.4.5"
 
-"@mui/x-internals@8.11.2":
-  version "8.11.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-8.11.2.tgz#d05e68f42e485a7b1a73d716281476192cfc87df"
-  integrity sha512-3BFZ0Njgih+eWQBzSsdKEkRMlHtKRGFWz+/CGUrSBb5IApO0apkUSvG4v5augNYASsjksqWOXVlds7Wwznd0Lg==
+"@mui/x-internals@8.11.3":
+  version "8.11.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-8.11.3.tgz#54a6c7c91832bfbab5bdc971363e6c0dadc43678"
+  integrity sha512-Fmp4Op+nNSqsWn2Jwv9yA8WXi3Wem9jmgdUplvMK6JZAt7iA0ZdzGltCcHrdxOcK1Nu/2F7H8KOZuBzpy1lspw==
   dependencies:
     "@babel/runtime" "^7.28.2"
     "@mui/utils" "^7.3.2"
     reselect "^5.1.1"
     use-sync-external-store "^1.5.0"
 
-"@mui/x-virtualizer@0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-0.1.6.tgz#6e90edf351760624f4e830058ebd7c42c14935e6"
-  integrity sha512-rZBS1+Y8micorIDs06REFsjQGMW+CJ0OiRnko32R2fvC7Wy5FrgZ/PK5im1vXG6a86lSg5YLKT9wr59/6NqRjQ==
+"@mui/x-virtualizer@0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-0.1.7.tgz#a9af79830fa8ccbdd726a1051abe54decef51472"
+  integrity sha512-PtAxlDTpmVkOWfaBEwlGGbRCA137C369OjmdxdPYrx5twhvukdhT/2b/KfSVbz6MzTctOGmkw5ye+IkjaFco/g==
   dependencies:
     "@babel/runtime" "^7.28.2"
     "@mui/utils" "^7.3.2"
-    "@mui/x-internals" "8.11.2"
+    "@mui/x-internals" "8.11.3"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
