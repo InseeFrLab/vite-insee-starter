@@ -1570,17 +1570,17 @@
   dependencies:
     "@tanstack/query-core" "5.87.4"
 
-"@tanstack/react-router-devtools@1.131.48":
-  version "1.131.48"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.131.48.tgz#11d1c9f5afc1785e8573298998d6347a3323ec48"
-  integrity sha512-b0D2Zvab60+uotkl25bhU2NXOdCMMWRennY5YDeV6TS1ZRG5m17DZAzIspw9SCi51eC+H/j8inVcxIrQYaB5AQ==
+"@tanstack/react-router-devtools@1.131.49":
+  version "1.131.49"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.131.49.tgz#069922558aa1d103f3541e01643dd4ace9aac1b9"
+  integrity sha512-GdF7OaSCgyjuei9Cc9FsKR+ab+URvsWsoVBsCrvap7oWv0tXlga9bWSwaaF7erVI9gYaQt/iR/hQdGi88Ua8CQ==
   dependencies:
     "@tanstack/router-devtools-core" "1.131.48"
 
 "@tanstack/react-router@^1.121.34":
-  version "1.131.48"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.131.48.tgz#13c1c725764367fa678247cf449214bb4c87d444"
-  integrity sha512-iT9k/+J4vkoXyI1lBu0StSCLXgfOIMf/IDPh+pZ5HhMPab/wx0PDgIFFgEq9qM1CCykDnKqqeDY0QZWBUS4V1A==
+  version "1.131.49"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.131.49.tgz#984bab40a038f7f5322bfdc806c1a445b28d4c0d"
+  integrity sha512-WHgWJ053W8VU8lUYh8abSHVPeQdpaCpfaUAbV+3uYXbip2G+qlmI/Gsbh/BBV3bYtIi6l3t5dqx3ffCXNTzB5Q==
   dependencies:
     "@tanstack/history" "1.131.2"
     "@tanstack/react-store" "^0.7.0"
@@ -1620,11 +1620,11 @@
     solid-js "^1.9.5"
 
 "@tanstack/router-devtools@^1.121.34":
-  version "1.131.48"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.131.48.tgz#298f81dc2219821bc0c2628af0dc6d5e30bebc78"
-  integrity sha512-gsg6DGxGptJHyE7/N8oWvMzSRz1r9e6pUATwbAh3WC372ybW1CmuQwe5ax9E58rb0xm4hAHn4S1T/YUHJyr2CA==
+  version "1.131.49"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.131.49.tgz#89d3343e065543e8101ebc89c48a07cff645a9fd"
+  integrity sha512-VQMV/eVO9WHa3sWrdwjeOyS7BdgnZ5LN2qP0hB+zLe3kDNgQqtucCDypFdQ9taqXdN9pNDFZD7NMvQaBO8fEwg==
   dependencies:
-    "@tanstack/react-router-devtools" "1.131.48"
+    "@tanstack/react-router-devtools" "1.131.49"
     clsx "^2.1.1"
     goober "^2.1.16"
 
@@ -1642,10 +1642,10 @@
     tsx "^4.19.2"
     zod "^3.24.2"
 
-"@tanstack/router-plugin@1.131.48":
-  version "1.131.48"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.131.48.tgz#4da1e6c45cc5e6588ca721f09a5acf34d358c38e"
-  integrity sha512-5Bt7M3rP6bYNIwFYhLj5AjPdfBqWmrjIliq06rV1iCQ8GJvXPVSuZHwT+jDzxEsyRzHUjk5kuK3ytimXmexpSQ==
+"@tanstack/router-plugin@1.131.49":
+  version "1.131.49"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.131.49.tgz#3655edf435344ad4850bc87fee890fc8179bb34b"
+  integrity sha512-npL9wqKGMAqaTPqZyZIp1k+omo5Imwvlg/gqQdnphZYIhCJGoxe8CBGQT2zrVnRtL5D7BD9vvpRh2moEDaJF8A==
   dependencies:
     "@babel/core" "^7.27.7"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1675,11 +1675,11 @@
     diff "^8.0.2"
 
 "@tanstack/router-vite-plugin@^1.121.34":
-  version "1.131.48"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.131.48.tgz#e5f84040699159ebb0b7a6eb082c118cc9deae23"
-  integrity sha512-SzoSGt4FmRmgpJKqnET39nmrmNPQAnY5BEEX6nP6kQQuDhwBBA8mgEworOXGXtnapYOpPkf71Di+caR56ZSepQ==
+  version "1.131.49"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.131.49.tgz#2788c864a71dbd29223336bc834e8a659794df0d"
+  integrity sha512-0DQpUKJiHwwZwP4p6Eejd/wIiInT77gKZFRPzQt+BZ9UxJNdL3/2gTFmb9GUWP5NFbTWQ7y2JcpbJiawoGY0DQ==
   dependencies:
-    "@tanstack/router-plugin" "1.131.48"
+    "@tanstack/router-plugin" "1.131.49"
 
 "@tanstack/store@0.7.5", "@tanstack/store@^0.7.0":
   version "0.7.5"
