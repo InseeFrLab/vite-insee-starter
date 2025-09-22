@@ -38,7 +38,7 @@ export const translations: Translations<"en"> = {
     TodoPage: {
         "waking up container": "The REST API container is waking up ..."
     },
-    AutoLogoutCountdown: {
+    AutoLogoutWarningOverlay: {
         "paragrah still there": "Are you still there?",
         "paragrah will be logged out": ({ secondsLeft }) =>
             `You will be logged out in ${secondsLeft} seconds.`

@@ -38,7 +38,7 @@ export const translations: Translations<"fr"> = {
     TodoPage: {
         "waking up container": "Le conteneur de l'API REST est en cours de démarrage ..."
     },
-    AutoLogoutCountdown: {
+    AutoLogoutWarningOverlay: {
         "paragrah still there": "Êtes-vous toujours là ?",
         "paragrah will be logged out": ({ secondsLeft }) =>
             `Vous serez déconnecté dans ${secondsLeft} secondes.`

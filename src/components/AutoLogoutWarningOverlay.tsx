@@ -13,7 +13,7 @@ export function AutoLogoutWarningOverlay() {
 
     const { css } = useStyles();
 
-    const { t } = useTranslation("AutoLogoutCountdown");
+    const { t } = useTranslation("AutoLogoutWarningOverlay");
 
     if (secondsLeft === undefined) {
         return null;
@@ -46,6 +46,6 @@ export function AutoLogoutWarningOverlay() {
 
 const { i18n } = declareComponentKeys<
     "paragrah still there" | { K: "paragrah will be logged out"; P: { secondsLeft: number } }
->()("AutoLogoutCountdown");
+>()("AutoLogoutWarningOverlay");
 
 export type I18n = typeof i18n;
