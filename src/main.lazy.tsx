@@ -4,7 +4,6 @@ import { startReactDsfr } from "@codegouvfr/react-dsfr/spa";
 import { OidcProvider } from "oidc";
 import { RouterProvider, createRouter, Link, type LinkProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
-import { I18nFetchingSuspense } from "i18n";
 import { createDsfrCustomBrandingProvider } from "@codegouvfr/react-dsfr/mui";
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
@@ -79,9 +78,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <QueryClientProvider client={queryClient}>
             <DsfrCustomBrandingProvider>
                 <OidcProvider>
-                    <I18nFetchingSuspense>
-                        <RouterProvider router={router} />
-                    </I18nFetchingSuspense>
+                    <RouterProvider router={router} />
                 </OidcProvider>
             </DsfrCustomBrandingProvider>
         </QueryClientProvider>
