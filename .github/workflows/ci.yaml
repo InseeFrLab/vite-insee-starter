@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v5
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v5
             - uses: bahmutov/npm-install@v1
             - run: yarn test
             - run: yarn build
@@ -40,7 +40,7 @@ jobs:
         if: needs.check_if_version_upgraded.outputs.is_upgraded_version == 'true' && github.event_name == 'push'
         steps:
             - uses: actions/checkout@v5
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v5
             - uses: softprops/action-gh-release@v2
               with:
                   name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
