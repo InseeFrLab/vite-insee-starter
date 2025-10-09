@@ -1454,12 +1454,12 @@
   dependencies:
     "@tanstack/query-core" "5.90.2"
 
-"@tanstack/react-router-devtools@1.132.50":
-  version "1.132.50"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.132.50.tgz#c94bfd65957393a099114474a5860926489d46ef"
-  integrity sha512-OMtjhVvoTPliBIPLoiGdiJKgX/D5rt65xC9+yvI3Y0z6007SzDEbKLBt1Fke630bygcZlOfOjcprruqjJ1FojQ==
+"@tanstack/react-router-devtools@1.132.51":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.132.51.tgz#22e12705feb7129fa956b230ed701a5f4ae18ec9"
+  integrity sha512-09gHGUE9BVE6O+7u4ICnKigdPP0vZAYI70dKNqGp8bEy9jaMmHGlUxVV6pKqBLVgcPmwT9YMRAeJ5+QrcznXGA==
   dependencies:
-    "@tanstack/router-devtools-core" "1.132.50"
+    "@tanstack/router-devtools-core" "1.132.51"
     vite "^7.1.7"
 
 "@tanstack/react-router@^1.121.34":
@@ -1495,33 +1495,32 @@
     tiny-invariant "^1.3.3"
     tiny-warning "^1.0.3"
 
-"@tanstack/router-devtools-core@1.132.50":
-  version "1.132.50"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools-core/-/router-devtools-core-1.132.50.tgz#625c0e5b267bfadbfc08e2783c401329f2063907"
-  integrity sha512-6oMevkpk06Ia3AaUHs02UQulQz8PZyYcs/U0BinVF42B8JTFlRp++HXRX4hgBnVlv81bylUnMbJ6sYASeQySUQ==
+"@tanstack/router-devtools-core@1.132.51":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools-core/-/router-devtools-core-1.132.51.tgz#e518288fb07f74855d2cd34ab86249d81318ff7c"
+  integrity sha512-uhbk4rSeUpYaqOJLZwOwfyysSoeedIEiRWz37sTVM4tUBFsWqA/p9gO2kVSx/Xmcu8grLy512KNDDeji3QhdwQ==
   dependencies:
-    clsx "^2.1.1"
-    goober "^2.1.16"
-    solid-js "^1.9.5"
-    vite "^7.1.7"
-
-"@tanstack/router-devtools@^1.121.34":
-  version "1.132.50"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.132.50.tgz#6d1f23b0888342fa30f7957c9efe0d4062f1ac2c"
-  integrity sha512-fQ8ct8/UemaLB+FQ1tneZ8E1iirHvGghfGn6zsfzOrJ5I7y6w5CpiunSH/R7qSThsKHQf6rwqKGpvoc3Gw4NnQ==
-  dependencies:
-    "@tanstack/react-router-devtools" "1.132.50"
     clsx "^2.1.1"
     goober "^2.1.16"
     vite "^7.1.7"
 
-"@tanstack/router-generator@1.132.47":
-  version "1.132.47"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.132.47.tgz#f9a9db0b6b9e47cbee77507dbcea8d6c0640f21a"
-  integrity sha512-t3HHDWRQ4CDkm141I7pl1xQf6vehNG54m5h/2DqJGugYkP4C1x0jxqzgCbek2SuuGocS1P+NrWQeyNFmkUIgEA==
+"@tanstack/router-devtools@^1.121.34":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.132.51.tgz#607a66ecaa5a33b8170226d4748cce673cdad302"
+  integrity sha512-+ezqGerlafVGDap//LmF7M+SKQUi0j1virR86m+hbDzia8BQY1wfxYjdpvF835VXsaQ/XUCH8K1LaBX5U68Buw==
+  dependencies:
+    "@tanstack/react-router-devtools" "1.132.51"
+    clsx "^2.1.1"
+    goober "^2.1.16"
+    vite "^7.1.7"
+
+"@tanstack/router-generator@1.132.51":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.132.51.tgz#5c32bc40dc7b97f792bb511797c63cd255f1d36e"
+  integrity sha512-iAGz2IZ2rr38o+7cgE33qPyNFJFx7PcPOvUXk5kcX1TtXeyTgVLoe7vqQzKYbungZmht2V8xSFmy6kakUJhxOA==
   dependencies:
     "@tanstack/router-core" "1.132.47"
-    "@tanstack/router-utils" "1.132.31"
+    "@tanstack/router-utils" "1.132.51"
     "@tanstack/virtual-file-routes" "1.132.31"
     prettier "^3.5.0"
     recast "^0.23.11"
@@ -1529,10 +1528,10 @@
     tsx "^4.19.2"
     zod "^3.24.2"
 
-"@tanstack/router-plugin@1.132.47":
-  version "1.132.47"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.132.47.tgz#74187f5c7c88c92a1c13e9fc482107a90305842c"
-  integrity sha512-E/BDgWavv7t0Szp4daIzSoeNiyJaKnN1gofb/ViLbepgHFQUAxuBwqIf+o+hYDggvENcFrYnai1T03PsSyuZ3Q==
+"@tanstack/router-plugin@1.132.51":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.132.51.tgz#9c9f5ce138a7335fb84ea429643931a6672d53db"
+  integrity sha512-eAC22XJmfJJU1f/wdW9j3e/U/74KFxUZfb38fVTugNAo+TUw58krS/XRrpOjZFnsg4lO4HseGntC4SxKD3agHw==
   dependencies:
     "@babel/core" "^7.27.7"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1541,18 +1540,18 @@
     "@babel/traverse" "^7.27.7"
     "@babel/types" "^7.27.7"
     "@tanstack/router-core" "1.132.47"
-    "@tanstack/router-generator" "1.132.47"
-    "@tanstack/router-utils" "1.132.31"
+    "@tanstack/router-generator" "1.132.51"
+    "@tanstack/router-utils" "1.132.51"
     "@tanstack/virtual-file-routes" "1.132.31"
     babel-dead-code-elimination "^1.0.10"
     chokidar "^3.6.0"
     unplugin "^2.1.2"
     zod "^3.24.2"
 
-"@tanstack/router-utils@1.132.31":
-  version "1.132.31"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-utils/-/router-utils-1.132.31.tgz#191e9156f120b05ab988f90769ebf9f9eeb3bdd0"
-  integrity sha512-uf8mQ3wV58K8TL5XXBoWhkYxmCV7LLWbbf6AvcxdhnCnBNmXBGlY+T8RdsRnXyI2Iyp2HfHaVZ+8H3CEQedXfw==
+"@tanstack/router-utils@1.132.51":
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-utils/-/router-utils-1.132.51.tgz#d61bfae80e5b74e4ac3b89554345757a2d1ef767"
+  integrity sha512-8wmYmc8LY0MhgNw1jfwjTdpYgl5CmvvkamoHOUcz4odFiAWOXLhwo3UBOwKihw+6SxJ/M7l9tEcq5PdLUOUi0Q==
   dependencies:
     "@babel/core" "^7.27.4"
     "@babel/generator" "^7.27.5"
@@ -1560,15 +1559,15 @@
     "@babel/preset-typescript" "^7.27.1"
     ansis "^4.1.0"
     diff "^8.0.2"
-    fast-glob "^3.3.3"
     pathe "^2.0.3"
+    tinyglobby "^0.2.15"
 
 "@tanstack/router-vite-plugin@^1.121.34":
-  version "1.132.47"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.132.47.tgz#a0902d36102ff2ae301c34940b00e2b03d7337db"
-  integrity sha512-THp7/lPrBwAsfZui1z9rQ2IHkUdBxEgVW+dagKNIYhTnYFQBDbSgD6UoUfLscjniMMEzgxho1U3B/IK29vPCCg==
+  version "1.132.51"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-vite-plugin/-/router-vite-plugin-1.132.51.tgz#98aa6feac568bafb8e0fe174378156a1d5bce47e"
+  integrity sha512-5PA8mCuloyPv65Qcoyw4Dfr+aIBSOg1lo7ASqXl6BH2xvZrzFI+T+BuJY3rosQ6FPU++mTtUTbm+YwfccZD4iA==
   dependencies:
-    "@tanstack/router-plugin" "1.132.47"
+    "@tanstack/router-plugin" "1.132.51"
 
 "@tanstack/store@0.7.7", "@tanstack/store@^0.7.0":
   version "0.7.7"
@@ -2136,9 +2135,9 @@ balanced-match@^1.0.0:
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
 baseline-browser-mapping@^2.8.9:
-  version "2.8.12"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.8.12.tgz#7cb875f4c5b5ab4528109df277b2f0e1971ba27e"
-  integrity sha512-vAPMQdnyKCBtkmQA6FMCBvU9qFIppS3nzyXnEM+Lo2IAhG4Mpjv9cCxMudhgV3YdNNJv6TNqXy97dfRVL2LmaQ==
+  version "2.8.14"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.8.14.tgz#b73b0ae23efcb967e30b381c09a1a001777ec927"
+  integrity sha512-GM9c0cWWR8Ga7//Ves/9KRgTS8nLausCkP3CGiFLrnwA2CDUluXgaQqvrULoR2Ujrd/mz/lkX87F5BHFsNr5sQ==
 
 bidi-js@^1.0.3:
   version "1.0.3"
@@ -2227,9 +2226,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001746:
-  version "1.0.30001748"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001748.tgz#628a5a9293014e58f8ba1216bb4966b04c58bee0"
-  integrity sha512-5P5UgAr0+aBmNiplks08JLw+AW/XG/SurlgZLgB1dDLfAw7EfRGxIwzPHxdSCGY/BTKDqIVyJL87cCN6s0ZR0w==
+  version "1.0.30001749"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001749.tgz#21a43b923577932097fe32bcaabb6da7f4677632"
+  integrity sha512-0rw2fJOmLfnzCRbkm8EyHL8SvI2Apu5UbnQuTsJ0ClgrH8hcwFooJ1s5R0EP8o8aVrFu8++ae29Kt9/gZAZp/Q==
 
 chai@^5.2.0:
   version "5.2.0"
@@ -2402,7 +2401,7 @@ cssstyle@^5.3.0:
     "@csstools/css-syntax-patches-for-csstree" "^1.0.14"
     css-tree "^3.1.0"
 
-csstype@^3.0.2, csstype@^3.1.0, csstype@^3.1.3:
+csstype@^3.0.2, csstype@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
@@ -2569,9 +2568,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.227:
-  version "1.5.231"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.231.tgz#9e1b3d4bd7391e3b55f9f449ca2cc97bdae5a616"
-  integrity sha512-cyl6vqZGkEBnz/PmvFHn/u9G/hbo+FF2CNAOXriG87QOeLsUdifCZ9UbHNscE9wGdrC8XstNMli0CbQnZQ+fkA==
+  version "1.5.233"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.233.tgz#05db98476cee317527d6c48934571e13ad6b6f58"
+  integrity sha512-iUdTQSf7EFXsDdQsp8MwJz5SVk4APEFqXU/S47OtQ0YLqacSwPXdZ5vRlMX3neb07Cy2vgioNuRnWUXFwuslkg==
 
 emoji-regex@^10.3.0:
   version "10.5.0"
@@ -3000,7 +2999,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^3.2.9, fast-glob@^3.3.2, fast-glob@^3.3.3:
+fast-glob@^3.2.9, fast-glob@^3.3.2:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.3.3.tgz#d06d585ce8dba90a16b0505c543c3ccfb3aeb818"
   integrity sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==
@@ -3226,9 +3225,9 @@ get-symbol-description@^1.1.0:
     get-intrinsic "^1.2.6"
 
 get-tsconfig@^4.7.5:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.10.1.tgz#d34c1c01f47d65a606c37aa7a177bc3e56ab4b2e"
-  integrity sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ==
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.12.0.tgz#cfb3a4446a2abd324a205469e8bda4e7e44cbd35"
+  integrity sha512-LScr2aNr2FbjAjZh2C6X6BxRx1/x+aTDExct/xyq2XKbYOiG5c0aK7pMsSuyc0brz3ibr/lbQiHD9jzt4lccJw==
   dependencies:
     resolve-pkg-maps "^1.0.0"
 
@@ -4767,12 +4766,12 @@ semver@^7.6.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
 
-seroval-plugins@^1.3.2, seroval-plugins@~1.3.0:
+seroval-plugins@^1.3.2:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.3.3.tgz#51bcacf09e5384080d7ea4002b08fd9f6166daf5"
   integrity sha512-16OL3NnUBw8JG1jBLUoZJsLnQq0n5Ua6aHalhJK4fMQkz1lqR7Osz1sA30trBtd9VUDc2NgkuRCn8+/pBwqZ+w==
 
-seroval@^1.3.2, seroval@~1.3.0:
+seroval@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.3.2.tgz#7e5be0dc1a3de020800ef013ceae3a313f20eca7"
   integrity sha512-RbcPH1n5cfwKrru7v7+zrZvjLurgHhGyso3HTyGtRivGWgYjbOmGuivCQaORNELjNONoK35nj28EoWul9sb1zQ==
@@ -4938,15 +4937,6 @@ slice-ansi@^7.1.0:
   dependencies:
     ansi-styles "^6.2.1"
     is-fullwidth-code-point "^5.0.0"
-
-solid-js@^1.9.5:
-  version "1.9.9"
-  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.9.9.tgz#7c61402a969a246973ac55ff78a06210eabc097c"
-  integrity sha512-A0ZBPJQldAeGCTW0YRYJmt7RCeh5rbFfPZ2aOttgYnctHE7HgKeHCBB/PVc2P7eOfmNXqMFFFoYYdm3S4dcbkA==
-  dependencies:
-    csstype "^3.1.0"
-    seroval "~1.3.0"
-    seroval-plugins "~1.3.0"
 
 source-map-js@^1.0.1, source-map-js@^1.2.1:
   version "1.2.1"
