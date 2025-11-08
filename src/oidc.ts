@@ -1,41 +1,41 @@
-import { createReactOidc } from "oidc-spa/react";
-import { createMockReactOidc } from "oidc-spa/mock/react";
+import { oidcSpa } from "oidc-spa/react-spa";
 import { z } from "zod";
 import { getIsDark } from "@codegouvfr/react-dsfr/useIsDark";
 import { $lang } from "i18n";
 
-const decodedIdTokenSchema = z.object({
-    sub: z.string(),
-    preferred_username: z.string()
-});
+export const { bootstrapOidc, OidcInitializationGate, enforceLogin, getOidc, useOidc } = oidcSpa
+    .withExpectedDecodedIdTokenShape({
+        decodedIdTokenSchema: z.object({
+            sub: z.string(),
+            preferred_username: z.string()
+        }),
+        decodedIdToken_mock: {
+            sub: "123",
+            preferred_username: "john doe"
+        }
+    })
+    .createUtils();
 
 const issuerUri = import.meta.env.VITE_OIDC_ISSUER_URI;
-const clientId = import.meta.env.VITE_OIDC_CLIENT_ID;
-const homeUrl = import.meta.env.BASE_URL;
 
 if (!issuerUri) {
     console.log("=============  VITE_OIDC_ISSUER_URI not set, USING MOCK OIDC =============");
 }
 
-export const { OidcProvider, useOidc, getOidc, enforceLogin } = issuerUri
-    ? createReactOidc({
-          issuerUri,
-          clientId,
-          homeUrl,
-          decodedIdTokenSchema: decodedIdTokenSchema,
-          extraQueryParams: () => ({
-              dark: getIsDark() ? "true" : "false",
-              ui_locales: $lang.current
-          }),
-          debugLogs: true
-      })
-    : createMockReactOidc({
-          isUserInitiallyLoggedIn: false,
-          homeUrl,
-          mockedTokens: {
-              decodedIdToken: {
-                  sub: "123",
-                  preferred_username: "john doe"
-              } satisfies z.infer<typeof decodedIdTokenSchema>
+bootstrapOidc(
+    issuerUri
+        ? {
+              implementation: "real",
+              issuerUri,
+              clientId: import.meta.env.VITE_OIDC_CLIENT_ID,
+              extraQueryParams: () => ({
+                  dark: getIsDark() ? "true" : "false",
+                  ui_locales: $lang.current
+              }),
+              debugLogs: true
           }
-      });
+        : {
+              implementation: "mock",
+              isUserInitiallyLoggedIn: false
+          }
+);

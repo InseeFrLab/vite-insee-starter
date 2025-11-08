@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useOidc } from "oidc";
-import { parseKeycloakIssuerUri } from "oidc-spa/tools/parseKeycloakIssuerUri";
+import { createKeycloakUtils } from "oidc-spa/keycloak";
 import { useLang } from "i18n";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useStyles } from "tss";
@@ -10,9 +10,7 @@ export const Route = createLazyFileRoute("/account")({
 });
 
 function Page() {
-    const {
-        params: { issuerUri, clientId }
-    } = useOidc({ assert: "user logged in" });
+    const { issuerUri, clientId, validRedirectUri } = useOidc({ assert: "user logged in" });
 
     const { lang } = useLang();
 
@@ -27,10 +25,10 @@ function Page() {
                         display: "inline-block"
                     })
                 )}
-                href={parseKeycloakIssuerUri(issuerUri)!.getAccountUrl({
-                    locale: lang,
+                href={createKeycloakUtils({ issuerUri }).getAccountUrl({
                     clientId,
-                    backToAppFromAccountUrl: location.href
+                    validRedirectUri,
+                    locale: lang
                 })}
             >
                 Go to Keycloak Account Management Page

@@ -4,18 +4,13 @@ import { declareComponentKeys } from "i18nifty";
 import { useTranslation } from "i18n";
 
 export function AutoLogoutWarningOverlay() {
-    const { useAutoLogoutWarningCountdown } = useOidc();
-    const { secondsLeft } = useAutoLogoutWarningCountdown({
-        // How many seconds before auto logout do we start
-        // displaying the overlay.
-        warningDurationSeconds: 45
-    });
+    const { autoLogoutState } = useOidc();
 
     const { css } = useStyles();
 
     const { t } = useTranslation("AutoLogoutWarningOverlay");
 
-    if (secondsLeft === undefined) {
+    if (!autoLogoutState.shouldDisplayWarning) {
         return null;
     }
 
@@ -38,7 +33,11 @@ export function AutoLogoutWarningOverlay() {
         >
             <div className={css({ textAlign: "center" })}>
                 <p>{t("paragrah still there")}</p>
-                <p>{t("paragrah will be logged out", { secondsLeft })}</p>
+                <p>
+                    {t("paragrah will be logged out", {
+                        secondsLeft: autoLogoutState.secondsLeftBeforeAutoLogout
+                    })}
+                </p>
             </div>
         </div>
     );

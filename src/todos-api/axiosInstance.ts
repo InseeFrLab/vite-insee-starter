@@ -11,7 +11,7 @@ axiosInstance.interceptors.request.use(async config => {
     const oidc = await getOidc();
 
     if (oidc.isUserLoggedIn) {
-        const { accessToken } = await oidc.getTokens();
+        const accessToken = await oidc.getAccessToken();
 
         config.headers.Authorization = `Bearer ${accessToken}`;
     }
