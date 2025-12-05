@@ -5435,9 +5435,9 @@ tslib@^2.0.1, tslib@^2.2.0, tslib@^2.6.0, tslib@^2.8.1:
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
 
 tss-react@^4.9.18:
-  version "4.9.19"
-  resolved "https://registry.yarnpkg.com/tss-react/-/tss-react-4.9.19.tgz#01ab1e82110deacead0ed93788a30d8ca91b22b6"
-  integrity sha512-mmeec1wmLJKUpbaEfsQIOgk0ZtaVBt/oMbiWUFzCnxNm7vb6sDEA3ez/5/ll1eg74nrOcy9BjA+qEuF7nUV0bA==
+  version "4.9.20"
+  resolved "https://registry.yarnpkg.com/tss-react/-/tss-react-4.9.20.tgz#4fa8257183ba57729b17be88d58a6761daa6f1f4"
+  integrity sha512-+tecs5hEKZmPqNDtiq5Gx2GxjrQXbV5JuOeWkV+eOf99qiIUkE3Vcn07zNLHws06iPfH2H4t5VqoVjIdCMS7hw==
   dependencies:
     "@emotion/cache" "*"
     "@emotion/serialize" "*"
