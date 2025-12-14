@@ -4,7 +4,7 @@ x-react-volumes: &react-volumes
 services:
     front:
         container_name: reactapp
-        image: node:22
+        image: node:24
         hostname: front
         profiles:
             - dev
