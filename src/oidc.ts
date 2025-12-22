@@ -28,10 +28,14 @@ bootstrapOidc(
               implementation: "real",
               issuerUri,
               clientId: import.meta.env.VITE_OIDC_CLIENT_ID,
-              extraQueryParams: () => ({
-                  dark: getIsDark() ? "true" : "false",
-                  ui_locales: $lang.current
-              }),
+              extraQueryParams: {
+                  get dark() {
+                      return getIsDark() ? "true" : "false";
+                  },
+                  get ui_locales() {
+                      return $lang.current;
+                  }
+              },
               debugLogs: true
           }
         : {

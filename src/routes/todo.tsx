@@ -3,7 +3,7 @@ import { enforceLogin } from "oidc";
 import { TodoApp } from "components/TodoApp";
 import { tss, keyframes } from "tss";
 import { fr } from "@codegouvfr/react-dsfr";
-import { assert } from "tsafe/assert";
+import { assert } from "tsafe";
 import CircularProgress from "@mui/material/CircularProgress";
 import { declareComponentKeys, useTranslation } from "i18n";
 import {

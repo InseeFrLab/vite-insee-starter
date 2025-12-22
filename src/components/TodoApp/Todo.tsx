@@ -4,7 +4,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
 import type { TodoItem } from "./type";
-import { assert } from "tsafe/assert";
+import { assert } from "tsafe";
 import { declareComponentKeys, useTranslation } from "i18n";
 
 // Todo item but without the id, we don't need it.
