@@ -77,6 +77,18 @@ You can refresh it for the currently published version of the API by running:
 yarn generate-todos-api-client
 ```
 
+## Running the Docker Image
+
+```bash
+docker build -t inseefrlab/vite-insee-starter:main .
+
+docker run -it -p 8083:8080 \
+  --env VITE_TODOS_API_URL="https://insee-todo-api.up.railway.app" \
+  --env VITE_OIDC_ISSUER_URI="https://cloud-iam.oidc-spa.dev/realms/oidc-spa" \
+  --env VITE_OIDC_CLIENT_ID="vite-insee-starter" \
+  inseefrlab/vite-insee-starter:main
+```
+
 ## Keycloak theme
 
 When authenticating you will notice that the login pages are DSFR themed.  
