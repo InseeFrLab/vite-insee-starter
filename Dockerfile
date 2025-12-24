@@ -30,7 +30,7 @@ RUN echo $'#!/bin/sh                    \n\
 cd /usr/share/nginx                     \n\
 rm -rf ./html/* ./html/.* 2>/dev/null   \n\
 cp -r ./tmp_html/. ./html/              \n\
-./html/vite-env.sh                      \n\
+./html/vite-envs.sh                     \n\
 exec nginx -g "daemon off;"             \n\
 ' > /usr/share/nginx/entrypoint.sh
 
