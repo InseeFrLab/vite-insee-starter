@@ -89,6 +89,8 @@ docker run -it -p 8083:8080 \
   inseefrlab/vite-insee-starter:main
 ```
 
+Open http://localhost:8083
+
 ## Keycloak theme
 
 When authenticating you will notice that the login pages are DSFR themed.  

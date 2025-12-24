@@ -33,7 +33,16 @@ function Page() {
                         : "French Government Branding disabled, using custom branding"}
                 </Typography>
                 <Link href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
-                    InseeFrLab/vite-insee-starter
+                    GitHub
+                </Link>
+                <Link href="https://hub.docker.com/r/inseefrlab/vite-insee-starter" target="_blank">
+                    DockerHub
+                </Link>
+                <Link href="https://github.com/InseeFrLab/todo-rest-api" target="_blank">
+                    GitHub API
+                </Link>
+                <Link href="https://hub.docker.com/r/inseefrlab/todo-rest-api" target="_blank">
+                    DockerHub API
                 </Link>
                 <MyComponent className={classes.myComponent} />
             </div>
