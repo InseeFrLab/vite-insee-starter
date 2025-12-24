@@ -16,9 +16,7 @@ export default defineConfig({
         viteEnvs({
             declarationFile: ".env"
         }),
-        oidcSpa({
-            safeMode: true
-        }),
+        oidcSpa(),
         tanstackRouter()
     ]
 });
