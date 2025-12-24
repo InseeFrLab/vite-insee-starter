@@ -15,7 +15,7 @@ ENV NGINX_GROUP_ID=101
 ENV NGINX_USER=nginx
 
 
-RUN rm etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/default.conf
 COPY --chown=$NGINX_USER:$NGINX_USER --from=build /app/nginx.conf /etc/nginx/conf.d/nginx.conf
 
 WORKDIR /usr/share/nginx/html
