@@ -8,7 +8,7 @@ export const translations: Translations<"en"> = {
         "operator logo alt": "Insee, measure to understand",
         "page title home": "Home",
         "page title mui": "Playing with Mui",
-        "page title todo": "Task List Application",
+        "page title todo": "Todo list",
         "page title chat": "Chat"
     },
     AuthButtons: {

@@ -37,6 +37,7 @@ const useStyles = tss.withParams<{ isBigger: boolean }>().create(({ isBigger }) 
     },
     text: {
         margin: "auto",
-        color: fr.colors.decisions.background.contrast.redMarianne.default
+        color: fr.colors.decisions.background.contrast.redMarianne.default,
+        userSelect: "none"
     }
 }));
