@@ -8,7 +8,7 @@ import { createDsfrCustomBrandingProvider } from "@codegouvfr/react-dsfr/mui";
 import { createTheme } from "@mui/material/styles";
 import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import logoInseePngUrl from "assets/logo-insee.png";
+import faviconUrl from "assets/favicon.png";
 import "assets/geist/main.css";
 
 const queryClient = new QueryClient();
@@ -69,7 +69,7 @@ const { DsfrCustomBrandingProvider } = createDsfrCustomBrandingProvider({
             }
         });
 
-        return { theme, faviconUrl: logoInseePngUrl };
+        return { theme, faviconUrl };
     }
 });
 
