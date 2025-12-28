@@ -1,16 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { enforceLogin } from "oidc";
-import { Evt, type StatefulReadonlyEvt } from "evt";
 import { useRerenderOnStateChange } from "evt/hooks";
-import { Deferred } from "evt/tools/Deferred";
-import { getOidc } from "oidc";
-import { assert } from "tsafe";
 import { useState } from "react";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
 import { tss } from "tss";
 import { declareComponentKeys, useTranslation } from "i18n";
+import { getChat } from "chat";
 
 export const Route = createFileRoute("/chat")({
     component: RouteComponent,
@@ -72,6 +69,7 @@ function RouteComponent() {
                     </Button>
                 }
                 nativeInputProps={{
+                    autoFocus: true,
                     value: draft,
                     onChange: event => setDraft(event.target.value),
                     onKeyDown: event => {
@@ -139,81 +137,4 @@ const { i18n } = declareComponentKeys<
     "waiting for server messages" | "you" | "server" | "message label" | "send"
 >()("ChatPage");
 
-export type Chat = {
-    evtMessages: StatefulReadonlyEvt<Chat.Message[]>;
-    sendMessage: (message: string) => void;
-};
-
 export type I18n = typeof i18n;
-
-namespace Chat {
-    export type Message = {
-        origin: "client" | "server";
-        message: string;
-    };
-}
-
-function createChat(): Chat {
-    const evtMessages = Evt.create<Chat.Message[]>([]);
-
-    const dSocket = new Deferred<WebSocket>();
-
-    (async () => {
-        const oidc = await getOidc();
-
-        assert(oidc.isUserLoggedIn);
-
-        const url = new URL(import.meta.env.VITE_TODOS_API_URL);
-
-        url.protocol = "ws:";
-
-        url.pathname += "ws";
-
-        const socket = new WebSocket(url.href, [`authorization_bearer_${await oidc.getAccessToken()}`]);
-
-        socket.addEventListener("message", event => {
-            evtMessages.state = [
-                ...evtMessages.state,
-                {
-                    origin: "server",
-                    message: event.data
-                }
-            ];
-        });
-
-        socket.addEventListener("error", err => {
-            console.error("socket error", err);
-        });
-
-        const onOpen = () => {
-            dSocket.resolve(socket);
-            socket.removeEventListener("open", onOpen);
-        };
-
-        socket.addEventListener("open", onOpen);
-    })();
-
-    return {
-        evtMessages,
-        sendMessage: async message => {
-            evtMessages.state = [
-                ...evtMessages.state,
-                {
-                    origin: "client",
-                    message
-                }
-            ];
-            const socket = await dSocket.pr;
-            socket.send(message);
-        }
-    };
-}
-
-let chat: Chat | undefined = undefined;
-
-function getChat() {
-    if (chat === undefined) {
-        chat = createChat();
-    }
-    return chat;
-}
