@@ -9,7 +9,7 @@ export const translations: Translations<"fr"> = {
         "page title home": "Acceuil",
         "page title mui": "Jouer avec Mui",
         "page title todo": "Application liste de tâches",
-        "page title websocket": "Websocket"
+        "page title chat": "Discussion"
     },
     AuthButtons: {
         login: "Se connecter",
@@ -39,7 +39,7 @@ export const translations: Translations<"fr"> = {
     TodoPage: {
         "waking up container": "Le conteneur de l'API REST est en cours de démarrage ..."
     },
-    WebsocketPage: {
+    ChatPage: {
         "waiting for server messages": "En attente des messages du serveur...",
         you: "Vous",
         server: "Serveur",

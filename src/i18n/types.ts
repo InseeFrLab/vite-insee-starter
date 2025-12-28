@@ -18,7 +18,7 @@ export type ComponentKey =
     | import("components/AutoLogoutWarningOverlay").I18n
     | import("routes/index.lazy").I18n
     | import("routes/todo").I18n
-    | import("routes/websocket").I18n;
+    | import("routes/chat").I18n;
 
 export type Translations<L extends Language> = GenericTranslations<
     ComponentKey,

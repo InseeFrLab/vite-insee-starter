@@ -12,7 +12,7 @@ import { fr } from "@codegouvfr/react-dsfr";
 import { tss } from "tss";
 import { declareComponentKeys, useTranslation } from "i18n";
 
-export const Route = createFileRoute("/websocket")({
+export const Route = createFileRoute("/chat")({
     component: RouteComponent,
     beforeLoad: enforceLogin
 });
@@ -26,7 +26,7 @@ function RouteComponent() {
 
     const [draft, setDraft] = useState("");
 
-    const { t } = useTranslation("WebsocketPage");
+    const { t } = useTranslation("ChatPage");
     const { classes, cx } = useStyles();
 
     const onSend = () => {
@@ -137,7 +137,7 @@ const useStyles = tss.withName({ RouteComponent }).create({
 
 const { i18n } = declareComponentKeys<
     "waiting for server messages" | "you" | "server" | "message label" | "send"
->()("WebsocketPage");
+>()("ChatPage");
 
 export type Chat = {
     evtMessages: StatefulReadonlyEvt<Chat.Message[]>;
