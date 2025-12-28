@@ -27,7 +27,7 @@ function createChat(): Chat {
 
         const url = new URL(import.meta.env.VITE_TODOS_API_URL);
 
-        url.protocol = "ws:";
+        url.protocol = url.protocol === "https:" ? "wss" : "ws";
 
         url.pathname += "ws";
 
