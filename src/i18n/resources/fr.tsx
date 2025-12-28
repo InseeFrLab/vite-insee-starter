@@ -8,7 +8,8 @@ export const translations: Translations<"fr"> = {
         "operator logo alt": "Insee, mesurer pour comprendre",
         "page title home": "Acceuil",
         "page title mui": "Jouer avec Mui",
-        "page title todo": "Application liste de tâches"
+        "page title todo": "Application liste de tâches",
+        "page title websocket": "Websocket"
     },
     AuthButtons: {
         login: "Se connecter",
@@ -37,6 +38,13 @@ export const translations: Translations<"fr"> = {
     },
     TodoPage: {
         "waking up container": "Le conteneur de l'API REST est en cours de démarrage ..."
+    },
+    WebsocketPage: {
+        "waiting for server messages": "En attente des messages du serveur...",
+        you: "Vous",
+        server: "Serveur",
+        "message label": "Message",
+        send: "Envoyer"
     },
     AutoLogoutWarningOverlay: {
         "paragrah still there": "Êtes-vous toujours là ?",

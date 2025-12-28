@@ -35,6 +35,7 @@
         "@tanstack/react-router": "^1.121.34",
         "axios": "^1.10.0",
         "dayjs": "^1.11.13",
+        "evt": "^2.5.9",
         "i18nifty": "^4.0.6",
         "oidc-spa": "8.8.0-rc.1",
         "react": "^19.1.0",

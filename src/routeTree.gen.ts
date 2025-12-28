@@ -11,6 +11,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WebsocketRouteImport } from './routes/websocket'
 import { Route as TodoRouteImport } from './routes/todo'
 import { Route as AccountRouteImport } from './routes/account'
 
@@ -22,6 +23,11 @@ const MuiLazyRoute = MuiLazyRouteImport.update({
   path: '/mui',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/mui.lazy').then((d) => d.Route))
+const WebsocketRoute = WebsocketRouteImport.update({
+  id: '/websocket',
+  path: '/websocket',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TodoRoute = TodoRouteImport.update({
   id: '/todo',
   path: '/todo',
@@ -42,12 +48,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/account': typeof AccountRoute
   '/todo': typeof TodoRoute
+  '/websocket': typeof WebsocketRoute
   '/mui': typeof MuiLazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/account': typeof AccountRoute
   '/todo': typeof TodoRoute
+  '/websocket': typeof WebsocketRoute
   '/mui': typeof MuiLazyRoute
 }
 export interface FileRoutesById {
@@ -55,20 +63,22 @@ export interface FileRoutesById {
   '/': typeof IndexLazyRoute
   '/account': typeof AccountRoute
   '/todo': typeof TodoRoute
+  '/websocket': typeof WebsocketRoute
   '/mui': typeof MuiLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/account' | '/todo' | '/mui'
+  fullPaths: '/' | '/account' | '/todo' | '/websocket' | '/mui'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/account' | '/todo' | '/mui'
-  id: '__root__' | '/' | '/account' | '/todo' | '/mui'
+  to: '/' | '/account' | '/todo' | '/websocket' | '/mui'
+  id: '__root__' | '/' | '/account' | '/todo' | '/websocket' | '/mui'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   AccountRoute: typeof AccountRoute
   TodoRoute: typeof TodoRoute
+  WebsocketRoute: typeof WebsocketRoute
   MuiLazyRoute: typeof MuiLazyRoute
 }
 
@@ -79,6 +89,13 @@ declare module '@tanstack/react-router' {
       path: '/mui'
       fullPath: '/mui'
       preLoaderRoute: typeof MuiLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/websocket': {
+      id: '/websocket'
+      path: '/websocket'
+      fullPath: '/websocket'
+      preLoaderRoute: typeof WebsocketRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/todo': {
@@ -109,6 +126,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   AccountRoute: AccountRoute,
   TodoRoute: TodoRoute,
+  WebsocketRoute: WebsocketRoute,
   MuiLazyRoute: MuiLazyRoute,
 }
 export const routeTree = rootRouteImport

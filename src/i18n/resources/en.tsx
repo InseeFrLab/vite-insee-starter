@@ -8,7 +8,8 @@ export const translations: Translations<"en"> = {
         "operator logo alt": "Insee, measure to understand",
         "page title home": "Home",
         "page title mui": "Playing with Mui",
-        "page title todo": "Task List Application"
+        "page title todo": "Task List Application",
+        "page title websocket": "Websocket"
     },
     AuthButtons: {
         login: "Log in",
@@ -37,6 +38,13 @@ export const translations: Translations<"en"> = {
     },
     TodoPage: {
         "waking up container": "The REST API container is waking up ..."
+    },
+    WebsocketPage: {
+        "waiting for server messages": "Waiting for server messages...",
+        you: "You",
+        server: "Server",
+        "message label": "Message",
+        send: "Send"
     },
     AutoLogoutWarningOverlay: {
         "paragrah still there": "Are you still there?",

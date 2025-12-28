@@ -37,7 +37,8 @@ export function Header() {
                     [
                         ["/", t("page title home")],
                         ["/mui", t("page title mui")],
-                        ["/todo", t("page title todo")]
+                        ["/todo", t("page title todo")],
+                        ["/websocket", t("page title websocket")]
                     ] as const
                 ).map(([to, label]) => ({
                     text: label,
@@ -57,6 +58,7 @@ const { i18n } = declareComponentKeys<
     | "page title home"
     | "page title mui"
     | "page title todo"
+    | "page title websocket"
 >()("Header");
 
 export type I18n = typeof i18n;
