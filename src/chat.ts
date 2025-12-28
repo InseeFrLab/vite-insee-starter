@@ -31,7 +31,12 @@ function createChat(): Chat {
 
         url.pathname += "ws";
 
-        const socket = new WebSocket(url.href, [`authorization_bearer_${await oidc.getAccessToken()}`]);
+        const socket = new WebSocket(url.href, [
+            // NOTE: This is a common workaround to the fact that the WebSocket API
+            // does not allow to set custom headers to the UPGRADE request.
+            // So we use the protocol and on the server read the Sec-WebSocket-Protocol header.
+            `authorization_bearer_${await oidc.getAccessToken()}`
+        ]);
 
         socket.addEventListener("message", event => {
             evtMessages.state = [
