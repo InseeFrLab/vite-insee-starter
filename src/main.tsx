@@ -10,6 +10,7 @@ import { useLang } from "i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import faviconUrl from "assets/favicon.png";
 import "assets/geist/main.css";
+import { shouldUseGovBranding } from "./govBrandingPreference";
 
 const queryClient = new QueryClient();
 
@@ -47,7 +48,9 @@ startReactDsfr({
 
 const { DsfrCustomBrandingProvider } = createDsfrCustomBrandingProvider({
     createMuiTheme: ({ isDark, theme_gov }) => {
-        if (import.meta.env.VITE_IS_GOV_INSTANCE === "true") {
+        const useGovBranding = shouldUseGovBranding();
+
+        if (useGovBranding) {
             return { theme: theme_gov };
         }
 

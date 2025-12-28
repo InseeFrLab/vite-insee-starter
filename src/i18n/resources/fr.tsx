@@ -34,7 +34,13 @@ export const translations: Translations<"fr"> = {
     },
     HomePage: {
         welcome: ({ name }) => <>Bienvenue {name === undefined ? "" : <strong>{name}</strong>}!</>,
-        "video aria label": "Video de démonstration de react-dsfr"
+        "video aria label": "Video de démonstration de react-dsfr",
+        "gov branding toggle label": "Habillage gouvernemental français",
+        "gov branding toggle helper":
+            "Activez ou désactivez le thème gouvernemental français par défaut pour cette application.",
+        "gov branding toggle title": "Basculer l'habillage gouvernemental français",
+        "gov branding enabled": "Habillage gouvernemental français activé",
+        "gov branding disabled": "Habillage gouvernemental français désactivé"
     },
     TodoPage: {
         "waking up container": "Le conteneur de l'API REST est en cours de démarrage ..."

@@ -1,12 +1,14 @@
-import type { ReactElement } from "react";
+import { useCallback, type ReactElement } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { declareComponentKeys, useTranslation } from "i18n";
 import { useOidc } from "oidc";
 import { tss } from "tss";
 import { MyComponent } from "components/MyComponent";
 import { fr } from "@codegouvfr/react-dsfr";
+import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import { persistGovBrandingPreference } from "govBrandingPreference";
 
 export const Route = createLazyFileRoute("/")({
     component: Page
@@ -19,6 +21,11 @@ function Page() {
 
     const { classes, isGov } = useStyles();
 
+    const handleGovBrandingChange = useCallback((checked: boolean) => {
+        persistGovBrandingPreference(checked);
+        window.location.reload();
+    }, []);
+
     return (
         <div className={classes.root}>
             <div className={classes.content}>
@@ -27,10 +34,17 @@ function Page() {
                         name: isUserLoggedIn ? decodedIdToken.preferred_username : undefined
                     })}
                 </Typography>
-                <Typography variant="body1">
-                    {isGov
-                        ? "French Government Branding Enabled"
-                        : "French Government Branding disabled, using custom branding"}
+                <div className={classes.toggle}>
+                    <ToggleSwitch
+                        checked={isGov}
+                        onChange={handleGovBrandingChange}
+                        label={t("gov branding toggle label")}
+                        helperText={t("gov branding toggle helper")}
+                        inputTitle={t("gov branding toggle title")}
+                    />
+                </div>
+                <Typography variant="body1" className={classes.brandingStatus}>
+                    {t(isGov ? "gov branding enabled" : "gov branding disabled")}
                 </Typography>
                 <Link href="https://github.com/InseeFrLab/vite-insee-starter" target="_blank">
                     GitHub
@@ -58,6 +72,14 @@ const useStyles = tss.create({
     content: {
         textAlign: "center"
     },
+    toggle: {
+        marginTop: fr.spacing("3w"),
+        display: "flex",
+        justifyContent: "center"
+    },
+    brandingStatus: {
+        marginBottom: fr.spacing("3w")
+    },
     myComponent: {
         margin: "auto",
         marginTop: fr.spacing("5w")
@@ -73,6 +95,11 @@ const { i18n } = declareComponentKeys<
           R: ReactElement;
       }
     | "video aria label"
+    | "gov branding toggle label"
+    | "gov branding toggle helper"
+    | "gov branding toggle title"
+    | "gov branding enabled"
+    | "gov branding disabled"
 >()("HomePage");
 
 export type I18n = typeof i18n;

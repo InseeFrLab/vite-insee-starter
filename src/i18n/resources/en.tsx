@@ -34,7 +34,13 @@ export const translations: Translations<"en"> = {
     },
     HomePage: {
         welcome: ({ name }) => <>Welcome {name === undefined ? "" : <strong>{name}</strong>}!</>,
-        "video aria label": "Demonstration video of react-dsfr"
+        "video aria label": "Demonstration video of react-dsfr",
+        "gov branding toggle label": "French Government branding",
+        "gov branding toggle helper":
+            "Enable or disable the default French Government theme for this app.",
+        "gov branding toggle title": "Toggle French Government branding",
+        "gov branding enabled": "French Government branding enabled",
+        "gov branding disabled": "French Government branding disabled"
     },
     TodoPage: {
         "waking up container": "The REST API container is waking up ..."
