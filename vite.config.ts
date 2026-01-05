@@ -16,7 +16,9 @@ export default defineConfig({
         viteEnvs({
             declarationFile: ".env"
         }),
-        oidcSpa(),
+        oidcSpa({
+            browserRuntimeFreeze: { enabled: true }
+        }),
         tanstackRouter()
     ]
 });
