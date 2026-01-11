@@ -28,7 +28,6 @@ bootstrapOidc(
               implementation: "real",
               issuerUri,
               clientId: import.meta.env.VITE_OIDC_CLIENT_ID,
-              dpop: "auto",
               extraQueryParams: {
                   get dark() {
                       return getIsDark() ? "true" : "false";

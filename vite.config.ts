@@ -17,7 +17,8 @@ export default defineConfig({
             declarationFile: ".env"
         }),
         oidcSpa({
-            browserRuntimeFreeze: { enabled: true }
+            browserRuntimeFreeze: { enabled: true },
+            DPoP: { enabled: true, mode: "auto" }
         }),
         tanstackRouter()
     ]
