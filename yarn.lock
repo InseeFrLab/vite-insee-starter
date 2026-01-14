@@ -4442,10 +4442,10 @@ object.assign@^4.1.7:
     has-symbols "^1.1.0"
     object-keys "^1.1.1"
 
-oidc-spa@10.0.1-rc.6:
-  version "10.0.1-rc.6"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.0.1-rc.6.tgz#6afa745d44d917f8a6e69098e0c6a9656b707435"
-  integrity sha512-pdp6oJkPNZTKcbXhfI6rHT4A+rgayoowXryKAdcEoCzqMEOs6goYAAKXhJpugOG7QCnrKW1SGfIXfEDGti2wvw==
+oidc-spa@10.0.1-rc.7:
+  version "10.0.1-rc.7"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.0.1-rc.7.tgz#85d4b953fb5d95e3642949fd760727d3b1dfa159"
+  integrity sha512-5TCOTGEFxGK09HXGD39hqnDsVbxNp7iLE/uRZamsbLRBvEo/Mtw0JzKYqpw3R9Ct/VwM5cYa9GzK9Xvgo1bmAw==
 
 onetime@^5.1.2:
   version "5.1.2"
