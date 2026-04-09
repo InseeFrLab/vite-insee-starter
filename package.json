@@ -66,7 +66,7 @@
         "jsdom": "^27.0.0",
         "lint-staged": "^16.1.2",
         "node-fetch": "^3.3.2",
-        "orval": "^7.10.0",
+        "orval": "^8.0.0",
         "prettier": "^3.6.0",
         "tsx": "^4.20.3",
         "typescript": "^5.8.3",
