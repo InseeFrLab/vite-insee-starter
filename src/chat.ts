@@ -1,6 +1,6 @@
 import { Evt, type StatefulReadonlyEvt } from "evt";
 import { Deferred } from "evt/tools/Deferred";
-import { getOidc } from "oidc";
+import { getOidc } from "@/oidc";
 import { assert } from "tsafe";
 
 export type Chat = {

@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { enforceLogin } from "oidc";
+import { enforceLogin } from "@/oidc";
 import { useRerenderOnStateChange } from "evt/hooks";
 import { useState } from "react";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import { fr } from "@codegouvfr/react-dsfr";
-import { tss } from "tss";
-import { declareComponentKeys, useTranslation } from "i18n";
-import { getChat } from "chat";
+import { tss } from "@/tss";
+import { declareComponentKeys, useTranslation } from "@/i18n";
+import { getChat } from "@/chat";
 
 export const Route = createFileRoute("/chat")({
     component: RouteComponent,

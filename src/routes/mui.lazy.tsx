@@ -59,7 +59,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-import { useStyles } from "tss";
+import { useStyles } from "@/tss";
 
 export const Route = createLazyFileRoute("/mui")({
     component: Page
@@ -84,7 +84,7 @@ function Page() {
                         <Switch
                             checked={isDark}
                             onChange={event => setIsDark(event.target.checked)}
-                            inputProps={{ "aria-label": "controlled" }}
+                            slotProps={{ input: { "aria-label": "controlled" } }}
                         />
                     }
                     label="Dark mode"

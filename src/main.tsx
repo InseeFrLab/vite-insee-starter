@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { startReactDsfr } from "@codegouvfr/react-dsfr/spa";
-import { OidcInitializationGate } from "oidc";
+import { OidcInitializationGate } from "@/oidc";
 import { RouterProvider, createRouter, Link, type LinkProps } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { createDsfrCustomBrandingProvider } from "@codegouvfr/react-dsfr/mui";
 import { createTheme } from "@mui/material/styles";
-import { useLang } from "i18n";
+import { useLang } from "@/i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import faviconUrl from "assets/favicon.png";
-import "assets/geist/main.css";
+import faviconUrl from "@/assets/favicon.png";
+import "@/assets/geist/main.css";
 import { shouldUseGovBranding } from "./govBrandingPreference";
 
 const queryClient = new QueryClient();

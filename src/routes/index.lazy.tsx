@@ -1,9 +1,9 @@
 import { useCallback, type ReactElement } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { declareComponentKeys, useTranslation } from "i18n";
-import { useOidc } from "oidc";
-import { tss } from "tss";
-import { MyComponent } from "components/MyComponent";
+import { declareComponentKeys, useTranslation } from "@/i18n";
+import { useOidc } from "@/oidc";
+import { tss } from "@/tss";
+import { MyComponent } from "@/components/MyComponent";
 import { fr } from "@codegouvfr/react-dsfr";
 import { ToggleSwitch } from "@codegouvfr/react-dsfr/ToggleSwitch";
 import { Highlight } from "@codegouvfr/react-dsfr/Highlight";
@@ -13,7 +13,7 @@ import { Summary } from "@codegouvfr/react-dsfr/Summary";
 import { Tile } from "@codegouvfr/react-dsfr/Tile";
 import { CallOut } from "@codegouvfr/react-dsfr/CallOut";
 import { Tag } from "@codegouvfr/react-dsfr/Tag";
-import { persistGovBrandingPreference } from "govBrandingPreference";
+import { persistGovBrandingPreference } from "@/govBrandingPreference";
 
 export const Route = createLazyFileRoute("/")({
     component: Page

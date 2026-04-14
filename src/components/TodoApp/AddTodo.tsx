@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import { Input } from "@codegouvfr/react-dsfr/Input";
 import { Button } from "@codegouvfr/react-dsfr/Button";
-import { declareComponentKeys, useTranslation } from "i18n";
+import { declareComponentKeys, useTranslation } from "@/i18n";
 
 type Props = {
     className?: string;

@@ -1,6 +1,6 @@
 import { Todo } from "./Todo";
 import { AddTodo } from "./AddTodo";
-import { tss } from "tss";
+import { tss } from "@/tss";
 import type { TodoItem } from "./type";
 import { fr } from "@codegouvfr/react-dsfr";
 import CircularProgress from "@mui/material/CircularProgress";

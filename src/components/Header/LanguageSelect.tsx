@@ -2,7 +2,7 @@ import {
     LanguageSelect as LanguageSelect_base,
     addLanguageSelectTranslations
 } from "@codegouvfr/react-dsfr/LanguageSelect";
-import { useLang, languages } from "i18n";
+import { useLang, languages } from "@/i18n";
 
 type Props = {
     id?: string;
