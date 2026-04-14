@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import { tss } from "tss";
+import { useState } from "react";
+import { tss } from "@/tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { Button } from "@codegouvfr/react-dsfr/Button";
 import Checkbox from "@mui/material/Checkbox";
 import type { TodoItem } from "./type";
 import { assert } from "tsafe";
-import { declareComponentKeys, useTranslation } from "i18n";
+import { declareComponentKeys, useTranslation } from "@/i18n";
 
 // Todo item but without the id, we don't need it.
 export type TodoItemLike = {
@@ -31,11 +31,6 @@ export function Todo(props: TodoProps) {
     const { className, todo, onToggleTodo, onDeleteTodo, onUpdateTodoText } = props;
 
     const [text, setText] = useState(todo.text);
-
-    useEffect(() => {
-        setText(todo.text);
-    }, [todo.text]);
-
     const [isEditing, setIsEditing] = useState(false);
 
     const { classes, cx } = useStyles({ isEditing });
@@ -64,6 +59,7 @@ export function Todo(props: TodoProps) {
                             onUpdateTodoText(text);
                             setIsEditing(false);
                         } else {
+                            setText(todo.text);
                             setIsEditing(true);
                         }
                     }}

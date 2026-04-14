@@ -1,13 +1,13 @@
 import { Header as DsfrHeader } from "@codegouvfr/react-dsfr/Header";
-import logoInsee from "assets/logo_insee.svg";
-import logoInseeDark from "assets/logo_insee_dark.svg";
+import logoInsee from "@/assets/logo_insee.svg";
+import logoInseeDark from "@/assets/logo_insee_dark.svg";
 import { headerFooterDisplayItem } from "@codegouvfr/react-dsfr/Display";
-import { declareComponentKeys, useTranslation } from "i18n";
+import { declareComponentKeys, useTranslation } from "@/i18n";
 import { LanguageSelect } from "./LanguageSelect";
 import { AuthButtons } from "./AuthButtons";
 import { useMatchRoute } from "@tanstack/react-router";
 import { useIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { useStyles } from "tss";
+import { useStyles } from "@/tss";
 
 export function Header() {
     const { t } = useTranslation("Header");

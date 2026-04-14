@@ -1,7 +1,7 @@
-import { useOidc } from "oidc";
-import { useStyles } from "tss";
+import { useOidc } from "@/oidc";
+import { useStyles } from "@/tss";
 import { declareComponentKeys } from "i18nifty";
-import { useTranslation } from "i18n";
+import { useTranslation } from "@/i18n";
 
 export function AutoLogoutWarningOverlay() {
     const { autoLogoutState } = useOidc();

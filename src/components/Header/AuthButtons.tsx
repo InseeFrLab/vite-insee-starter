@@ -1,7 +1,7 @@
 import { HeaderQuickAccessItem } from "@codegouvfr/react-dsfr/Header";
-import { declareComponentKeys, useTranslation } from "i18n";
-import { useOidc } from "oidc";
-import { tss } from "tss";
+import { declareComponentKeys, useTranslation } from "@/i18n";
+import { useOidc } from "@/oidc";
+import { tss } from "@/tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { useMatchRoute } from "@tanstack/react-router";
 

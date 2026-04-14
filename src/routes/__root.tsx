@@ -1,10 +1,10 @@
 import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { QueryClient } from "@tanstack/react-query";
-import { Footer } from "components/Footer";
-import { Header } from "components/Header";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
-import { AutoLogoutWarningOverlay } from "components/AutoLogoutWarningOverlay";
-import { tss, GlobalStyles } from "tss";
+import { AutoLogoutWarningOverlay } from "@/components/AutoLogoutWarningOverlay";
+import { tss, GlobalStyles } from "@/tss";
 
 export const Route = createRootRouteWithContext<{
     queryClient: QueryClient;

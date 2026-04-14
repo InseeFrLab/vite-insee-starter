@@ -1,7 +1,7 @@
 // custom-instance.ts
 
 import Axios, { type AxiosRequestConfig } from "axios";
-import { getOidc } from "oidc";
+import { getOidc } from "@/oidc";
 
 const axiosInstance = Axios.create({
     baseURL: import.meta.env.VITE_TODOS_API_URL

@@ -1,7 +1,7 @@
 import { oidcSpa } from "oidc-spa/react-spa";
 import { z } from "zod";
 import { getIsDark } from "@codegouvfr/react-dsfr/useIsDark";
-import { $lang } from "i18n";
+import { $lang } from "@/i18n";
 
 export const { bootstrapOidc, OidcInitializationGate, enforceLogin, getOidc, useOidc } = oidcSpa
     .withExpectedDecodedIdTokenShape({

@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { enforceLogin } from "oidc";
-import { TodoApp } from "components/TodoApp";
-import { tss, keyframes } from "tss";
+import { enforceLogin } from "@/oidc";
+import { TodoApp } from "@/components/TodoApp";
+import { tss, keyframes } from "@/tss";
 import { fr } from "@codegouvfr/react-dsfr";
 import { assert } from "tsafe";
 import CircularProgress from "@mui/material/CircularProgress";
-import { declareComponentKeys, useTranslation } from "i18n";
+import { declareComponentKeys, useTranslation } from "@/i18n";
 import {
     getGetTodosQueryKey,
     getGetTodosQueryOptions,
@@ -13,7 +13,7 @@ import {
     useGetTodos,
     usePutTodo,
     usePutTodoId
-} from "todos-api";
+} from "@/todos-api";
 import { useIsMutating, useIsFetching, useQueryClient } from "@tanstack/react-query";
 
 export const Route = createFileRoute("/todo")({
