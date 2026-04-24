@@ -244,9 +244,9 @@
     css-tree "^3.0.0"
 
 "@codegouvfr/react-dsfr@^1.32.0":
-  version "1.32.0"
-  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.32.0.tgz#82e0a8c7a20906a9623ce28161c2cc6b8a0ba49a"
-  integrity sha512-f7J66o6Wx8Cwy+AEkxA3gNmNvZhLyWL+/IhiNeHFifrNBUd+9nyWrdaecttBhASzmOUp9nAqCVVRb5mrlRcFGQ==
+  version "1.32.1"
+  resolved "https://registry.yarnpkg.com/@codegouvfr/react-dsfr/-/react-dsfr-1.32.1.tgz#69d2329fb9c8764c1f424c81ba9dd1b931a02bf8"
+  integrity sha512-oxszdo6TOjlFZ22db3ZRP/CiEdE7DdUCWCIb8Yzfx793EPvfGwrWfBb43KPl5OexlE+FNzid5Do1u5N5e/Uc5w==
   dependencies:
     tsafe "^1.8.5"
     yargs-parser "^21.1.1"
