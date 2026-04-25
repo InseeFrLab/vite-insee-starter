@@ -1163,13 +1163,13 @@
     "@tanstack/router-devtools-core" "1.167.3"
 
 "@tanstack/react-router@^1.168.21":
-  version "1.168.23"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.168.23.tgz#a350bfdb401c7ca01929980b54cec238a91fc7b9"
-  integrity sha512-+GblieDnutG6oipJJPNtRJjrWF8QTZEG/l0532+BngFkVK48oHNOcvIkSoAFYftK1egAwM7KBxXsb0Ou+X6/MQ==
+  version "1.168.24"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.168.24.tgz#d33a5b9e41ebff4b4407845c4efbe0f68501a1ce"
+  integrity sha512-CQWd9ywDZU6icG65SrjJMzWcNg/ehBKFxfxYssKSuELk0eM9SzJxJ3JBI760kdLXIsXewOX9PHpJDknxC/R5Ag==
   dependencies:
     "@tanstack/history" "1.161.6"
     "@tanstack/react-store" "^0.9.3"
-    "@tanstack/router-core" "1.168.15"
+    "@tanstack/router-core" "1.168.16"
     isbot "^5.1.22"
 
 "@tanstack/react-store@^0.9.3":
@@ -1180,10 +1180,10 @@
     "@tanstack/store" "0.9.3"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.168.15":
-  version "1.168.15"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.168.15.tgz#6d079c5f12e19a0082bf5ccc912f383ad7c5b72b"
-  integrity sha512-Wr0424NDtD8fT/uALobMZ9DdcfsTyXtW5IPR++7zvW8/7RaIOeaqXpVDId8ywaGtqPWLWOfaUg2zUtYtukoXYA==
+"@tanstack/router-core@1.168.16":
+  version "1.168.16"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.168.16.tgz#f680c1d0990a1af87bf0dd7ee3ce8b5aef05d552"
+  integrity sha512-2lkWNMzDWWxVqTf9Y54DH1ceZOrGrOGzx9CFVMq8gQSOxhr3x3+otjVei1Rlx4xmsCc4yCqccqjun5wDtE9MZA==
   dependencies:
     "@tanstack/history" "1.161.6"
     cookie-es "^3.0.0"
@@ -1207,13 +1207,13 @@
     clsx "^2.1.1"
     goober "^2.1.16"
 
-"@tanstack/router-generator@1.166.33":
-  version "1.166.33"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.33.tgz#3ff7403baa4067f4853f76f706034a0cdc28f8ec"
-  integrity sha512-MXP1WrEaZ13tlO5iJoXC+ZIFHNj5CtcvWuqlAZ3zXY70Musuq+mfUcKWMVdcIstnNqrZl5M2hfqLh5Zf5t4NVw==
+"@tanstack/router-generator@1.166.34":
+  version "1.166.34"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.34.tgz#b49facacc438a31c9be481d07274e93c20cc3239"
+  integrity sha512-VamHGCFqOntz9Ds6oOHtpzXLQg2yhOsXsCXSznLjoDzme3Rk69HvOzXkx9IIpDxo4v64QdvNjeV2IyfXuz5RFw==
   dependencies:
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.168.15"
+    "@tanstack/router-core" "1.168.16"
     "@tanstack/router-utils" "1.161.7"
     "@tanstack/virtual-file-routes" "1.161.7"
     magic-string "^0.30.21"
@@ -1222,9 +1222,9 @@
     zod "^3.24.2"
 
 "@tanstack/router-plugin@^1.167.22":
-  version "1.167.23"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.23.tgz#03079a62c1c47243128ed247fc5ea24232051e11"
-  integrity sha512-dqfCd8gsZThbVQ8bcYMO62/hW5GCkUoPLnnjOd3fCWoEi+Ei5oWa/GnlgHCpG7bdeGr/K8isnYUmI9Ysq5vLrg==
+  version "1.167.26"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.26.tgz#eef26465cb13e0bbe1bb5adada81be0696de1fb5"
+  integrity sha512-NUbZriBBZDAoTO9ymcnuABbJdl0jMQYpPIa0JVKQn32S1xGWkVhJ8V9xmTPJU3rVdHZYedcmTHFTTadClG389w==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1232,12 +1232,12 @@
     "@babel/template" "^7.27.2"
     "@babel/traverse" "^7.28.5"
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.168.15"
-    "@tanstack/router-generator" "1.166.33"
+    "@tanstack/router-core" "1.168.16"
+    "@tanstack/router-generator" "1.166.34"
     "@tanstack/router-utils" "1.161.7"
     "@tanstack/virtual-file-routes" "1.161.7"
     chokidar "^3.6.0"
-    unplugin "^2.1.2"
+    unplugin "^3.0.0"
     zod "^3.24.2"
 
 "@tanstack/router-utils@1.161.7":
@@ -3901,13 +3901,12 @@ universalify@^2.0.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.1.tgz#168efc2180964e6386d061e094df61afe239b18d"
   integrity sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==
 
-unplugin@^2.1.2:
-  version "2.3.11"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-2.3.11.tgz#411e020dd2ba90e2fbe1e7bd63a5a399e6ee3b54"
-  integrity sha512-5uKD0nqiYVzlmCRs01Fhs2BdkEgBS3SAVP6ndrBsuK42iC2+JHyxM05Rm9G8+5mkmRtzMZGY8Ct5+mliZxU/Ww==
+unplugin@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-3.0.0.tgz#01e40c474bf74d363744f4cb262569d26dd9bb43"
+  integrity sha512-0Mqk3AT2TZCXWKdcoaufeXNukv2mTrEZExeXlHIOZXdqYoHHr4n51pymnwV8x2BOVxwXbK2HLlI7usrqMpycdg==
   dependencies:
     "@jridgewell/remapping" "^2.3.5"
-    acorn "^8.15.0"
     picomatch "^4.0.3"
     webpack-virtual-modules "^0.6.2"
 
