@@ -7,7 +7,7 @@ RUN yarn install --frozen-lockfile --network-timeout 1000000
 RUN yarn build
 
 # production environment
-FROM nginxinc/nginx-unprivileged:1.29-alpine
+FROM nginxinc/nginx-unprivileged:1.30-alpine
 
 # Define non-root user variables
 ENV NGINX_USER_ID=101
