@@ -745,24 +745,24 @@
     react-is "^19.2.4"
 
 "@mui/x-data-grid@^9.0.1":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-9.0.2.tgz#fe3b7f1737ab08e06d2cfb1e671be90a656664ba"
-  integrity sha512-9hkBS73x3G5MniOpkCh54iH5iwBr55obchF5IS1eybURZEgPxSXFizNMrDbyM2EGaYG9DQ87MvC5IoV7g0F2Vw==
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-9.0.3.tgz#6610d84116f1c137cbd388839031155411484b6a"
+  integrity sha512-f3MJChJBaKIxIxNPl4M2OG7rfnrg1hakOIcR45hrPRQPUFKYAelMHfVw8Y/FOAKW4qG1Z7LXbhsyg+KglYsG5w==
   dependencies:
-    "@babel/runtime" "^7.28.6"
+    "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
     "@mui/x-internals" "^9.0.0"
-    "@mui/x-virtualizer" "9.0.0-alpha.0"
+    "@mui/x-virtualizer" "9.0.0-alpha.1"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     use-sync-external-store "^1.6.0"
 
 "@mui/x-date-pickers@^9.0.0":
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-9.0.2.tgz#ac601e4655ce3017185d652f9f91a2914bb6e63a"
-  integrity sha512-rnyc2wFPnprTS5i8Lq9aX2Rlx+ZRvNZERTd7sPMErf/8HnMCYzxwErITbd+TuImlvo2vaLF1gNynqT8AJMusYw==
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-9.0.3.tgz#c15067c04fe29ed43bcbca518405a179bf4a2f97"
+  integrity sha512-1geYekK9XaZBy38GDpR1749AaDG335iB2cHPWPfWskFLpqx/ZU/IQ0tymFZ1u8jKCT2cwKzb6UdM3bq6kmtcdw==
   dependencies:
-    "@babel/runtime" "^7.28.6"
+    "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
     "@mui/x-internals" "^9.0.0"
     "@types/react-transition-group" "^4.4.12"
@@ -780,12 +780,12 @@
     reselect "^5.1.1"
     use-sync-external-store "^1.6.0"
 
-"@mui/x-virtualizer@9.0.0-alpha.0":
-  version "9.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-9.0.0-alpha.0.tgz#60dd975d2ae8f376e68b50823397c59f8c99cf36"
-  integrity sha512-K52TKCuWlkMEWOeB2nPfhIAHaWsYEb9h1ME9Wb+gmw4FloMA03VvKsrqvn8o6l8hYUi4/5F8NfYOIfPwqW3EhA==
+"@mui/x-virtualizer@9.0.0-alpha.1":
+  version "9.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-9.0.0-alpha.1.tgz#c4ad062a515d447aeca59db0e099a9f6445a09f0"
+  integrity sha512-XDDoOXuI1Apw9+Jlu4mWkho7fuFt5MqUgKrEYiZdi2vQw3Z3psqncgiEn8SWwl+WGAsjrB1qgeviyWaY1a6uCQ==
   dependencies:
-    "@babel/runtime" "^7.28.6"
+    "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
     "@mui/x-internals" "^9.0.0"
 
