@@ -201,7 +201,7 @@
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.27.6.tgz#ec4070a04d76bae8ddbb10770ba55714a417b7c6"
   integrity sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==
 
-"@babel/runtime@^7.28.6", "@babel/runtime@^7.29.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.29.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
   version "7.29.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.2.tgz#9a6e2d05f4b6692e1801cd4fb176ad823930ed5e"
   integrity sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==
@@ -745,49 +745,49 @@
     react-is "^19.2.4"
 
 "@mui/x-data-grid@^9.0.1":
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-9.0.3.tgz#6610d84116f1c137cbd388839031155411484b6a"
-  integrity sha512-f3MJChJBaKIxIxNPl4M2OG7rfnrg1hakOIcR45hrPRQPUFKYAelMHfVw8Y/FOAKW4qG1Z7LXbhsyg+KglYsG5w==
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-9.0.4.tgz#52e9480cca5c2295bc1ba91f928f230fc736e7f6"
+  integrity sha512-XhjewU6EGFPXDhVJ48ILA7PXYdGVbIwvy6g3SYkm7yMygb/ScA6k+Uac2zi09OMxJDCK8nRiuhj+ONY4uZZIYQ==
   dependencies:
     "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
-    "@mui/x-internals" "^9.0.0"
-    "@mui/x-virtualizer" "9.0.0-alpha.1"
+    "@mui/x-internals" "^9.0.4"
+    "@mui/x-virtualizer" "9.0.0-alpha.2"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     use-sync-external-store "^1.6.0"
 
 "@mui/x-date-pickers@^9.0.0":
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-9.0.3.tgz#c15067c04fe29ed43bcbca518405a179bf4a2f97"
-  integrity sha512-1geYekK9XaZBy38GDpR1749AaDG335iB2cHPWPfWskFLpqx/ZU/IQ0tymFZ1u8jKCT2cwKzb6UdM3bq6kmtcdw==
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-9.0.4.tgz#539386f08095e99229aa9e99e42431239475b66a"
+  integrity sha512-Zq4ZUYyqFtv9BjAyYOkUEiAykdAJnvFoPY8gaARXWleyX8QY5ztY5I1yD3iS6R+k/QFWNOef07VYU7nKFdRrYA==
   dependencies:
     "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
-    "@mui/x-internals" "^9.0.0"
+    "@mui/x-internals" "^9.0.4"
     "@types/react-transition-group" "^4.4.12"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     react-transition-group "^4.4.5"
 
-"@mui/x-internals@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-9.0.0.tgz#8851a058e09b719690b4f398319805239e923855"
-  integrity sha512-E/4rdg69JjhyybpPGypCjAKSKLLnSdCFM+O6P/nkUg47+qt3uftxQEhjQO53rcn6ahHl6du/uNZ9BLgeY6kYxQ==
+"@mui/x-internals@^9.0.4":
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-9.0.4.tgz#a6a1ad84d506d14f29e46b57cac55a0d3899378f"
+  integrity sha512-I84xcPZOEmN29syfAjgsv25kpW7GX9+F7n2xXKEX5C7VdyXITbAW2RomwXt3guud4KwGhkAGuGDPK7Wi20EoCg==
   dependencies:
-    "@babel/runtime" "^7.28.6"
+    "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
     reselect "^5.1.1"
     use-sync-external-store "^1.6.0"
 
-"@mui/x-virtualizer@9.0.0-alpha.1":
-  version "9.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-9.0.0-alpha.1.tgz#c4ad062a515d447aeca59db0e099a9f6445a09f0"
-  integrity sha512-XDDoOXuI1Apw9+Jlu4mWkho7fuFt5MqUgKrEYiZdi2vQw3Z3psqncgiEn8SWwl+WGAsjrB1qgeviyWaY1a6uCQ==
+"@mui/x-virtualizer@9.0.0-alpha.2":
+  version "9.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@mui/x-virtualizer/-/x-virtualizer-9.0.0-alpha.2.tgz#06e6e233e7d43b54774a9338bf86a30ed79cbc61"
+  integrity sha512-L/7I81NzdQ6a+iu74bkOyVILbwVdAEeCMQLDdmBS77lXVmSZSn3E664oQVdE8uoiSjbOuF0U2LGyM7wH9Ae/nA==
   dependencies:
     "@babel/runtime" "^7.29.2"
     "@mui/utils" "9.0.0"
-    "@mui/x-internals" "^9.0.0"
+    "@mui/x-internals" "^9.0.4"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
