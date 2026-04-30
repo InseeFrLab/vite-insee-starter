@@ -1163,13 +1163,13 @@
     "@tanstack/router-devtools-core" "1.167.3"
 
 "@tanstack/react-router@^1.168.21":
-  version "1.168.25"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.168.25.tgz#9301cb8e1f3cbe4b14eddb88e947fd529a84d1b7"
-  integrity sha512-4U/E76dc+fYuLixjV1RLNfqrkQoexSL8MqGNpIHOodtvY3fMPGaALrvDVtBDQYBEU4z5r5fHaV6+kclWAVFP9A==
+  version "1.168.26"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.168.26.tgz#34943def22a96ef60ca2bf833947dee21a35445d"
+  integrity sha512-+MV+U5KfMUQGZIU/x8MU3FMRSujxLs678v2jhu1Y8P9ndQBKLVOBYKFY+vv/ypxBUYiyDiOsZkDxPJC8UPo/Ig==
   dependencies:
     "@tanstack/history" "1.161.6"
     "@tanstack/react-store" "^0.9.3"
-    "@tanstack/router-core" "1.168.17"
+    "@tanstack/router-core" "1.168.18"
     isbot "^5.1.22"
 
 "@tanstack/react-store@^0.9.3":
@@ -1180,10 +1180,10 @@
     "@tanstack/store" "0.9.3"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.168.17":
-  version "1.168.17"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.168.17.tgz#7ffdae6a30bdb38620d6069124d3bd392c23e332"
-  integrity sha512-VDq7HCqRK3sdpxoETwYoTXTaYi+OVQC197g1fdzaiZBUmhntfjn+PQc15OzTqNNhf8Menk6r6ftmuphybMKdig==
+"@tanstack/router-core@1.168.18":
+  version "1.168.18"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.168.18.tgz#f6c8ada89fa69ec3520a3a022cadaa6a9510089c"
+  integrity sha512-rheeg/+hIHSVw9IDzcc5NJlKamKtKJN/c8rPG9XEmLwHvA4C1WRN/yjMTGgoGNU0xKKjL2AzvUhYMSaBdelbEA==
   dependencies:
     "@tanstack/history" "1.161.6"
     cookie-es "^3.0.0"
@@ -1207,13 +1207,13 @@
     clsx "^2.1.1"
     goober "^2.1.16"
 
-"@tanstack/router-generator@1.166.36":
-  version "1.166.36"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.36.tgz#7c08d49615ef64c779a28be5d2dbeef6bfcb1f29"
-  integrity sha512-ce8Sg+ONwdd483kXJBYhTcdIAjEwSlWUOkoLsgPdNUIfA05hdnd9JkNnM4X1OnzpFL8/+TBSMo4WYQp9CHhDPg==
+"@tanstack/router-generator@1.166.37":
+  version "1.166.37"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.37.tgz#6ace9f4bf84391598ce21e5f2486344ebd23d111"
+  integrity sha512-uj5t0IzKzvwzySiTSrF2JLdxs5xwo3dbKJ3/BpLrJyrUC978VAupNP0kQlvps8VMKrGk9x9s1ogpO5qNu29Qpw==
   dependencies:
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.168.17"
+    "@tanstack/router-core" "1.168.18"
     "@tanstack/router-utils" "1.161.7"
     "@tanstack/virtual-file-routes" "1.161.7"
     jiti "^2.6.1"
@@ -1222,9 +1222,9 @@
     zod "^3.24.2"
 
 "@tanstack/router-plugin@^1.167.22":
-  version "1.167.28"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.28.tgz#39ba63fc306d98295034b8be9b0f5c9a205d4c31"
-  integrity sha512-O23ba7JaKvx5Eu0l6iTpknu79QcdkMmoW1VtZdsZe5NoQ6dHHru6caoapDc/uOxmz7h7VYfSuLjs/UYg7EA1cA==
+  version "1.167.29"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.29.tgz#6f469a7b2c9555301814e9bfdb62a8ca87bee56b"
+  integrity sha512-Rl5TWqXgn1dbs82IqpswP63WTODdYAmQ4kU/mulNzmCsgMKSer3bjKPFrE1g2dnxBxfoF6iwfDGdAwdreK4mvA==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1232,8 +1232,8 @@
     "@babel/template" "^7.27.2"
     "@babel/traverse" "^7.28.5"
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.168.17"
-    "@tanstack/router-generator" "1.166.36"
+    "@tanstack/router-core" "1.168.18"
+    "@tanstack/router-generator" "1.166.37"
     "@tanstack/router-utils" "1.161.7"
     "@tanstack/virtual-file-routes" "1.161.7"
     chokidar "^3.6.0"
@@ -2024,9 +2024,9 @@ dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.328:
-  version "1.5.344"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.344.tgz#6437cc08a7d9b914a98120e182f37793c9eaffd4"
-  integrity sha512-4MxfbmNDm+KPh066EZy+eUnkcDPcZ35wNmOWzFuh/ijvHsve6kbLTLURy88uCNK5FbpN+yk2nQY6BYh1GEt+wg==
+  version "1.5.345"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.345.tgz#39d8f7cbc19350e5d7d94a471c111eb7326e8ef6"
+  integrity sha512-F9JXQGiMrz6yVNPI2qOVPvB9HzjH5cGzhs8oJ6A28V5L/YnzN/0KsuiibqF+F1Fd9qxFzD1BUnYSd8JfULxTwg==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
