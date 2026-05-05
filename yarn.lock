@@ -1224,14 +1224,14 @@
     clsx "^2.1.1"
     goober "^2.1.16"
 
-"@tanstack/router-generator@1.166.39":
-  version "1.166.39"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.39.tgz#318b9575c2918676a2a9e7bf74b055fbc637436f"
-  integrity sha512-j2OW/UvpjM/DT9tHVmuhWW1k6UOezTRrPqBPZFFmIth0fY7iTPqK+Erqpo8r5yGTRGCbMvOS4sL3H2MldnIZew==
+"@tanstack/router-generator@1.166.40":
+  version "1.166.40"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.40.tgz#3f2c57b768faace96560be02962a55dd79765f01"
+  integrity sha512-78WYpSUBeNFkxJZ76nltzccKdGKNZSqfwCts424nVOyM6nF5CSXPS5Lfbyu28u3Gi7Pu/mGR3e4Rkc9WDKNP1Q==
   dependencies:
     "@babel/types" "^7.28.5"
     "@tanstack/router-core" "1.169.1"
-    "@tanstack/router-utils" "1.161.7"
+    "@tanstack/router-utils" "1.161.8"
     "@tanstack/virtual-file-routes" "1.161.7"
     jiti "^2.6.1"
     magic-string "^0.30.21"
@@ -1239,9 +1239,9 @@
     zod "^3.24.2"
 
 "@tanstack/router-plugin@^1.167.22":
-  version "1.167.32"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.32.tgz#a9747bb382e7581bf7474da7ae83ba9d16d37ff8"
-  integrity sha512-i9BA6GzUCoM20UYZ77orXzHwD5zM0OQTtLuPNbqTTSG38CvR6viRFP/d+QFo2aRNyCvun8PR7zSa49bslSggEQ==
+  version "1.167.33"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.33.tgz#d28965acc77f6ebce42673b20f5a4bfbd294cf25"
+  integrity sha512-oopYVBUpLeT28EPpXmnKOtqfeEtY4IYp4YOYLx3OuRMQcOUsssU7lug4KhEhVGUxLx+S9jcBhcMb3bCyTUVlwA==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1250,17 +1250,17 @@
     "@babel/traverse" "^7.28.5"
     "@babel/types" "^7.28.5"
     "@tanstack/router-core" "1.169.1"
-    "@tanstack/router-generator" "1.166.39"
-    "@tanstack/router-utils" "1.161.7"
+    "@tanstack/router-generator" "1.166.40"
+    "@tanstack/router-utils" "1.161.8"
     "@tanstack/virtual-file-routes" "1.161.7"
     chokidar "^3.6.0"
     unplugin "^3.0.0"
     zod "^3.24.2"
 
-"@tanstack/router-utils@1.161.7":
-  version "1.161.7"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-utils/-/router-utils-1.161.7.tgz#06183f1e711038906b6d0a5e854a7e8c2a07fb6d"
-  integrity sha512-VkY0u7ax/GD0qU6ZLLnfPC+UMxVzxRbvZp4yV4iUSXjgJZ/siAT5/QlLm9FEDJ9QDoC0VD9W7f00tKKreUI7Ng==
+"@tanstack/router-utils@1.161.8":
+  version "1.161.8"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-utils/-/router-utils-1.161.8.tgz#1c1518ef039d88e19648c2dc13629900b3f796ba"
+  integrity sha512-xyiLWEKjfBAVhauDSSjXxyf7s8elU6SM+V050sbkofvGmIIvkwPFtDsX7Gvwh14kBd6iCwAT+RiPvXTxAptY0Q==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/generator" "^7.28.5"
@@ -2041,9 +2041,9 @@ dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.328:
-  version "1.5.348"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.348.tgz#8031cb2cc3a60cc798c94d4f44bfc174d015e844"
-  integrity sha512-QC2X59nRlycQQMc4ZXjSVBX+tSgJfgRtcrYHbIZLgOV2dCvefoQGegLR7lLXKgpPpSuVmJU19LMzGrSa2C7k3Q==
+  version "1.5.349"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.349.tgz#9b9c6a6d84d1107557c18a9336099ce0ee890e5b"
+  integrity sha512-QsWVGyRuY07Aqb234QytTfwd5d9AJlfNIQ5wIOl1L+PZDzI9d9+Fn0FRale/QYlFxt/bUnB0/nLd1jFPGxGK1A==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
@@ -3593,14 +3593,14 @@ semver@^7.7.3:
   integrity sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==
 
 seroval-plugins@^1.5.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.5.2.tgz#102b8ec17525e2504e9476b1fe6a1f442926f0af"
-  integrity sha512-qpY0Cl+fKYFn4GOf3cMiq6l72CpuVaawb6ILjubOQ+diJ54LfOWaSSPsaswN8DRPIPW4Yq+tE1k5aKd7ILyaFg==
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.5.3.tgz#80f69795530f09c65c4f4364168810446cacfc74"
+  integrity sha512-LhVh4KjjkKmCxOUjoaUwtqbDjyMfnA535yEmmGDuwZcIYtw8ns6tZmeszNTECeUg/3sJpnEjsz/KhQrcPXPw1Q==
 
 seroval@^1.5.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.5.2.tgz#b07584d531281498fa7f51f49dfdc5d76e76a681"
-  integrity sha512-xcRN39BdsnO9Tf+VzsE7b3JyTJASItIV1FVFewJKCFcW4s4haIKS3e6vj8PGB9qBwC7tnuOywQMdv5N4qkzi7Q==
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.5.3.tgz#65401b794ef19e897635a2f2e874a54ca5f2e6f7"
+  integrity sha512-BXe0x4buEeYiIKaRUnth1WqCILQ3k4O67KP/B4pC3pVz0Mv2c96ngA9QDREUYxWY1sb2RZVRqwI9RcpVMyHCVw==
 
 shebang-command@^2.0.0:
   version "2.0.0"
