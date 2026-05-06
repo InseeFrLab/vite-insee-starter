@@ -64,7 +64,7 @@
         "globals": "^17.5.0",
         "husky": "^9.1.7",
         "jsdom": "^29.0.2",
-        "lint-staged": "^16.4.0",
+        "lint-staged": "^17.0.0",
         "node-fetch": "^3.3.2",
         "orval": "^8.7.0",
         "prettier": "^3.8.2",
