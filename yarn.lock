@@ -1228,24 +1228,24 @@
     clsx "^2.1.1"
     goober "^2.1.16"
 
-"@tanstack/router-generator@1.166.41":
-  version "1.166.41"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.41.tgz#277bd1f0e6d360e02b2a0a93dc2ed64cc6dff4e6"
-  integrity sha512-XpnkVvk9AlCtw5vggJsnSx3MdKGk8Asopwy9wUFAqFAHqlrRJzV9PoZ5kGkNEJMOYYcMTriJLN4D+kyXRUJpDQ==
+"@tanstack/router-generator@1.166.42":
+  version "1.166.42"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.166.42.tgz#8ba37c12fa30bfa3b561df347e0cfafb526aea21"
+  integrity sha512-2qBWC0t78r6b3vI+AbnvCZcFAvbYBDlLuWZrTjQbcjUmwG3qyeQp983tJyDuj9wb5//adG1tgAGXZkJ3aDwdBg==
   dependencies:
     "@babel/types" "^7.28.5"
     "@tanstack/router-core" "1.169.2"
     "@tanstack/router-utils" "1.161.8"
     "@tanstack/virtual-file-routes" "1.161.7"
-    jiti "^2.6.1"
+    jiti "^2.7.0"
     magic-string "^0.30.21"
     prettier "^3.5.0"
     zod "^3.24.2"
 
 "@tanstack/router-plugin@^1.167.34":
-  version "1.167.34"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.34.tgz#4ca9cdf29ddc4cee5f0f3b2bdebb93a3c6f24b88"
-  integrity sha512-hU0Cuw79Yo6FGPBB0mW9Ik8bnTzmnUKtbgbvmIzeFdK3wKBPS4+xN7kcxVaBqXfP6xR3PFkIf2SSoYsiuLjVtg==
+  version "1.167.35"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.167.35.tgz#2e07c3f1c01cba5cb09f4f1256d5f07be708a783"
+  integrity sha512-UAScU5VAzLYVY4FML/Cbc5S5TucT4I8Ata05yozGOe4ZfepTKRffA5xWLtD2N+ov5svdv0KTX/kqlZnYPe28mA==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/plugin-syntax-jsx" "^7.27.1"
@@ -1254,7 +1254,7 @@
     "@babel/traverse" "^7.28.5"
     "@babel/types" "^7.28.5"
     "@tanstack/router-core" "1.169.2"
-    "@tanstack/router-generator" "1.166.41"
+    "@tanstack/router-generator" "1.166.42"
     "@tanstack/router-utils" "1.161.8"
     "@tanstack/virtual-file-routes" "1.161.7"
     chokidar "^3.6.0"
@@ -1812,9 +1812,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001782:
-  version "1.0.30001791"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001791.tgz#dfb93d85c40ad380c57123e72e10f3c575786b51"
-  integrity sha512-yk0l/YSrOnFZk3UROpDLQD9+kC1l4meK/wed583AXrzoarMGJcbRi2Q4RaUYbKxYAsZ8sWmaSa/DsLmdBeI1vQ==
+  version "1.0.30001792"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001792.tgz#ca8bb9be244835a335e2018272ce7223691873c5"
+  integrity sha512-hVLMUZFgR4JJ6ACt1uEESvQN1/dBVqPAKY0hgrV70eN3391K6juAfTjKZLKvOMsx8PxA7gsY1/tLMMTcfFLLpw==
 
 chai@^5.2.0:
   version "5.3.3"
@@ -2035,9 +2035,9 @@ dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.328:
-  version "1.5.350"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.350.tgz#66fe98a41d12ff06879378e2060265868433fb8c"
-  integrity sha512-/KWD4qK8nMqIoJh35Rpc37fiVyOe80mcUQKpfje0Dp9uot2ROuipsh+EriCdfInxjleD5v1S4OlIn41I0LXP0g==
+  version "1.5.352"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.352.tgz#0b57303cf654d7e4353edf01abe1ca55e5136063"
+  integrity sha512-9wHk8x6dyuimoe18EdiDPWKExNdxYqo4fn4FwOVVper6RxT3cmpBwBkWWfSOCYJjQdIco/nPhJhNLmn4Ufg1Yg==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
@@ -2791,7 +2791,7 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-jiti@^2.6.1:
+jiti@^2.6.1, jiti@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.7.0.tgz#974228f2f4ca2bc21885a1797b45fea68e950c64"
   integrity sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==
