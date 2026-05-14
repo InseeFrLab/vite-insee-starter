@@ -2574,13 +2574,6 @@ get-stream@^9.0.0:
     "@sec-ant/readable-stream" "^0.4.1"
     is-stream "^4.0.1"
 
-get-tsconfig@^4.7.5:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.14.0.tgz#985d85c52a9903864280ccc2448d413fbf1efed8"
-  integrity sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==
-  dependencies:
-    resolve-pkg-maps "^1.0.0"
-
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -3511,11 +3504,6 @@ resolve-from@^4.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-resolve-pkg-maps@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz#616b3dc2c57056b5588c31cdf4b3d64db133720f"
-  integrity sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==
-
 resolve@^1.19.0:
   version "1.22.10"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.10.tgz#b663e83ffb09bbf2386944736baae803029b8b39"
@@ -3860,12 +3848,11 @@ tss-react@^4.9.20:
     "@emotion/utils" "*"
 
 tsx@^4.21.0:
-  version "4.21.0"
-  resolved "https://registry.yarnpkg.com/tsx/-/tsx-4.21.0.tgz#32aa6cf17481e336f756195e6fe04dae3e6308b1"
-  integrity sha512-5C1sg4USs1lfG0GFb2RLXsdpXqBSEhAaA/0kPL01wxzpMqLILNxIxIOKiILz+cdg/pLnOUxFYOR5yhHU666wbw==
+  version "4.21.1"
+  resolved "https://registry.yarnpkg.com/tsx/-/tsx-4.21.1.tgz#3c7561c30d94ac074acfbad79a1efb5e7692757e"
+  integrity sha512-5QE2Q04cN1u0993w0LT5rPw3faZqZU1fFn1mGE0pV53N1Dn7c+QFFxQu1mBeSgeOXwFyTicZw02wVgp3Tb5cAQ==
   dependencies:
     esbuild "~0.27.0"
-    get-tsconfig "^4.7.5"
   optionalDependencies:
     fsevents "~2.3.3"
 
