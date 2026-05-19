@@ -131,7 +131,7 @@ function Page() {
 
     return (
         <div className={classes.root}>
-            <Highlight size="lg" className={classes.heroHighlight}>
+            <Highlight bodyAs="div" size="lg" className={classes.heroHighlight}>
                 <div className={classes.heroContent}>
                     <div className={classes.heroHeader}>
                         <Tag small>{t("hero strapline")}</Tag>

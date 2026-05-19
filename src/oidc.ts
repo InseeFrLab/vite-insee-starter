@@ -36,7 +36,7 @@ bootstrapOidc(
                       return $lang.current;
                   }
               },
-              debugLogs: true
+              debugLogs: false
           }
         : {
               implementation: "mock",

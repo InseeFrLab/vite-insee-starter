@@ -1,0 +1,54 @@
+services:
+  # OTel Collector — point d'entrée unique pour tous les signaux
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    ports:
+      - "4317:4317" # OTLP gRPC (services backend)
+      - "4318:4318" # OTLP HTTP (frontend browser)
+      - "55679:55679" # zpages debug (optionnel, pratique en démo)
+    volumes:
+      - ./otel-collector-config.yml:/etc/otelcol-contrib/config.yaml
+
+  # Jaeger — backend de visualisation
+  jaeger:
+    image: jaegertracing/jaeger:latest
+    ports:
+      - "16686:16686" # UI
+
+  # Keycloak — OIDC provider local
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    command: >
+      start-dev
+      --import-realm
+      --tracing-enabled=true
+      --tracing-endpoint=http://otel-collector:4317
+      --tracing-protocol=grpc
+      --telemetry-service-name=keycloak-iam
+      --spi-cors--default--allowed-headers=traceparent,tracestate,baggage
+    ports:
+      - "8180:8080"
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+    volumes:
+      - ./keycloak-realm.json:/opt/keycloak/data/import/realm.json
+
+  # API todo
+  todo-api:
+    image: inseefrlab/todo-rest-api:2.3.2
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    extra_hosts:
+      - "localhost:host-gateway"
+    ports:
+      - "8080:8080"
+    environment:
+      - OIDC_ISSUER_URI=http://localhost:8180/realms/oidc-spa
+      - OIDC_AUDIENCE=account
+      - PORT=8080
+      - OTEL_ENABLED=true
+      - MODE=prod
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318

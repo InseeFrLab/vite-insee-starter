@@ -10,6 +10,7 @@ type ImportMetaEnv = {
   VITE_OIDC_ISSUER_URI: string
   VITE_OIDC_CLIENT_ID: string
   VITE_IS_GOV_INSTANCE: string
+  VITE_OTEL_COLLECTOR_URL: string
   BASE_URL: string
   MODE: string
   DEV: boolean

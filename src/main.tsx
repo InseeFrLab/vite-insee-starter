@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import faviconUrl from "@/assets/favicon.png";
 import "@/assets/geist/main.css";
 import { shouldUseGovBranding } from "./govBrandingPreference";
+import "./otel";
 
 const queryClient = new QueryClient();
 

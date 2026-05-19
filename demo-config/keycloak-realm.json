@@ -1,0 +1,43 @@
+{
+    "realm": "oidc-spa",
+    "enabled": true,
+    "clients": [
+        {
+            "clientId": "vite-insee-starter",
+            "enabled": true,
+            "publicClient": true,
+            "redirectUris": ["http://localhost:5173/*", "http://localhost:4173/*"],
+            "webOrigins": ["http://localhost:5173", "http://localhost:4173"],
+            "standardFlowEnabled": true,
+            "protocolMappers": [
+                {
+                    "name": "audience",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-audience-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "included.client.audience": "account",
+                        "id.token.claim": "false",
+                        "access.token.claim": "true"
+                    }
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "username": "demo",
+            "email": "demo@demo.fr",
+            "firstName": "Demo",
+            "lastName": "User",
+            "enabled": true,
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "demo",
+                    "temporary": false
+                }
+            ]
+        }
+    ]
+}
