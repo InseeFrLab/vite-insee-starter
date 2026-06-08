@@ -26,4 +26,4 @@ dist-ssr
 *.sln
 *.sw?
 
-/public/dsfr/
+/vanilla-vite-react-typescript

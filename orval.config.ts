@@ -4,6 +4,7 @@ export default defineConfig({
         output: {
             target: "src/todos-api/client.gen.ts",
             client: "react-query",
+            httpClient: "axios",
             override: {
                 mutator: {
                     path: "src/todos-api/axiosInstance.ts",
