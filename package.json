@@ -23,7 +23,7 @@
         "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "^1.32.1",
+        "@codegouvfr/react-dsfr": "1.32.3-rc.1",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
         "@mui/icons-material": "^9.0.0",
@@ -42,7 +42,7 @@
         "react-dom": "^19.2.5",
         "tsafe": "^1.8.12",
         "tss-react": "^4.9.20",
-        "vite-envs": "^4.6.2",
+        "vite-envs": "^4.7.0",
         "zod": "^4.4.3"
     },
     "devDependencies": {
