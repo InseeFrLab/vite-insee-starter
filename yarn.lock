@@ -3749,10 +3749,10 @@ use-sync-external-store@^1.6.0:
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz#b174bfa65cb2b526732d9f2ac0a408027876f32d"
   integrity sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==
 
-vite-envs@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-4.7.0.tgz#fa93c18281afcb7192036a7c74a52ca59496b1c6"
-  integrity sha512-5up/wODYYvIkxrUkPljml+pE3VI49JFql1YU07FT06F35fAhXxwxK40NvgAxC9Nh9xcekk2seS27/pwBN+LFog==
+vite-envs@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/vite-envs/-/vite-envs-4.7.1.tgz#84fd00ac127b957ca4e59802db7ca2b164dc6b2d"
+  integrity sha512-JksP1ToqW5WSCcbfIwb7KHIQv9UHO8nreGpqsCJaXnTAd00LAAOa7ta7KoonNZNpDecODqF19rZbg1miIS2ILg==
 
 "vite@^6.0.0 || ^7.0.0 || ^8.0.0", vite@^8.0.16:
   version "8.0.16"

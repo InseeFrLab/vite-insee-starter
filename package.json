@@ -42,7 +42,7 @@
         "react-dom": "^19.2.7",
         "tsafe": "^1.8.12",
         "tss-react": "^4.9.21",
-        "vite-envs": "^4.7.0",
+        "vite-envs": "^4.7.1",
         "zod": "^4.4.3"
     },
     "devDependencies": {
