@@ -1,5 +1,5 @@
 import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
-import { QueryClient } from "@tanstack/react-query";
+import type { QueryClient } from "@tanstack/react-query";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { fr } from "@codegouvfr/react-dsfr";
