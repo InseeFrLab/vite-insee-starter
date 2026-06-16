@@ -1276,9 +1276,9 @@
     "@tanstack/router-devtools-core" "1.168.0"
 
 "@tanstack/react-router@^1.170.15":
-  version "1.170.15"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.15.tgz#8f6ae4699bffab765dd8636249146dc95e19810d"
-  integrity sha512-GawYz7HEjj8rTUUDoT/SemDEVm63pZUO+2mOcXHY9Jl3EwMS5gFBnPu/2UvcrwRm1jN1k79fokc0d4aFmrLatg==
+  version "1.170.16"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.16.tgz#ea81f98fb64bd51700817405c65f1574db411314"
+  integrity sha512-w6eq1IJklujs1tESazaK/FxH0+H2l8vm/QPuu1cD3oRW/ubgKneQpd7b64ti/8gUyEimzimJQZDmJr6YHfP5+g==
   dependencies:
     "@tanstack/history" "1.162.0"
     "@tanstack/react-store" "^0.9.3"
@@ -2759,9 +2759,9 @@ is-unicode-supported@^2.0.0:
   integrity sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==
 
 isbot@^5.1.22:
-  version "5.1.39"
-  resolved "https://registry.yarnpkg.com/isbot/-/isbot-5.1.39.tgz#e9094732fbe1e7662d31b5ae08cc0b8da31d6dfe"
-  integrity sha512-obH0yYahGXdzNxo+djmHhBYThUKDkz565cxkIlt2L9hXfv1NlaLKoDBHo6KxXsYrIXx2RK3x5vY36CfZcobxEw==
+  version "5.1.43"
+  resolved "https://registry.yarnpkg.com/isbot/-/isbot-5.1.43.tgz#7d73aed5270cf8f5dac2631ac45f04e0d388c6e3"
+  integrity sha512-drJhFmibra4LO6Wd7D3Oi6UICRK9244vSZkmxzhlZP0TTdwCA2ueK4PEkUkzPYeuqug9+cqqdWPgihjk5+83Cg==
 
 isexe@^2.0.0:
   version "2.0.0"
