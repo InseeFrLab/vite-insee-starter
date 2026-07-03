@@ -3075,10 +3075,10 @@ obug@^2.1.1:
   resolved "https://registry.yarnpkg.com/obug/-/obug-2.1.3.tgz#c02c60f95abd603409330e767db7f2823193331e"
   integrity sha512-9miFgM2OFba7hB+pRgvtV84pYTBaoTHohvmIgiRt6dRIzbwEOIaNaP+dIlGs2fNFoB0SeISs0Jz5WFVRid6Xyg==
 
-oidc-spa@10.2.3:
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.2.3.tgz#ce92680e052156a5a89601f862a05d2912e2b7a8"
-  integrity sha512-rbxDM5Ss1DLhXpjR35S6eGoI9o3+S8Z7gQVEn2yg4t11iM0nDI/XXxu+NDhuKKDwZaqCeeJYNZnUEc6rXG2lKQ==
+oidc-spa@10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.2.4.tgz#fa942114718e8f3b80a7c6e2fe7372522c17f2d3"
+  integrity sha512-0OcBOl452cq7swYgrNbfsVrP6h/AsZ6DpDvUvpgI6S4nr+Oji3EMhy999XkL9UnBYmxCnmUtv7Vyw9jThUBSmA==
 
 onetime@^7.0.0:
   version "7.0.0"
