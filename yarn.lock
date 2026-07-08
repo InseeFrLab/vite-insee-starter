@@ -2972,10 +2972,10 @@ obug@^2.1.1:
   resolved "https://registry.yarnpkg.com/obug/-/obug-2.1.3.tgz#c02c60f95abd603409330e767db7f2823193331e"
   integrity sha512-9miFgM2OFba7hB+pRgvtV84pYTBaoTHohvmIgiRt6dRIzbwEOIaNaP+dIlGs2fNFoB0SeISs0Jz5WFVRid6Xyg==
 
-oidc-spa@10.2.5:
-  version "10.2.5"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.2.5.tgz#9326ada91bfaf925a40a38032d7e55fc74d255d7"
-  integrity sha512-nrjhvStlRRZ3tYHazqut29foP1/OW7UHTkdaBh4uPoMN3tzCr9WKhQCyHx9YO40PpKhuJ/oIomXQ8/1Z2JBkag==
+oidc-spa@10.2.6:
+  version "10.2.6"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-10.2.6.tgz#09714ad9d9035a8a6164f15773a837fe2a9baad9"
+  integrity sha512-I4v7eRP8PbRfkGCMy7PtNtCERkbY5x3xwoPshtJ4wXDBDNiRHvS7pFGzsmoLfex3hLw2Fa7QxW6jssMcRjkG/Q==
 
 onetime@^7.0.0:
   version "7.0.0"
