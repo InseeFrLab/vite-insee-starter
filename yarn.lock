@@ -1162,9 +1162,9 @@
     zod "^4.4.3"
 
 "@tanstack/router-plugin@^1.168.19":
-  version "1.168.22"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.22.tgz#69a379485511b88735d92aa420e1ba63e541242d"
-  integrity sha512-+iBkwRWQ7dlTcL4TIKrphcToJf95DAd75FY9duiel7OFfDt8oT4tlfn713TKlgSHpZ9PVLQQQHe8ijcEseM39Q==
+  version "1.168.23"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.23.tgz#91709e1dbf4bd74f827a7a02345cfdb0f82b2fb5"
+  integrity sha512-0+PIcvnaAimFwjoEIeV3h7LKjzC8zNnp7pH2UamdKwQ9QlY99WU9V0Xl0zbM0i9hrUa/mKgWPDAzELmPUu5fMA==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/template" "^7.27.2"
