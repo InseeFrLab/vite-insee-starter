@@ -1110,13 +1110,13 @@
     "@tanstack/router-devtools-core" "1.168.1"
 
 "@tanstack/react-router@^1.170.17":
-  version "1.170.19"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.19.tgz#ab55df2fd2291ba9062569c54bb5a631f291f2a1"
-  integrity sha512-cK7VUsc9+8gYZMqwJjCAhrmL9wPhkwxEcZ7cxlHdBjjmqHbZyNxXAml/KfLmSuxRDQGVk2iofpoHclDTSrkmmg==
+  version "1.170.20"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.20.tgz#8dd37820ad7e4f2156497656ec4d3ffd511f3f7e"
+  integrity sha512-ptdksUzLqYJQcbA1XTIjIXwkQ2hJx/71SyOm2PVYqU30zrbj5c4bCimdJWx4qGYj1lb30mx3A58XIOz3zMzO3Q==
   dependencies:
     "@tanstack/history" "1.162.0"
     "@tanstack/react-store" "^0.9.3"
-    "@tanstack/router-core" "1.171.16"
+    "@tanstack/router-core" "1.171.17"
     isbot "^5.1.22"
 
 "@tanstack/react-store@^0.9.3":
@@ -1127,15 +1127,15 @@
     "@tanstack/store" "0.9.3"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.171.16":
-  version "1.171.16"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.16.tgz#bffd209fb59958665d9ba277c61b60c5ac647d3f"
-  integrity sha512-/qwawP5a45puA9DQtG8syrChWCV7uGMYs1p5rwgrICgiS/0pHo7zNOFyfVI02J1azWhCfFc6w6+SuiivPESYAA==
+"@tanstack/router-core@1.171.17":
+  version "1.171.17"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.17.tgz#c5e9fbbf4246494e471d6215ec32cdfe746cbb60"
+  integrity sha512-jaW4vGn+S0Txcz4HgARz9VN2BlgcyGJwIrZ2Vzo9FoJje8wzIiRSX+BMts6KGANXB/jWr+vLXJ3fen50ge2ZcA==
   dependencies:
     "@tanstack/history" "1.162.0"
     cookie-es "^3.0.0"
-    seroval "^1.5.4"
-    seroval-plugins "^1.5.4"
+    seroval "^1.6.2"
+    seroval-plugins "^1.6.2"
 
 "@tanstack/router-devtools-core@1.168.1":
   version "1.168.1"
@@ -1152,13 +1152,13 @@
   dependencies:
     "@tanstack/react-router-devtools" "1.167.1"
 
-"@tanstack/router-generator@1.167.22":
-  version "1.167.22"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.22.tgz#3fd099d251776c2cf14ee218d2f018f9625d4fbf"
-  integrity sha512-tiKrH6xuCdTfmm4UuHSpLsZ5q2pwmhNbGpExp5u/CCRObjQM5nxz8Dce/X3w86ST6VSZFQMBNjLcsUMnVlJw/Q==
+"@tanstack/router-generator@1.167.23":
+  version "1.167.23"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.23.tgz#05f8efd17112c440f07cfa60902ad57a91863ba3"
+  integrity sha512-VXCGdsFMBJ1eRVpdDGXmuYUB7+AsqG0YcdATKCareTXrIbsBo/ox8Df5KsssoWV1jYVYlPUSpihpaiJXzJ1Kfw==
   dependencies:
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.16"
+    "@tanstack/router-core" "1.171.17"
     "@tanstack/router-utils" "1.162.2"
     "@tanstack/virtual-file-routes" "1.162.0"
     jiti "^2.7.0"
@@ -1167,15 +1167,15 @@
     zod "^4.4.3"
 
 "@tanstack/router-plugin@^1.168.19":
-  version "1.168.24"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.24.tgz#9b9cc8f566c4eb7cefb434ad317e55254efb850a"
-  integrity sha512-FfPW45gfZHDC25AHo4MJB3ZljXEKFJenEgIDTELwnI6FtS90vXTQXjOjdTVNs/7B4R8+wLf7nWVrPSvBMp7zWw==
+  version "1.168.25"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.25.tgz#5f6846ce531f329f66271de234adee1bb874d3ff"
+  integrity sha512-Kj/mhjJlUa9wWyXacWd6DQ/axWrQGmxhOnRKlgHK6/A/eGeCU5Vwetbvi4S6FlMOjIJm514XPXYkEXqjXp7+4w==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/template" "^7.27.2"
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.16"
-    "@tanstack/router-generator" "1.167.22"
+    "@tanstack/router-core" "1.171.17"
+    "@tanstack/router-generator" "1.167.23"
     "@tanstack/router-utils" "1.162.2"
     chokidar "^5.0.0"
     unplugin "^3.0.0"
@@ -3352,12 +3352,12 @@ semver@^7.7.3:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.8.5.tgz#39b646037dd50c14fb451e7e4cac58ed8b863f69"
   integrity sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==
 
-seroval-plugins@^1.5.4:
+seroval-plugins@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.6.2.tgz#8e49b47fd585c2025f74f84f78272ea1753a8daa"
   integrity sha512-TfxuUjlbBESzUOWdTkTKqvSmav0ABym+itetDXLK6mDz8SmrpdI30aF8RTXE8Bvq+tH/1yIDkvy3W0lfQb1ipQ==
 
-seroval@^1.5.4:
+seroval@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.6.2.tgz#93ecff62ca1312a565e37146b2a332b9d625194d"
   integrity sha512-mPT+SD2TrlB6wvte1KkYOYUkubaTbd6pZ/6Kk3C9nxzrHmCZyhxOO7XGAeL7f+yLKZglzGtM9odUVvg/EhO+vQ==
