@@ -1931,9 +1931,9 @@ data-urls@^7.0.0:
     whatwg-url "^16.0.0"
 
 dayjs@^1.11.21:
-  version "1.11.21"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.21.tgz#57f87562e62de76f3c704bd2b8d522fc33068eb2"
-  integrity sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA==
+  version "1.11.22"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.22.tgz#757de199cb87ba258d413422af9072a22da86e2d"
+  integrity sha512-1YRnxzt/AabP3GHxnaB9/b+ZScCKu5TeF+co+BWG+lnWVIwEcTFc1FVE0WLNmNO3sA6GGXL40i5qkHfbLzpwrg==
 
 debug@4, debug@^4.1.0, debug@^4.3.1, debug@^4.3.2, debug@^4.4.3:
   version "4.4.3"
