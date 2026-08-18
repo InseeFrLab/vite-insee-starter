@@ -1240,13 +1240,13 @@
     "@tanstack/router-devtools-core" "1.168.1"
 
 "@tanstack/react-router@^1.170.17":
-  version "1.170.29"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.29.tgz#3379c54ee0d34a66c3f2e722097a728fb6faea3a"
-  integrity sha512-xQwakR0ReaUGu3xeXEl2CqzlIXk4i9vxaf/zqdzoELMY0mDZgMOr+xobiA5cQdn8cnovqZgqqUxcwXhsruC+NA==
+  version "1.170.30"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.30.tgz#23cc97af42a0ca07b4e3516f90031f0142a24c9f"
+  integrity sha512-FB3FD6cPPKQFMyYaEsm3Isb8TkIvNAuSeADCS25OzMgKyFXZK/B/Y3m9fpBoKS55pjbvtRPpW87NMY8GVwNPlg==
   dependencies:
     "@tanstack/history" "1.162.1"
     "@tanstack/react-store" "^0.9.3"
-    "@tanstack/router-core" "1.171.24"
+    "@tanstack/router-core" "1.171.25"
     isbot "^5.1.22"
 
 "@tanstack/react-store@^0.9.3":
@@ -1257,10 +1257,10 @@
     "@tanstack/store" "0.9.3"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.171.24":
-  version "1.171.24"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.24.tgz#e1f3312fe6743c7e16c3e3a331f80b3acacff1a5"
-  integrity sha512-+j+8NmV4QOS+ILNLdXFlLTdKPPbBQIy6mXDZ0QWEKYZ0xQOdlnOCXVHPflyGanD2SWSxjqGkw8CsW0CXXP7fLg==
+"@tanstack/router-core@1.171.25":
+  version "1.171.25"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.25.tgz#3e1b6b57a31382a752bc6c50058411b54cc4aa9f"
+  integrity sha512-w74Al2ar8UKx3Xp4ICTxIZD2Vmd6N9Yn4xH8ILq40gI5UqlxzjPPYoR5l2+5cmv9XCWZehxw7saIofmZpf1G4w==
   dependencies:
     "@tanstack/history" "1.162.1"
     cookie-es "^3.0.0"
@@ -1282,13 +1282,13 @@
   dependencies:
     "@tanstack/react-router-devtools" "1.167.1"
 
-"@tanstack/router-generator@1.167.30":
-  version "1.167.30"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.30.tgz#fe96417283a465aa9f470fcb6309c454675b86b1"
-  integrity sha512-Tf9TJfdpP0yL3k1D1ke6hR1dvPCgKShTik3HcBRDeTK5eNrp9/X0Q0YApN8thE6pVcXL6a78O3ZE7XN7s7KwNw==
+"@tanstack/router-generator@1.167.31":
+  version "1.167.31"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.31.tgz#ff20dc873cc66049c4ebe894f7e2d0ab0ecabdd7"
+  integrity sha512-xgk+8BCKzAoIONVJPeyyzLRKhb9W0PNWJepPIjx5gRU36+FDZUMNeZ/gjyOBZ4EzQgrUOCPs4/Vkr8JcnuRLLA==
   dependencies:
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.24"
+    "@tanstack/router-core" "1.171.25"
     "@tanstack/router-utils" "1.162.2"
     "@tanstack/virtual-file-routes" "1.162.0"
     jiti "^2.7.0"
@@ -1297,15 +1297,15 @@
     zod "^4.4.3"
 
 "@tanstack/router-plugin@^1.168.19":
-  version "1.168.32"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.32.tgz#96f549a56c214ab2dd8e8d4e15797e4ce17b6016"
-  integrity sha512-P+qYIY9b/K+ZGUPNiyLqsd20vN/1abgmSNG0Ch9KTKldag3icR7TlrJgnM2km86yuRdXa4nJ5YT7+JLV5rJRZg==
+  version "1.168.33"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.33.tgz#46e196a17955f3d05e9c6a403d40880e3a60d4b0"
+  integrity sha512-Zdz2Cis8hf/U7Ft9pv7QjwLJgKO2lYej10Sr5cpBWX1Y1fO9sXqdQGy0OW6XLiDt5RgcdfEST81k4I3cRCD4Ag==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/template" "^7.27.2"
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.24"
-    "@tanstack/router-generator" "1.167.30"
+    "@tanstack/router-core" "1.171.25"
+    "@tanstack/router-generator" "1.167.31"
     "@tanstack/router-utils" "1.162.2"
     chokidar "^5.0.0"
     unplugin "^3.0.0"
@@ -1760,9 +1760,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.11.12:
-  version "2.11.14"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.14.tgz#d51bb92285608b0e6356841a2eea76842a771d52"
-  integrity sha512-JyJ954WzuIR8/FFzX0o5krdSTrBAkcCSRfWSleRsIHSWV+cZe2FI1PKggVkFke1hBldRs+LRxUczzE9iPmgZww==
+  version "2.11.15"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.15.tgz#9c0cac93d7d304f3d61bb41088a102cd62e68676"
+  integrity sha512-FwMjJJ7HnyZpWe+oWxegG0fezZyBZUagI5LZEoO3GCbtbKNwRfMH9Ue5d5v01PNePBy1QSfPSDTTeVL0Hb9EzA==
 
 bidi-js@^1.0.3:
   version "1.0.3"
@@ -2000,9 +2000,9 @@ dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.402:
-  version "1.5.406"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.406.tgz#c1d2ddac21d01e92f0ddd2951d37642501d4a7f1"
-  integrity sha512-hWH5ORBi3d0IipnMh7BN5GDTaAmrSSSWmznwt2zltdiRNEWoEQyTwF0FFSBxzHO7hLSRT6loQu3IQGV0wg/Tvg==
+  version "1.5.409"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.409.tgz#3d514dd82b2d181d8ade96c53242f4b8c94ab4ed"
+  integrity sha512-ChI4N44d0B4A6C8prnNjMOaGgE59fUyEVYcRYm2XEXIjMbbvF5i9UL1cblDbpGqiU0uS8FE8UcKxqZqTXdmzbQ==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
