@@ -1240,13 +1240,13 @@
     "@tanstack/router-devtools-core" "1.168.1"
 
 "@tanstack/react-router@^1.170.17":
-  version "1.170.31"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.31.tgz#3378355db93672990fc0646fbcaa458837be6475"
-  integrity sha512-jqITLcf9Y+es9Wm7fD7XfXFGKk1Fujm+okGqHtr+UhISnQuyLQ8d3frsJlIN0Np1doYoeb5weozSkv72+EZ5bw==
+  version "1.170.32"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.32.tgz#818337b3b933702c7c33aaeb707a7ebf4904e04e"
+  integrity sha512-SIpxvaTKco100a5ZR3ePmArbhtm3XOx+w1dpGYY9gxHDta4iXSKDdQuhLonwJbIMkVJsU1rwXf0UDHMrF/1snw==
   dependencies:
     "@tanstack/history" "1.162.1"
     "@tanstack/react-store" "^0.9.3"
-    "@tanstack/router-core" "1.171.26"
+    "@tanstack/router-core" "1.171.27"
     isbot "^5.1.22"
 
 "@tanstack/react-store@^0.9.3":
@@ -1257,10 +1257,10 @@
     "@tanstack/store" "0.9.3"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.171.26":
-  version "1.171.26"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.26.tgz#e5f0945a3aeea2c37fe1bba65b49bf208c6d8e27"
-  integrity sha512-VymmPSs/93szHur/7PBygT6tRbmfcNO1xR46Wn/JVHeBqVduLPCuxBeJEgfVmVq8E4hSklPEh8i6qGXQd6WRqA==
+"@tanstack/router-core@1.171.27":
+  version "1.171.27"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.27.tgz#98e1c2dac311a2a5ca1e5b6829299d6b3b31fe9b"
+  integrity sha512-wDwSLvoLwIaNcnx9UNcN9Mb7Y8QwCYq1U1RQZwyN186gnkIoIYI2SOxy8VqH1vFigbkHkk4FmwMAQlghPgDK2g==
   dependencies:
     "@tanstack/history" "1.162.1"
     cookie-es "^3.0.0"
@@ -1282,13 +1282,13 @@
   dependencies:
     "@tanstack/react-router-devtools" "1.167.1"
 
-"@tanstack/router-generator@1.167.32":
-  version "1.167.32"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.32.tgz#be748a3cab3a61b942e84cad21075bbf3df9168a"
-  integrity sha512-KKPWUMUda7JYil+uDQPrX4ecyoXP9J3DesdpavOWpGCavsiAd6cxH6yq18krLGa1j20qmPJc10LJSLOOFia5tQ==
+"@tanstack/router-generator@1.167.33":
+  version "1.167.33"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.33.tgz#887cc8ab1bc41ccb812380c3d7eaffec8e0d19df"
+  integrity sha512-Z3lCWIPuRUMPmuI8Mm48x/s49TxmHOaFVZ52j1W1QKYrsFHyT6U/h9bqfHJDxfQ8kz7y9q+W1YPKZ15Ee7yuCA==
   dependencies:
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.26"
+    "@tanstack/router-core" "1.171.27"
     "@tanstack/router-utils" "1.162.2"
     "@tanstack/virtual-file-routes" "1.162.0"
     jiti "^2.7.0"
@@ -1297,15 +1297,15 @@
     zod "^4.4.3"
 
 "@tanstack/router-plugin@^1.168.19":
-  version "1.168.34"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.34.tgz#6a1dab9aa1d971e718bf809081fc536c4455514b"
-  integrity sha512-WsXLQU8tQmoTyoQRB1JI3lGg5wnwo6VB2R8D2RQbtCVlUi3bjreSNgZSJ7Ghw06ZoUyNMO+Csiqf679nNnzN+w==
+  version "1.168.35"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.35.tgz#36514b7600b31f4688cc89af084c97235e5dc089"
+  integrity sha512-foDAZKFqHXae+oFbIgcsSvy2QCVRn7XdS3nhwcRvD+ed6JrKPUP/1lQMsZLJqWycgR1vkZF7gs955KGa0NZQ0w==
   dependencies:
     "@babel/core" "^7.28.5"
     "@babel/template" "^7.27.2"
     "@babel/types" "^7.28.5"
-    "@tanstack/router-core" "1.171.26"
-    "@tanstack/router-generator" "1.167.32"
+    "@tanstack/router-core" "1.171.27"
+    "@tanstack/router-generator" "1.167.33"
     "@tanstack/router-utils" "1.162.2"
     chokidar "^5.0.0"
     unplugin "^3.0.0"
@@ -1760,9 +1760,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.11.12:
-  version "2.11.15"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.15.tgz#9c0cac93d7d304f3d61bb41088a102cd62e68676"
-  integrity sha512-FwMjJJ7HnyZpWe+oWxegG0fezZyBZUagI5LZEoO3GCbtbKNwRfMH9Ue5d5v01PNePBy1QSfPSDTTeVL0Hb9EzA==
+  version "2.11.18"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.18.tgz#49701f6ab6c58ccafb6d8e1ab2767574d9f0ba73"
+  integrity sha512-1iEmLEYSiE1SeBoAfPo/Mnx3PzfzHUkDK61ASkCpuk3YXugYLH5DYK1SzqV55F8FMI6s0F+/tCP7Polz1QRjxw==
 
 bidi-js@^1.0.3:
   version "1.0.3"
@@ -2000,9 +2000,9 @@ dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.402:
-  version "1.5.411"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.411.tgz#d56c7e43f91e2b3abb53b4eecd646e20d0b18b34"
-  integrity sha512-gglkxzokjHfawpGxq75XdBV2/l3BAPzrsMs70qgaZdTW5rpV1tC4MdgJVP9fN126bODA4ZJQkn1wryEzJyQXIg==
+  version "1.5.412"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.412.tgz#79b93ba8d96ada5c9ef0d916ea0663f01ea15498"
+  integrity sha512-z4rMe3esBzlzovKHj4gxJnsCGZRK5l4baUvm+gCGJBPE+gsyUMKsuU9tnEUtI1dOebXz1ytAPGjvXhmQ7rIPwA==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
@@ -3515,14 +3515,14 @@ semver@^7.7.3:
   integrity sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==
 
 seroval-plugins@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.6.2.tgz#8e49b47fd585c2025f74f84f78272ea1753a8daa"
-  integrity sha512-TfxuUjlbBESzUOWdTkTKqvSmav0ABym+itetDXLK6mDz8SmrpdI30aF8RTXE8Bvq+tH/1yIDkvy3W0lfQb1ipQ==
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.6.3.tgz#15ad191e30d1b38169d790521e34148cba1a71d3"
+  integrity sha512-zQIy62HW683pMIUOKv9yKueQmOr+xMjpP2eH/qEPhr6nTAC+pJTh508md571Oduf/K/QpAoyeWpOhOp1+RFeDA==
 
 seroval@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.6.2.tgz#93ecff62ca1312a565e37146b2a332b9d625194d"
-  integrity sha512-mPT+SD2TrlB6wvte1KkYOYUkubaTbd6pZ/6Kk3C9nxzrHmCZyhxOO7XGAeL7f+yLKZglzGtM9odUVvg/EhO+vQ==
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.6.3.tgz#15e15538b0d04bdcec3887d5658b49869cbca7ce"
+  integrity sha512-5PwLbVPpT4DEki1hYVSSsoxWY6xCNMVucAVLK/CH0mXSDfp/I4KaAex72q80GNt5hpn7CCMGdSpIg4YGqH/wXQ==
 
 shebang-command@^2.0.0:
   version "2.0.0"
