@@ -6,7 +6,7 @@ export const translations: Translations<"fr"> = {
         "home link title": "Accueil - Nom de l'entité (ministère, secrétariat d'état, gouvernement)",
         "service title": "Modèle d'Application Web",
         "operator logo alt": "Insee, mesurer pour comprendre",
-        "page title home": "Acceuil",
+        "page title home": "Accueil",
         "page title mui": "Jouer avec Mui",
         "page title todo": "Liste de tâches",
         "page title chat": "Discussion"
