@@ -23,7 +23,7 @@
         "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
-        "@codegouvfr/react-dsfr": "1.34.0",
+        "@codegouvfr/react-dsfr": "^1.34.0",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
         "@mui/icons-material": "^9.2.0",
