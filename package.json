@@ -62,7 +62,7 @@
         "eslint-plugin-tss-unused-classes": "^1.0.4",
         "globals": "^17.7.0",
         "husky": "^9.1.7",
-        "jsdom": "^29.1.1",
+        "jsdom": "^30.0.0",
         "lint-staged": "^17.0.8",
         "node-fetch": "^3.3.2",
         "orval": "^8.20.0",
