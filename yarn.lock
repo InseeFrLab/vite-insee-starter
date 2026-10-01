@@ -1240,27 +1240,27 @@
     "@tanstack/router-devtools-core" "1.168.2"
 
 "@tanstack/react-router@^1.170.17":
-  version "1.170.40"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.40.tgz#acb67f2b90b0dee7ee9cba8682a8b88bdcd3d334"
-  integrity sha512-vVr3va9Mcq05rZRrDZPGoptAClRMKHvekLbpg2GcfXvAAtOVhW6Q93tOz4dvS8j03vTVrU25VM6weP1SIHGEew==
+  version "1.170.41"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-1.170.41.tgz#331b26510a46c8da4a465c11fc2de3626dc3271a"
+  integrity sha512-Mpvw8Wm5MGDbTqI8Yc9flLKxbOHwoWocv0H2aGKcgw2a017oK5nZWqa954P+DrUx/8fI98YNywnHP5XcD3tQ9w==
   dependencies:
     "@tanstack/history" "1.162.4"
-    "@tanstack/react-store" "^0.11.0"
-    "@tanstack/router-core" "1.171.33"
+    "@tanstack/react-store" "^0.11.2"
+    "@tanstack/router-core" "1.171.34"
     isbot "^5.1.22"
 
-"@tanstack/react-store@^0.11.0":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-store/-/react-store-0.11.1.tgz#e1e58036ffffa58f5b5d8826c2389f97502fac2c"
-  integrity sha512-HaIGKI3YLmjBYIvy5DFDY23oNaYZIsTZfngey07Uh5iLVJgM3bIGCnZeOFOqzjFld9JHWcaHJnasD/bKoGKwJQ==
+"@tanstack/react-store@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-store/-/react-store-0.11.2.tgz#14f81f98f43b04c34e76d348de3fe8488b3c3939"
+  integrity sha512-oj5O5DmiMWE+ih+SioX2ayC1kbK7d3fpLx0B75fPJr9nY3zU+hoW010yr64qXsY/9fyiLVE2bn5mGNV3owm8RQ==
   dependencies:
-    "@tanstack/store" "0.11.1"
+    "@tanstack/store" "0.11.2"
     use-sync-external-store "^1.6.0"
 
-"@tanstack/router-core@1.171.33":
-  version "1.171.33"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.33.tgz#92cf4580e03f2e6936d1cfaffa2532ac6f6b806e"
-  integrity sha512-TK31LyRZuVwwmWrv3oSCBN7OuM4R1qQZePRTiexFyqQUuCo3ERHZgzArosynwZKtYlEf4qbFCvbW7UUfvGiiZw==
+"@tanstack/router-core@1.171.34":
+  version "1.171.34"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-core/-/router-core-1.171.34.tgz#40ff69098378dc507662e055402c757c44a8a0d6"
+  integrity sha512-X+19pGuuLVPvvAvPYw9v/+ktRk5cCll8AtfpBpOhDRmVgUMrfqze0467xtq8YRVVs/mmo5rVtWn/7Tp32RDBKw==
   dependencies:
     "@tanstack/history" "1.162.4"
     cookie-es "^3.0.0"
@@ -1282,13 +1282,13 @@
   dependencies:
     "@tanstack/react-router-devtools" "1.167.2"
 
-"@tanstack/router-generator@1.167.39":
-  version "1.167.39"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.39.tgz#1df503d431397a20cb9cf85a68230e3a8bf2d5e0"
-  integrity sha512-9W4ErxITHoJH+1eySMm6RmTXzH/7drSUcVwynkco01A6Dg5gsnQsfxyojvLASLp5QxQe4gyubfBVupjBIPdPeg==
+"@tanstack/router-generator@1.167.40":
+  version "1.167.40"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-generator/-/router-generator-1.167.40.tgz#2bb0aa6aaf513cb99f638f3e680246b6040f45b1"
+  integrity sha512-WkEueqEvsBBudzO0fx1nWfOmRNW8OAvBoVABTGls9bAWzjdC+KDGHvjCNrvn88ofs1F6gqL8aWnzKCbxW3dCyQ==
   dependencies:
     "@babel/types" "^7.29.8"
-    "@tanstack/router-core" "1.171.33"
+    "@tanstack/router-core" "1.171.34"
     "@tanstack/router-utils" "1.162.3"
     "@tanstack/virtual-file-routes" "1.162.0"
     jiti "^2.7.0"
@@ -1297,15 +1297,15 @@
     zod "^4.5.4"
 
 "@tanstack/router-plugin@^1.168.19":
-  version "1.168.41"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.41.tgz#fb9a69b53406b2d2e3c36f4a7d3d82c73ef1c244"
-  integrity sha512-D6t6kkivRb0PzNgtYqnGBar9gOXEN8YrU2A3D5gnWMHv33DDshmuhrhRMk/u9cvumoeH88P1R1eWbQ3ZegTgcA==
+  version "1.168.42"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-plugin/-/router-plugin-1.168.42.tgz#61e8d100d020eb71f1bcc1f585dddf9f6c547355"
+  integrity sha512-vAR5WXJh/ErseEWQftDhsJcr2c++ucRQ6FbqN3ygMO44+ZxxRfW3sIpZmddHROVSmBk8jc6MrwjTPNjVhd62Vw==
   dependencies:
     "@babel/core" "^7.29.7"
     "@babel/template" "^7.29.7"
     "@babel/types" "^7.29.8"
-    "@tanstack/router-core" "1.171.33"
-    "@tanstack/router-generator" "1.167.39"
+    "@tanstack/router-core" "1.171.34"
+    "@tanstack/router-generator" "1.167.40"
     "@tanstack/router-utils" "1.162.3"
     chokidar "^5.0.0"
     unplugin "^3.3.0"
@@ -1325,10 +1325,10 @@
     pathe "^2.0.3"
     tinyglobby "^0.2.17"
 
-"@tanstack/store@0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@tanstack/store/-/store-0.11.1.tgz#063f634fe3cc925ad83704581a7be75301bec612"
-  integrity sha512-mzTOBhypOuDJAy/D8n2MfUZ1HFkXnmSETviRyhqEC8LUE7/IZQExOTxMANj3KjTofYTkFNpBY67qaVrT41YccA==
+"@tanstack/store@0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/store/-/store-0.11.2.tgz#cea02e554a483c7334a64a3ca2c0e4b703ba8531"
+  integrity sha512-sJ4mjol8uQsHV0gOJzzjwXfh2Fwm+Sz0+8deqiTm4jGbMdjzNSW+xZCFm0kUa870uhd8yi+DpKnZb5Kc4apa0Q==
 
 "@tanstack/virtual-file-routes@1.162.0":
   version "1.162.0"
@@ -1759,7 +1759,7 @@ balanced-match@^4.0.2:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-4.0.4.tgz#bfb10662feed8196a2c62e7c68e17720c274179a"
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
-baseline-browser-mapping@^2.11.25:
+baseline-browser-mapping@^2.11.26:
   version "2.11.26"
   resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.26.tgz#01bf6774efb3fbb9de20afc6b923ab85c7d230a6"
   integrity sha512-GLQdD3y6UF8iVuMJl5fHgE4jdn/ua7n+toKfLgNlg3BqQtOZjpy68T8Tup8/wGWZCDlm7KMg7tPb4MPn7oN0TQ==
@@ -1779,13 +1779,13 @@ brace-expansion@^5.0.5:
     balanced-match "^4.0.2"
 
 browserslist@^4.24.0:
-  version "4.29.1"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.29.1.tgz#f723071987a4f094177d94e01f6dc6e7493b972c"
-  integrity sha512-AUdjuRyCNGUYtqpqfTmWyM4fXay8yIQhmLnvYe/THMGfT9B/34X7xQd3ifKxwyNPPpowVBjLb+64BN9Rn1mizw==
+  version "4.29.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.29.3.tgz#9c8dafe96ab1c8e40e21c1274bdfa05aaee46476"
+  integrity sha512-1R4kiYKXGViqEN0CnoDrXc1StD9niAwu+j2dukWzrD4bJgsD4lDmEp0CRbc6E/vYJIfTHwPmwyaKtVSudICdPA==
   dependencies:
-    baseline-browser-mapping "^2.11.25"
-    caniuse-lite "^1.0.30001810"
-    electron-to-chromium "^1.5.438"
+    baseline-browser-mapping "^2.11.26"
+    caniuse-lite "^1.0.30001813"
+    electron-to-chromium "^1.5.439"
     node-releases "^2.0.57"
     update-browserslist-db "^1.3.3"
 
@@ -1802,10 +1802,10 @@ callsites@^3.0.0:
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
-caniuse-lite@^1.0.30001810:
-  version "1.0.30001812"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001812.tgz#55b32ed819d120b384149a4f9fd59d179ce008f9"
-  integrity sha512-qN+QNNBr93TCmFrmte0bBCjSDMuRvt78VlHT99qIGPszm4QsqCX8lnyWUFkHi8B7ZBAPq8SH+UqyXNy/odMdng==
+caniuse-lite@^1.0.30001813:
+  version "1.0.30001814"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001814.tgz#7a9e1d107dd60f6ad3dacc74df6f6d53a9dbcf9b"
+  integrity sha512-/Uaf1lAzr59XcMpW0o96WoEfr+VXK2OX4U9AgFoiSHsVJ4HppnIFUjtYzsyDH2+tgANaQb2/oxYGwCPapN1FpA==
 
 chai@^6.2.2:
   version "6.2.2"
@@ -1999,10 +1999,10 @@ dunder-proto@^1.0.1:
     es-errors "^1.3.0"
     gopd "^1.2.0"
 
-electron-to-chromium@^1.5.438:
-  version "1.5.439"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.439.tgz#d14ad21f157ee83b77d1e46fc031776eec9013c9"
-  integrity sha512-qu6QIPXhsb+CRcAiTMNjR4A1y/7tCYKkKjr5CZXRVih6qkDf79peZ2BpEU3qoDBNCRrcy3Mra3X9nG5oruuA7Q==
+electron-to-chromium@^1.5.439:
+  version "1.5.443"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.443.tgz#192b675e73bd809480cb9dc98babf3d370f1ac39"
+  integrity sha512-TDJG36L9A3CWWwZ97HKaE+Iz1sW80pNp6sAU0owzCIV3Zc9eVyRqZK8Vz6NKuMIU8WjP0pIkoqCa0VRf/yFD0Q==
 
 emoji-regex@^10.3.0:
   version "10.6.0"
@@ -3520,14 +3520,14 @@ semver@^7.7.3:
   integrity sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==
 
 seroval-plugins@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.6.7.tgz#4aba839a2fdafa9c115d965a71861d4b288b90c1"
-  integrity sha512-4Nk35ttD3DTDJW4hgw5StsVAPeU6qnDFnULAouw6tQ7oLTV/ICXrWpsXo2EE52eSP2joUMazbVf52mFEcADqRw==
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/seroval-plugins/-/seroval-plugins-1.6.8.tgz#3187b90331153472bdba83da5be63912e14cd2ac"
+  integrity sha512-N7mWAMydj89EnYTHtRpS3LBrAz3J9O6oVrqpuXuvlAHfAUG8WEKqtbAd7SBiJNY5NfCAFhSdyAh7wI4Shjqy4g==
 
 seroval@^1.6.7:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.6.7.tgz#b33953ac59aec5bde14f99e010bdaa7a507ae2db"
-  integrity sha512-AeDcLh0yO2SFm9W71essgnSzLV9DI8ZH0x0knXn2DMnUZj728mpLbxjlbB6IqKCmqh8JA3cEqRyGoNkt584JcQ==
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/seroval/-/seroval-1.6.8.tgz#916c4a293cfadcd9e0efdb73a8bfbe061f81866b"
+  integrity sha512-HlSgSAkTk4EqHcje1ptJjfZi1YDv5KbhVJ/d3P7T/nAXua2VmDu+AKDX5VTdFfZf48nDkWB2TKYt0DrCSa+3wg==
 
 shebang-command@^2.0.0:
   version "2.0.0"
