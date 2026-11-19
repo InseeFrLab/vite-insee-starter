@@ -1242,12 +1242,12 @@
   dependencies:
     "@tanstack/query-core" "5.101.4"
 
-"@tanstack/react-router-devtools@1.167.3":
-  version "1.167.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.167.3.tgz#917646cf0d4c59b02110693a699284532eee7866"
-  integrity sha512-HwAbCp3eIDHG6DmG9M7U7zBB5V3ybjeBek7Ss1Lz3NO19+qHDCJygdNPJpzdZJqznlnYGwLEoUF9XssUx5p8RQ==
+"@tanstack/react-router-devtools@1.167.4":
+  version "1.167.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router-devtools/-/react-router-devtools-1.167.4.tgz#fb8b37cd0471f2dc9d21fcc14597553b1936ce18"
+  integrity sha512-dKK0Jq3WZgFQX9CglJTfDf9M6prQV9t1ryXMybxzvDSOkEqddn0qoQdTtm2Mba1Mcss3c6WWs5Bu972sfWQcqw==
   dependencies:
-    "@tanstack/router-devtools-core" "1.168.3"
+    "@tanstack/router-devtools-core" "1.168.4"
 
 "@tanstack/react-router@^1.170.17":
   version "1.170.46"
@@ -1277,20 +1277,17 @@
     seroval "^1.6.7"
     seroval-plugins "^1.6.7"
 
-"@tanstack/router-devtools-core@1.168.3":
-  version "1.168.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools-core/-/router-devtools-core-1.168.3.tgz#41a20b8900c12f54c0a97af0adb8002306118c44"
-  integrity sha512-NJh7lWkvShucJU/pXtf5JWLqprL+8j6L5m82qcFuCvS4azOfknYr+KVIb3uEyVpLTrMpAvw+/hJEgAGULs21HA==
-  dependencies:
-    clsx "^2.1.1"
-    goober "^2.1.16"
+"@tanstack/router-devtools-core@1.168.4":
+  version "1.168.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools-core/-/router-devtools-core-1.168.4.tgz#ca5d0385960697826d7f2137b0a1a986ccac5926"
+  integrity sha512-n1QXJohfsgRK4798lO5X8V00vnbKE5LzKj60mXWrR4pL94HZB7IBr+4BCDDAciUoaIya6pi40zdAAxLfyFc4gw==
 
 "@tanstack/router-devtools@^1.167.0":
-  version "1.167.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.167.3.tgz#fac3f15eb2aede8484ea296da781df94a97f7b90"
-  integrity sha512-lnSx0ziD+UK0fUhvK/STkG0lO5XWc1dquC0FydHEhb/lUVPKMJef39lXDpmA44b8DLKzqaX8YAqwdRZPWUPxxA==
+  version "1.167.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/router-devtools/-/router-devtools-1.167.4.tgz#e112528880990c53dd96ceb7a50afdc17e894b13"
+  integrity sha512-+5lelcgKR/jlXEBuoiqvoutCsaujVg9xpwoRFmBr8UqpGX6F3QbslfZLsTe657BTUMvpDZ50olKrs9ZYY73kZg==
   dependencies:
-    "@tanstack/react-router-devtools" "1.167.3"
+    "@tanstack/react-router-devtools" "1.167.4"
 
 "@tanstack/router-generator@1.167.46":
   version "1.167.46"
@@ -2546,11 +2543,6 @@ globals@^17.7.0:
   version "17.7.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-17.7.0.tgz#553d55090b4dde8209ec2da42580d6e7e7d8b10d"
   integrity sha512-Czmyns5dUsq4seFBR/Kdydhmo8y9kC79hiSkPn0YcGtNnYWnrgt0vjrSjx9tspoDGWm2CMarffRuLjM4xUz8xg==
-
-goober@^2.1.16:
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/goober/-/goober-2.1.19.tgz#a4b4dcdbba9325b8c4d7380099f9f281f27c6a6f"
-  integrity sha512-U7veizMqxyKlM58+Z5j2ngJBH/r9siDmxpvNxSw0PylF6WQvrASJEZrxh1hidRBJc2jqoBVSyOban5u8m+6Rxg==
 
 gopd@^1.2.0:
   version "1.2.0"
